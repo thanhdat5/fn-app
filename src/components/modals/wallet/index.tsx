@@ -27,7 +27,7 @@ const WalletModal = ({ onDismiss }: Props) => {
 					<Tabs
 						defaultActiveKey="deposit"
 						id="uncontrolled-tab-example"
-						className="mb-3"
+						className="wallet-tab"
 					>
 						<Tab eventKey="deposit" title="Deposit">
 							<Deposit />

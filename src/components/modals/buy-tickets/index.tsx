@@ -32,7 +32,7 @@ const BuyTicketsModal = ({ onDismiss }: Props) => {
                         </div>
                     </div>
                 </Col>
-                <Col md="1" className="pe-md-2 pt-md-4">
+                <Col md="1" className="pe-0">
                     <div className="fn-buy-card-options">
                         <div className="fn-buy-option"><label>$2</label></div>
                         <div className="fn-buy-option"><label>$5</label></div>

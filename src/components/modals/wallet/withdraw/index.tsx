@@ -25,8 +25,8 @@ const Withdraw = ( ) => {
   return ( 
     <div className="fn-withdraw">
 
-    <div className="d-flex justify-content-center gap-5">
-				<Form.Group className="mb-3">
+    <div className="dropdown-wrapper">
+				<Form.Group>
 					<Form.Label>Currency</Form.Label>
 
 					<Dropdown className="fn-withdraw-currency">
@@ -53,7 +53,7 @@ const Withdraw = ( ) => {
 					</Dropdown>
 				</Form.Group>
 
-				<Form.Group className="mb-3">
+				<Form.Group>
 					<Form.Label>NetWork</Form.Label>
 					<Dropdown className="fn-withdraw-network">
 						<Dropdown.Toggle variant="dark" id="dropdown-network">
@@ -79,7 +79,8 @@ const Withdraw = ( ) => {
 				</Form.Group>
 			</div>
 
-			<Form.Group className="mb-3 px-5">
+			<div className="input-wrapper">
+			<Form.Group>
 				<Form.Label>
 				<img src="/images/tokens/usdt.svg" alt="" />
 					<p>
@@ -90,8 +91,7 @@ const Withdraw = ( ) => {
 					<Form.Control type="text" placeholder="Your Address" />
 					
 			</Form.Group>
-
-			<Form.Group className="mb-3 px-5">
+			<Form.Group>
 			<Form.Label className='amount-text'>
 					<p>
 					Amount <span>*</span>
@@ -99,14 +99,17 @@ const Withdraw = ( ) => {
 					<p>$0.00</p>
 				</Form.Label>
 				
-				<InputGroup className="mb-3">
+				<InputGroup>
 					<Form.Control placeholder="Amount" />
+					
 					<InputGroup.Text id="basic-addon2">
 						Max
 					</InputGroup.Text>
 				</InputGroup>
 					
 			</Form.Group>
+			</div>
+
 
 			<div className="fn-deposit-footer">
 				<FnButton

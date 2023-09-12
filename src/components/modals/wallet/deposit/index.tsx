@@ -24,8 +24,8 @@ const Deposit = () => {
 
   return (
     <div className="fn-deposit">
-      <div className="d-flex justify-content-center gap-5">
-				<Form.Group className="mb-3">
+      <div className=" dropdown-wrapper">
+				<Form.Group>
 					<Form.Label>Currency</Form.Label>
 
 					<Dropdown className="fn-deposit-currency">
@@ -52,7 +52,7 @@ const Deposit = () => {
 					</Dropdown>
 				</Form.Group>
 
-				<Form.Group className="mb-3">
+				<Form.Group >
 					<Form.Label>NetWork</Form.Label>
 					<Dropdown className="fn-deposit-network">
 						<Dropdown.Toggle variant="dark" id="dropdown-network">
@@ -79,9 +79,9 @@ const Deposit = () => {
 				</Form.Group>
 			</div>
 
-			<Form.Group className="mb-3 px-5">
+			<Form.Group className="address-wrapper">
 				<Form.Label>Your USDT deposit address</Form.Label>
-				<InputGroup className="mb-3">
+				<InputGroup >
 					<Form.Control placeholder="Your Address" />
 					<InputGroup.Text id="basic-addon2">
 						<img src="images/icons/copy.svg" alt="" />
@@ -89,16 +89,8 @@ const Deposit = () => {
 				</InputGroup>
 			</Form.Group>
 
-			<div className="d-flex align-items-center justify-content-center mb-5 mt-4">
-				<svg
-					width="118"
-					height="118"
-					viewBox="0 0 118 118"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<rect width="118" height="118" rx="10" fill="#D9D9D9" />
-				</svg>
+			<div className="qr-wrapper">
+				<img src="./images/icons/qr.svg" alt="" />
 			</div>
 
 			<div className="fn-deposit-footer">

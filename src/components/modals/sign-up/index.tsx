@@ -13,7 +13,7 @@ const SignUpModal = ({ onDismiss }: Props) => {
 
 	return (
 		<Modal
-			className="fn-modal"
+			className="fn-modal fn-sign-up"
 			centered
 			backdrop
 			keyboard={false}
@@ -24,13 +24,13 @@ const SignUpModal = ({ onDismiss }: Props) => {
 				<Modal.Title>Sign Up</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
-				<Form.Group className="mb-3" controlId="email">
+				<Form.Group  controlId="email" className='control-group'>
 					<Form.Control type="email" placeholder="Email" />
 				</Form.Group>
-				<InputGroup className="mb-1">
+				<InputGroup>
 					<Form.Control
 						type={`${showPassword ? 'text' : 'password'}`}
-						className="no-bl"
+						className="no-br"
 						placeholder="Login Password"
 					/>
 					<InputGroup.Text
@@ -41,17 +41,17 @@ const SignUpModal = ({ onDismiss }: Props) => {
 						<img src="/images/icons/eye.svg" alt="" />
 					</InputGroup.Text>
 				</InputGroup>
-				<div className="risk-wrapper mb-1">
+				<div className="risk-wrapper">
 					<div className="risk risk-red"></div>
 					<div className="risk risk-yellow"></div>
 					<div className="risk risk-green"></div>
 					<p className="risk-text">High Risk</p>
 				</div>
 
-				<InputGroup className="mb-3">
+				<InputGroup >
 					<Form.Control
 						type={`${showRePassword ? 'text' : 'password'}`}
-						className="no-bl"
+						className="no-br"
 						placeholder="Re-Enter Password"
 					/>
 					<InputGroup.Text
@@ -63,16 +63,16 @@ const SignUpModal = ({ onDismiss }: Props) => {
 					</InputGroup.Text>
 				</InputGroup>
 
-				<InputGroup className="mb-1">
+				<InputGroup >
 					<Form.Control
 						type="text"
-						className="no-bl"
+						className="no-br"
 						placeholder="Verification Code"
 					/>
 					<InputGroup.Text id="basic-addon1">Resend(60s)</InputGroup.Text>
 				</InputGroup>
 
-				<Form.Group className="mt-3 mb-4" controlId="code">
+				<Form.Group  controlId="code" className='control-group'>
 					<Form.Label>Enter Referral/Promo Code</Form.Label>
 					<Form.Control
 						type="text"
@@ -90,7 +90,7 @@ const SignUpModal = ({ onDismiss }: Props) => {
 					label="I agree to receive marketing promotions from Four Numbers"
 				/>
 
-				<div className="text-center mt-3">
+				<div className="text-center btn-wrapper">
 					<FnButton
 						text="Sign Up"
 						width="169px"

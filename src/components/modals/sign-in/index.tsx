@@ -10,10 +10,9 @@ type Props = {
 const SignInModal = ({ onDismiss }: Props) => {
 	const [showPassword, setShowPassword] = useState<boolean>(false);
 
-	
 	return (
 		<Modal
-			className="fn-modal"
+			className="fn-modal fn-sign-in"
 			centered
 			backdrop
 			keyboard={false}
@@ -24,13 +23,13 @@ const SignInModal = ({ onDismiss }: Props) => {
 				<Modal.Title>Sign In</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
-				<Form.Group className="mb-3" controlId="email">
+				<Form.Group controlId="email" className="group">
 					<Form.Control type="email" placeholder="Email" />
 				</Form.Group>
-				<InputGroup className="mb-1">
+				<InputGroup>
 					<Form.Control
 						type={`${showPassword ? 'text' : 'password'}`}
-						className="no-bl"
+						className="no-br"
 						placeholder="Login Password"
 					/>
 					<InputGroup.Text
@@ -44,10 +43,10 @@ const SignInModal = ({ onDismiss }: Props) => {
 
 				<h3 className="forgot-password">Forgot your password?</h3>
 
-				<InputGroup className="mb-3">
+				<InputGroup>
 					<Form.Control
 						type="text"
-						className="no-bl"
+						className="no-br"
 						placeholder="Verify Code"
 					/>
 					<InputGroup.Text id="basic-addon1" className="pwd-icon capcha">
@@ -55,7 +54,7 @@ const SignInModal = ({ onDismiss }: Props) => {
 					</InputGroup.Text>
 				</InputGroup>
 
-				<div className="text-center mt-3">
+				<div className="text-center btn-wrapper">
 					<FnButton
 						text="Sign In"
 						width="169px"
@@ -67,8 +66,8 @@ const SignInModal = ({ onDismiss }: Props) => {
 				</div>
 
 				<div className="sign-in-subtext">
-					Already have an account?{' '}
-					<span className="subtext-highlight">Sign in</span>
+					New to Qgacha?
+					<span className="subtext-highlight">Create account</span>
 				</div>
 			</Modal.Body>
 		</Modal>

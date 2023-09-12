@@ -1,16 +1,24 @@
-.fn-modal {
+.fn-sign-up {
 	.modal-body {
 		padding: 40px 35px !important;
+
+		.control-group {
+			margin: 17px 0;
+		}
+
+		.input-group {
+			margin: 13px 0;
+		}
 
 		.form-control {
 			border-radius: 3px;
 			border: 0.5px solid #9e9e9e;
 			background: #1b172f;
-			color: #fff !important;
+			color: #fff;
 			padding: 7px 20px;
 
 			&::placeholder {
-				color: #9e9e9e !important;
+				color: #9e9e9e;
 				font-family: Montserrat;
 				font-size: 15px;
 				font-weight: 500;
@@ -32,11 +40,12 @@
 			text-transform: capitalize;
 		}
 
-		.no-bl {
-			border-right: none !important;
+		.no-br {
+			border-right: none;
 
 			&:focus {
 				border: 0.5px solid #9e9e9e;
+				border-right: none;
 			}
 		}
 
@@ -72,8 +81,8 @@
 			&-input {
 				cursor: pointer;
 				background-color: transparent;
-				border-color: #e22197 !important;
-				box-shadow: none !important;
+				border-color: #e22197;
+				box-shadow: none;
 
 				&:checked[type='checkbox'] {
 					--bs-form-check-bg-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='red' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
@@ -122,6 +131,10 @@
 				white-space: nowrap;
 				margin: 0;
 			}
+		}
+
+		.btn-wrapper {
+			margin-top: 10px;
 		}
 
 		.sign-up-subtext {
