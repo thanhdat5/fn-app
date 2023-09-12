@@ -1,8 +1,9 @@
 import { Col, Modal, Nav, Row, Tab } from "react-bootstrap";
 import SettingGeneral from "./components/general";
+import SettingHistory from "./components/history";
+import SettingPreferences from "./components/preferences";
 import SettingSecurity from "./components/security";
 import "./index.scss";
-import SettingPreferences from "./components/preferences";
 
 type Props = {
     onDismiss: () => void;
@@ -48,7 +49,9 @@ const SettingsModal = ({ onDismiss }: Props) => {
                                 <Tab.Pane eventKey="preferences">
                                     <SettingPreferences />
                                 </Tab.Pane>
-                                <Tab.Pane eventKey="history">Second tab content</Tab.Pane>
+                                <Tab.Pane eventKey="history">
+                                    <SettingHistory />
+                                </Tab.Pane>
                             </Tab.Content>
                         </Col>
                     </Row>
