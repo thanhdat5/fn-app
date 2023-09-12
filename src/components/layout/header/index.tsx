@@ -1,5 +1,11 @@
-import { useState, useEffect } from "react";
+import SettingsModal from "components/modals/settings";
+import SignInModal from "components/modals/sign-in";
+import SignUpModal from "components/modals/sign-up";
+import UserInformationModal from "components/modals/user-information";
+import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
+import { authUserSelector, signIn, signOut } from "redux-toolkit-saga/auth";
+import { useAppDispatch, useAppSelector } from "store/hooks";
 import { IToken } from "types/token.model";
 import Balance from "./components/balance";
 import Language from "./components/language";
@@ -10,10 +16,7 @@ import SignIn from "./components/sign-in";
 import SignUp from "./components/sign-up";
 import User from "./components/user";
 import "./index.scss";
-import { useAppDispatch, useAppSelector } from "store/hooks";
-import { authUserSelector, signIn, signOut } from "redux-toolkit-saga/auth";
-import UserInformationModal from "components/modals/user-information";
-import SettingsModal from "components/modals/settings";
+import WalletModal from "components/modals/wallet";
 
 const Header = () => {
     const dispatch = useAppDispatch();
@@ -22,6 +25,9 @@ const Header = () => {
     const [selectedToken, setSelectedToken] = useState<IToken | undefined>(undefined);
     const [showUserInformation, setShowUserInformation] = useState(false);
     const [showSettings, setShowSettings] = useState(false);
+    const [showSignIn, setShowSignIn] = useState<boolean>(false);
+    const [showSignUp, setShowSignUp] = useState<boolean>(false);
+    const [showWallet, setShowWallet] = useState<boolean>(false);
 
     useEffect(() => {
         if (loggedUser && loggedUser.tokens?.length) {
@@ -59,12 +65,15 @@ const Header = () => {
                     <Logo />
                     {
                         loggedUser ? <>
-                            <Menu />
+                            <Menu onShowWallet={() => setShowWallet(true)}/>
                             <Balance selectedToken={selectedToken} tokens={loggedUser.tokens} onSelect={setSelectedToken} />
                             <User onClick={() => setShowUserInformation(true)} />
                         </> : <>
-                            <SignUp />
-                            <SignIn onClick={handleSignIn} />
+                            <SignUp onClick={() => setShowSignUp(true)}/>
+                            <SignIn onClick={() => {
+                                handleSignIn();
+                                setShowSignIn(true);
+                            }} />
                         </>
                     }
                     <Language />
@@ -76,6 +85,11 @@ const Header = () => {
         </div>
         {showUserInformation ? <UserInformationModal onLogout={handleSignOut} onDismiss={() => setShowUserInformation(false)} /> : <></>}
         {showSettings ? <SettingsModal onDismiss={() => setShowSettings(false)} /> : <></>}
+
+        {showSignIn ? <SignInModal onDismiss={() => setShowSignIn(false)} /> : <></>}
+        {showSignUp ? <SignUpModal onDismiss={() => setShowSignUp(false)} /> : <></>}
+
+        {showWallet ? <WalletModal onDismiss={() => setShowWallet(false)}/> : <></>}
     </>
 }
 export default Header

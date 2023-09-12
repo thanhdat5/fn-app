@@ -1,0 +1,118 @@
+.fn-modal {
+	.modal-body {
+		padding: 40px 35px !important;
+
+		.form-control {
+			border-radius: 3px;
+			border: 0.5px solid #9e9e9e;
+			background: #1b172f;
+			color: #fff !important;
+			padding: 7px 20px;
+
+			&::placeholder {
+				color: #9e9e9e !important;
+				font-family: Montserrat;
+				font-size: 15px;
+				font-weight: 500;
+				text-transform: capitalize;
+			}
+
+			&:focus {
+				background: #1b172f;
+				box-shadow: none;
+				border: 0.5px solid #9e9e9e;
+			}
+		}
+
+		.form-label {
+			color: #9e9e9e;
+			font-family: Montserrat;
+			font-size: 15px;
+			font-weight: 500;
+			text-transform: capitalize;
+		}
+
+		.no-bl {
+			border-right: none !important;
+
+			&:focus {
+				border: 0.5px solid #9e9e9e;
+			}
+		}
+
+		.input-group-text {
+			background: #1b172f;
+			border: 0.5px solid #9e9e9e;
+			border-left: none;
+
+			border-radius: 3px;
+			color: #9e9e9e;
+			font-family: Montserrat;
+			font-size: 15px;
+			font-weight: 500;
+			text-transform: capitalize;
+
+			&.pwd-icon {
+				cursor: pointer;
+				img {
+					transition: all ease-in-out 0.3s;
+					&:hover {
+						opacity: 0.5;
+					}
+				}
+			}
+		}
+
+		.forgot-password {
+			color: #f5f5f5;
+			font-family: Montserrat;
+			font-size: 15px;
+			font-weight: 500;
+			text-transform: capitalize;
+			text-align: right;
+			margin: 10px 0;
+			cursor: pointer;
+			transition: all ease-in-out 0.3s;
+
+			&:hover {
+				color: #9e9e9e;
+			}
+		}
+
+		.code-capcha {
+			width: 100px;
+			height: 100%;
+			background: #fff !important;
+			cursor: default;
+		}
+
+		.capcha {
+			padding-right: 7px !important;
+		}
+
+		.sign-in-subtext {
+			color: #9e9e9e;
+			font-family: Montserrat;
+			font-size: 15px;
+			font-style: normal;
+			font-weight: 500;
+			text-transform: capitalize;
+			margin-top: 20px;
+
+			.subtext-highlight {
+				color: #e22197;
+				font-family: Montserrat;
+				font-size: 15px;
+				font-style: normal;
+				font-weight: 700;
+				text-transform: capitalize;
+				cursor: pointer;
+				transition: all ease-in-out 0.3s;
+
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+}
