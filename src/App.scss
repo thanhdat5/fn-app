@@ -77,17 +77,84 @@ body {
 				text-transform: capitalize;
 				margin-bottom: 0;
 			}
-			.btn-close{
+			.btn-close {
 				outline: 0;
 				box-shadow: none;
 				filter: invert(1);
 				background-size: 10px 10px;
 				background-position: center;
-				transition: all ease-in-out .3s;
+				transition: all ease-in-out 0.3s;
 			}
 		}
-		.modal-body{
+		.modal-body {
 			padding: 20px;
+		}
+	}
+}
+
+.fn-toast {
+	width: auto;
+	.Toastify__toast {
+		padding: 0;
+		background-color: transparent;
+		position: relative;
+		&::before {
+			position: absolute;
+			content: '';
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 5px;
+		}
+		&.Toastify__toast--success {
+			&::before {
+				background: linear-gradient(
+					90deg,
+					#00e901 50%,
+					rgba(0, 233, 1, 0) 100%
+				);
+			}
+		}
+		&.Toastify__toast--error {
+			&::before {
+				background: linear-gradient(
+					90deg,
+					#dc1745 50%,
+					rgba(220, 23, 69, 0) 100%
+				);
+			}
+		}
+		&.Toastify__toast--info {
+			&::before {
+				background: linear-gradient(
+					90deg,
+					#1577dc 50%,
+					rgba(21, 119, 220, 0) 100%
+				);
+			}
+		}
+		.Toastify__toast-body {
+			padding: 0;
+			.Toastify__toast-icon {
+				display: none;
+			}
+		}
+		.Toastify__close-button {
+			color: #fff;
+			opacity: 1;
+			svg {
+				height: 10px;
+				width: auto;
+			}
+		}
+		.Toastify__progress-bar--success {
+			background: #00e901;
+		}
+		.Toastify__progress-bar--error {
+			background: #dc1745;
+		}
+		.Toastify__progress-bar--info {
+			background: #1577dc;
 		}
 	}
 }

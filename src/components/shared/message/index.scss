@@ -1,0 +1,63 @@
+.fn-message {
+	background: linear-gradient(90deg, #424549 50%, rgba(66, 69, 73, 0) 100%);
+	display: flex;
+	min-height: 70px;
+	.icon {
+		width: 56px;
+		min-width: 56px;
+		height: 100%;
+		min-height: 70px;
+		background: #2d3035;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			max-width: 24px;
+			max-height: 24px;
+			object-fit: contain;
+		}
+	}
+	.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex: 1;
+		.title {
+			width: 100%;
+			margin: 17px 16px 6px 16px;
+			color: #fff;
+			font-family: Montserrat;
+			font-size: 13px;
+			font-weight: 700;
+			line-height: 15px; /* 115.385% */
+			text-transform: capitalize;
+			display: flex;
+			align-items: center;
+			height: 12px;
+		}
+		.message {
+			width: 100%;
+			color: #fff;
+			font-family: Montserrat;
+			font-size: 13px;
+			font-weight: 500;
+			line-height: 15px; /* 115.385% */
+			margin: 0 16px 18px;
+			span {
+				color: #e22197;
+			}
+			a {
+				text-decoration: none;
+				color: #e22197;
+				transition: all ease-in-out 0.3s;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		.progress {
+			width: 100%;
+			height: 5px;
+		}
+	}
+}
