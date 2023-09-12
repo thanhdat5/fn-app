@@ -52,6 +52,7 @@ const Header = () => {
             totalWinningTickets: 0,
             totalPrizeWon: "TIỀN"
         }))
+        setShowSignIn(false);
     }
 
     const handleSignOut = () => {
@@ -65,31 +66,26 @@ const Header = () => {
                     <Logo />
                     {
                         loggedUser ? <>
-                            <Menu onShowWallet={() => setShowWallet(true)}/>
+                            <Menu onShowWallet={() => setShowWallet(true)} />
                             <Balance selectedToken={selectedToken} tokens={loggedUser.tokens} onSelect={setSelectedToken} />
                             <User onClick={() => setShowUserInformation(true)} />
                         </> : <>
-                            <SignUp onClick={() => setShowSignUp(true)}/>
-                            <SignIn onClick={() => {
-                                handleSignIn();
-                                setShowSignIn(true);
-                            }} />
+                            <SignUp onClick={() => setShowSignUp(true)} />
+                            <SignIn onClick={() => { setShowSignIn(true); }} />
                         </>
                     }
                     <Language />
                     {
-                        loggedUser ? <Setting onClick={() => setShowSettings(true)}/> : <></>
+                        loggedUser ? <Setting onClick={() => setShowSettings(true)} /> : <></>
                     }
                 </div>
             </Container>
         </div>
         {showUserInformation ? <UserInformationModal onLogout={handleSignOut} onDismiss={() => setShowUserInformation(false)} /> : <></>}
         {showSettings ? <SettingsModal onDismiss={() => setShowSettings(false)} /> : <></>}
-
-        {showSignIn ? <SignInModal onDismiss={() => setShowSignIn(false)} /> : <></>}
+        {showSignIn ? <SignInModal onSignIn={handleSignIn} onSignUp={() => { setShowSignIn(false); setShowSignUp(true) }} onDismiss={() => setShowSignIn(false)} /> : <></>}
         {showSignUp ? <SignUpModal onDismiss={() => setShowSignUp(false)} /> : <></>}
-
-        {showWallet ? <WalletModal onDismiss={() => setShowWallet(false)}/> : <></>}
+        {showWallet ? <WalletModal onDismiss={() => setShowWallet(false)} /> : <></>}
     </>
 }
 export default Header
