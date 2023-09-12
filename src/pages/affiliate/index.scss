@@ -1,0 +1,32 @@
+.fn-affiliate {
+	background-color: #1b0a30;
+	padding-top: 59px;
+	.fn-affiliate-tabs {
+		position: relative;
+		border: 0;
+		margin-bottom: 18px;
+        display: flex;
+        column-gap: 60px;
+		.nav-link {
+            border: 0;
+			padding: 23px 11px 17px 11px;
+			color: #9e9e9e;
+			font-family: Montserrat;
+			font-size: 20px;
+			font-weight: 500;
+			line-height: 14px; /* 70% */
+			border-bottom: 4px solid transparent;
+			transition: all ease-in-out 0.3s;
+			border-radius: 0;
+            background-color: transparent !important;
+			&.active {
+                font-weight: 700;
+				border-color: #e22197;
+			}
+		}
+	}
+	.tab-content {
+		position: relative;
+		padding-bottom: 39px;
+	}
+}

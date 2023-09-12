@@ -1,4 +1,7 @@
 {
+  "exclude": [
+    "./node_modules",
+  ],
   "compilerOptions": {
     "target": "es5",
     "lib": [
@@ -18,7 +21,22 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./src/",
+    "experimentalDecorators": true,
+    "declaration": true,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin"
+      }
+    ],
+    "types": ["jest"],
   },
   "include": [
     "src"

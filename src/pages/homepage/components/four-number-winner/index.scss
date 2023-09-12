@@ -1,0 +1,79 @@
+.fn-winner {
+	padding: 15px 7px 31px;
+	table {
+		margin-bottom: 38px;
+		> :not(caption) > * > * {
+			background-color: transparent;
+		}
+        &.table-striped{
+            > tbody > tr:nth-of-type(odd) > *{
+                background-color: #291A3A;
+            }
+            > tbody > tr:nth-of-type(even) > *{
+                background-color: #321B41;
+            }
+            tbody{
+                tr{
+                    td{
+                        border: 0;
+                    }
+                }
+            }
+        }
+		thead {
+			tr {
+				th {
+					padding: 0 9px;
+					color: #fff;
+					font-family: Montserrat;
+					font-size: 13px;
+					font-weight: 500;
+					line-height: 15px; /* 115.385% */
+					text-transform: capitalize;
+					height: 37px;
+					vertical-align: middle;
+					text-align: center;
+                    &:last-child{
+                        padding-right: 60px;
+                    }
+				}
+			}
+		}
+		tbody {
+			tr {
+				border-radius: 6px;
+				background: rgba(255, 255, 255, 0.01);
+				box-shadow: 0px -1px 0px 0px rgba(158, 158, 158, 0.5);
+				&:last-child {
+					td {
+						border: 0;
+					}
+				}
+				td {
+					color: #fff;
+					font-family: Montserrat;
+					font-size: 13px;
+					font-weight: 500;
+					line-height: 15px; /* 115.385% */
+					text-transform: capitalize;
+					height: 37px;
+					padding: 7px 9px 9px;
+					vertical-align: middle;
+					text-align: center;
+					img {
+						height: 47px;
+					}
+					span {
+						color: #e22197;
+					}
+                    &:last-child{
+                        padding-right: 60px;
+                    }
+				}
+			}
+		}
+	}
+	.fn-pagination {
+		margin-right: 32px;
+	}
+}

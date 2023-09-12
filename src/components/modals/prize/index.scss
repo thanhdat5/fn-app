@@ -1,0 +1,84 @@
+.fn-prize-body {
+	color: #fff;
+	font-family: Montserrat;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 20px; /* 133.333% */
+	text-transform: capitalize;
+	ul {
+		margin-bottom: 19px;
+	}
+	.note {
+		margin-top: 21px;
+		color: #fff;
+		font-family: Montserrat;
+		font-size: 11px;
+		font-weight: 300;
+		line-height: 20px; /* 181.818% */
+		text-transform: capitalize;
+		text-align: center;
+	}
+	table {
+		border-radius: 6px;
+		border: 1px solid #9e9e9e;
+		background-color: #291a3a;
+		overflow: hidden;
+		text-align: center;
+		width: 100%;
+		border-collapse: collapse;
+		border: 0.2px rgba($color: #9e9e9e, $alpha: 0.2) solid;
+		thead {
+			tr {
+				th {
+					padding: 8px;
+					border: 0.2px rgba($color: #9e9e9e, $alpha: 0.2) solid;
+				}
+				&:first-child {
+					th {
+						color: #e275f9;
+						font-family: Montserrat;
+						font-size: 11px;
+						font-weight: 700;
+						line-height: 15px; /* 136.364% */
+						text-transform: capitalize;
+					}
+				}
+				&:not(:first-child) {
+					th {
+						padding: 6px;
+						color: #05e8ff;
+						font-family: Montserrat;
+						font-size: 11px;
+						font-weight: 700;
+						line-height: 15px; /* 136.364% */
+						text-transform: capitalize;
+					}
+				}
+			}
+		}
+		tbody {
+			tr {
+				td {
+					padding: 5px;
+					border: 0.2px rgba($color: #9e9e9e, $alpha: 0.2) solid;
+					&:first-child {
+						color: #05e8ff;
+						font-family: Montserrat;
+						font-size: 11px;
+						font-weight: 500;
+						line-height: 15px; /* 136.364% */
+						text-transform: capitalize;
+					}
+					&:last-child {
+						color: #ffc700;
+						font-family: Montserrat;
+						font-size: 11px;
+						font-weight: 700;
+						line-height: 15px; /* 136.364% */
+						text-transform: capitalize;
+					}
+				}
+			}
+		}
+	}
+}

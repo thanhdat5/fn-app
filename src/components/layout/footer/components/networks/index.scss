@@ -1,0 +1,35 @@
+.fn-networks {
+    position: relative;
+    margin-bottom: 7px;
+	&-title {
+		color: #fff;
+		font-family: Montserrat;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 72px; /* 300% */
+		text-transform: uppercase;
+        margin-bottom: 10px;
+	}
+    &-list{
+        width: 458px;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        a{
+            display: inline-flex;
+            width: 46px;
+            height: 46px;
+            text-decoration: none;
+            overflow: hidden;
+            img{
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.fn-menu {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	column-gap: 91px;
+	a {
+		color: #fff;
+		text-align: center;
+		font-family: Poppins;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 15px; /* 107.143% */
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: all ease-in-out .3s;
+		&:hover,
+		&.active{
+			color: #f4cb65;
+		}
+	}
+}

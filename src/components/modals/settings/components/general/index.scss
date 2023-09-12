@@ -1,0 +1,115 @@
+.fn-setting-general {
+	padding: 24px 63px 84px 33px;
+	border-radius: 10px;
+	background-color: #17191b;
+	width: 769px;
+	max-width: 100%;
+	.title {
+		color: #fff;
+		font-family: Montserrat;
+		font-size: 15px;
+		font-weight: 700;
+		line-height: 15px; /* 100% */
+		text-transform: capitalize;
+		margin-bottom: 49px;
+	}
+	.form-label {
+		color: #9e9e9e;
+		font-family: Montserrat;
+		font-size: 15px;
+		font-weight: 500;
+		line-height: 15px; /* 100% */
+		text-transform: capitalize;
+		margin-bottom: 13px;
+		span {
+			color: #f00;
+		}
+	}
+	.form-control {
+		padding: 7px 20px;
+		border-radius: 6px;
+		border: 1px solid #9e9e9e;
+		background-color: #2d3035;
+		height: 46px;
+		color: #fff;
+		font-family: Montserrat;
+		font-size: 15px;
+		font-weight: 500;
+		line-height: 31.565px; /* 210.435% */
+		text-transform: capitalize;
+		&::placeholder {
+			color: #9e9e9e;
+		}
+	}
+	.resend {
+		background-color: transparent;
+		border: 0;
+		margin-right: 10px;
+		color: #e22197;
+		font-family: Montserrat;
+		font-size: 15px;
+		font-weight: 700;
+		line-height: 14.065px; /* 93.768% */
+		text-transform: capitalize;
+		transition: all ease-in-out 0.3s;
+		&:hover {
+			color: #1d803a;
+		}
+	}
+	.verify {
+		white-space: nowrap;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		border-radius: 10px;
+		border: 1px solid #575757;
+		background: linear-gradient(
+			180deg,
+			#e42299 0%,
+			#750a35 66.47%,
+			#a62159 100%
+		);
+		box-shadow: 2px -3px 2px -1px #938de1 inset,
+			-2px 2px 2px 0px rgba(0, 0, 0, 0.25) inset;
+		width: 169px;
+		max-width: 100%;
+		height: 35px;
+		overflow: hidden;
+		position: relative;
+		span {
+			color: #fff;
+			text-align: center;
+			font-family: Montserrat;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 15px; /* 107.143% */
+			position: relative;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(
+				180deg,
+				#4ba41a 0%,
+				#013f13 66.47%,
+				#1d803a 100%
+			);
+			/* button effect */
+			box-shadow: 1px -3px 1px -2.28866px #b2b2b2 inset,
+				0px 1px 2px 0px #fff inset, 1px 6px 4px -2px #000,
+				0px 2px 0px 0px #6d5962;
+			opacity: 0;
+			transition: all ease-in-out 0.3s;
+		}
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+}

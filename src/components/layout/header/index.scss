@@ -1,0 +1,17 @@
+.fn-header {
+	padding: 4px 0;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	// background: #fff;
+	// background-blend-mode: color-burn;
+	box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.85);
+	backdrop-filter: blur(5.5px);
+    &-inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

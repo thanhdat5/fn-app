@@ -1,0 +1,3 @@
+export const APP_STORAGES = {
+    ACCESS_TOKEN: "FN_ACCESS_TOKEN"
+}

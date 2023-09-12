@@ -1,0 +1,19 @@
+.fn-htp-body {
+	color: #9e9e9e;
+	font-family: Montserrat;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 30px; /* 200% */
+	text-transform: capitalize;
+	width: 687px;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	p {
+		text-transform: capitalize;
+	}
+	ul {
+		margin-bottom: 0;
+	}
+}

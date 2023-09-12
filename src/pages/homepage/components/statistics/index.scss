@@ -1,0 +1,30 @@
+.fn-total {
+	padding: 17px 29px 27px 28px;
+	position: relative;
+	.inner {
+		position: absolute;
+		top: 17px;
+		right: 29px;
+		bottom: 27px;
+		left: 28px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 18px 39px;
+		.row {
+			width: 100%;
+		}
+		.line {
+			display: flex;
+			height: 37px;
+			align-items: center;
+			column-gap: 5px;
+			color: #fff;
+			font-family: Montserrat;
+			font-size: 13px;
+			font-weight: 500;
+			line-height: 15px; /* 115.385% */
+			text-transform: capitalize;
+		}
+	}
+}

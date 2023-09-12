@@ -1,0 +1,132 @@
+.fn-my-tickets {
+	padding-bottom: 27px;
+	table {
+		border-radius: 6px;
+		margin-bottom: 4px;
+		> :not(caption) > * > * {
+			background-color: transparent;
+		}
+		thead {
+			tr {
+				th {
+					height: 37px;
+					padding: 0 15px;
+					vertical-align: middle;
+					color: #fff;
+					text-align: center;
+					font-family: Montserrat;
+					font-size: 13px;
+					font-weight: 700;
+					line-height: 15px; /* 115.385% */
+					text-transform: capitalize;
+					&:last-child {
+						padding-right: 29px;
+					}
+				}
+			}
+		}
+		tbody {
+			tr {
+				&:last-child {
+					td {
+						border: 0;
+					}
+				}
+				td {
+					padding: 12px 15px;
+					vertical-align: middle;
+					color: #fff;
+					text-align: center;
+					font-family: Montserrat;
+					font-size: 13px;
+					font-weight: 700;
+					line-height: 15px; /* 115.385% */
+					text-transform: capitalize;
+					&:last-child {
+						padding-right: 29px;
+					}
+					strong {
+						color: #fff;
+						font-family: Montserrat;
+						font-size: 36px;
+						font-weight: 700;
+						line-height: 15px; /* 41.667% */
+						text-transform: capitalize;
+						height: 50px;
+						display: inline-flex;
+						align-items: center;
+					}
+				}
+			}
+		}
+	}
+	.fn-pagination {
+		margin-bottom: 8px;
+		margin-right: 29px;
+	}
+	.fn-more {
+		color: #17191b;
+		text-align: center;
+		font-family: Montserrat;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 15px; /* 115.385% */
+		text-transform: uppercase;
+		border-radius: 6px;
+		background: conic-gradient(
+			from 0deg at 50% 50%,
+			#e22197 0deg,
+			#9b1258 360deg
+		);
+		width: 101px;
+		height: 35px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		padding: 0;
+		border: 0;
+		position: relative;
+		overflow: hidden;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 6px;
+			background: conic-gradient(
+				from 0deg at 50% 50%,
+				#e22197 0deg,
+				#9b1258 360deg
+			);
+			transition: all ease-in-out 0.3s;
+			transform: rotate(-180deg);
+			opacity: 0;
+		}
+		span {
+			position: relative;
+		}
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+}
+.fn-ticket-box {
+	padding: 19px 72px 19px 38px;
+	display: flex;
+	justify-content: space-between;
+	> span {
+		color: #9e9e9e;
+		font-family: Montserrat;
+		font-size: 13px;
+		font-weight: 500;
+		line-height: 15px; /* 115.385% */
+		text-transform: capitalize;
+		display: block;
+		margin-top: 6px;
+	}
+}

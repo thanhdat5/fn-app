@@ -1,0 +1,18 @@
+.fn-user {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 20px;
+	border: 0;
+	padding: 0;
+	outline: 0;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	border: 1px solid #e22197;
+	background-color: #C4C4C4;
+	margin-right: 22px;
+	img {
+		max-height: 24px;
+	}
+}

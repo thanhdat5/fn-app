@@ -1,0 +1,108 @@
+.fn-banner {
+	width: 100%;
+	min-height: 100vh;
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	&-buy {
+		position: absolute;
+		cursor: pointer;
+		text-decoration: none;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 53.7%;
+		display: flex;
+		width: 224px;
+		height: 56px;
+		padding: 10px 64.082px 0px 64.082px;
+		justify-content: center;
+		align-items: center;
+		border-radius: 15px;
+		background: linear-gradient(
+			180deg,
+			#e42299 0%,
+			#750a35 66.47%,
+			#a62159 100%
+		);
+		box-shadow: 1px -3px 1px -2.28866px #4aa41a inset,
+			0px 1px 2px 0px #fff inset, 1px 6px 4px -2px #000, 0px 2px 0px 0px #6d5962;
+		img {
+			height: 30px;
+			position: relative;
+		}
+		overflow: hidden;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 15px;
+			background: linear-gradient(
+				180deg,
+				#4ba41a 0%,
+				#013f13 66.47%,
+				#1d803a 100%
+			);
+			/* button effect */
+			box-shadow: 1px -3px 1px -2.28866px #b2b2b2 inset,
+				0px 1px 2px 0px #fff inset, 1px 6px 4px -2px #000,
+				0px 2px 0px 0px #6d5962;
+			opacity: 0;
+			transition: all ease-in-out 0.3s;
+		}
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+	&-box {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+	&-tickets {
+		position: relative;
+		padding: 9px 40px 6px 39px;
+		border-radius: 10px;
+		display: flex;
+		justify-content: space-between;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 10px;
+			background: #d9d9d9;
+			mix-blend-mode: multiply;
+		}
+	}
+	.sub-menu {
+		position: absolute;
+		top: 96px;
+		left: 0;
+		width: 100%;
+		text-align: right;
+		button {
+			margin-left: 20px;
+			border: 0;
+			background-color: transparent;
+			padding: 0;
+			color: #fff;
+			font-family: Montserrat;
+			font-size: 15px;
+			font-weight: 500;
+			line-height: 15px; /* 100% */
+			text-transform: capitalize;
+			transition: all ease-in-out 0.3s;
+			&:hover {
+				color: #f4cb65;
+			}
+		}
+	}
+}
