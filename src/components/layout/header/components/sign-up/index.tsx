@@ -1,8 +1,12 @@
 import "./index.scss";
 
-const SignUp = () => {
+type Props = {
+    onClick: () => void;
+}
 
-    return <button type="button" className="fn-signup">
+const SignUp = ({onClick}: Props) => {
+
+    return <button type="button" className="fn-signup" onClick={onClick}>
         <span>sign up</span>
     </button>
 }

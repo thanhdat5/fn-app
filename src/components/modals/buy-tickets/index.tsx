@@ -7,13 +7,13 @@ type Props = {
 }
 const BuyTicketsModal = ({ onDismiss }: Props) => {
     const { t } = useTranslation();
-    return <Modal className="fn-modal" size="lg" centered backdrop keyboard={false} show onHide={onDismiss}>
+    return <Modal className="fn-modal" size="xl" centered backdrop keyboard={false} show onHide={onDismiss}>
         <Modal.Header closeButton>
             <Modal.Title>{t('Buy four numbers Tickets')}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <Row>
-                <Col md="8" className="pe-md-4">
+                <Col md="7" className="pe-md-2">
                     <div className="fn-buy-heading">
                         <label>Numbers Of Ticket</label>
                         <span>1 Ticket = 2 USDT</span>
@@ -30,6 +30,13 @@ const BuyTicketsModal = ({ onDismiss }: Props) => {
                             <button type="button">50</button>
                             <button type="button">100</button>
                         </div>
+                    </div>
+                </Col>
+                <Col md="1" className="pe-0">
+                    <div className="fn-buy-card-options">
+                        <div className="fn-buy-option"><label>$2</label></div>
+                        <div className="fn-buy-option"><label>$5</label></div>
+                        <div className="fn-buy-option"><label>$10</label></div>
                     </div>
                 </Col>
                 <Col md="4">
