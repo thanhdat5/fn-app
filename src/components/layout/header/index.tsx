@@ -18,6 +18,7 @@ import User from "./components/user";
 import "./index.scss";
 import WalletModal from "components/modals/wallet";
 import MenuMobile from "./components/menu-mobile";
+import AffiliateModal from "pages/affiliate/modal";
 
 const Header = () => {
     const dispatch = useAppDispatch();
@@ -29,6 +30,7 @@ const Header = () => {
     const [showSignIn, setShowSignIn] = useState<boolean>(false);
     const [showSignUp, setShowSignUp] = useState<boolean>(false);
     const [showWallet, setShowWallet] = useState<boolean>(false);
+    const [showAffiliate, setShowAffiliate] = useState<boolean>(false);
 
     useEffect(() => {
         if (loggedUser && loggedUser.tokens?.length) {
@@ -70,7 +72,7 @@ const Header = () => {
                             <Menu onShowWallet={() => setShowWallet(true)} />
                             <Balance selectedToken={selectedToken} tokens={loggedUser.tokens} onSelect={setSelectedToken} />
                             <User onClick={() => setShowUserInformation(true)} />
-                            <MenuMobile onShowWallet={() => setShowWallet(true)} />
+                            <MenuMobile onShowWallet={() => setShowWallet(true)} onShowAffiliate={() => setShowAffiliate(true)} />
                         </> : <>
                             <SignUp onClick={() => setShowSignUp(true)} />
                             <SignIn onClick={() => { setShowSignIn(true); }} />
@@ -88,6 +90,7 @@ const Header = () => {
         {showSignIn ? <SignInModal onSignIn={handleSignIn} onSignUp={() => { setShowSignIn(false); setShowSignUp(true) }} onDismiss={() => setShowSignIn(false)} /> : <></>}
         {showSignUp ? <SignUpModal onDismiss={() => setShowSignUp(false)} /> : <></>}
         {showWallet ? <WalletModal onDismiss={() => setShowWallet(false)} /> : <></>}
+        {showAffiliate ? <AffiliateModal onDismiss={() => setShowAffiliate(false)} /> : <></>}
     </>
 }
 export default Header

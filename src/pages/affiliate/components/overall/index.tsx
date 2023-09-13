@@ -64,7 +64,9 @@ const Overall = () => {
                             <span>01/07/23 - 31/07/23</span>
                         </div>
                     </div>
-                    <img src="/images/chart.png" alt="" className="w-100" />
+                    <div className="chart-inner">
+                        <img src="/images/chart.png" alt="" className="w-100" />
+                    </div>
                 </Tab>
                 <Tab eventKey="lastMonth" title={t('Last month')}>
                     <div className="header">
@@ -78,7 +80,9 @@ const Overall = () => {
                             <span>01/07/23 - 31/07/23</span>
                         </div>
                     </div>
-                    <img src="/images/chart.png" alt="" className="w-100" />
+                    <div className="chart-inner">
+                        <img src="/images/chart.png" alt="" className="w-100" />
+                    </div>
                 </Tab>
             </Tabs>
         </div>

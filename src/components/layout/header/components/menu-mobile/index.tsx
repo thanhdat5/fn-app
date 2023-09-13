@@ -1,13 +1,13 @@
-import { NavLink } from "react-router-dom";
-import "./index.scss";
-import { useTranslation } from "react-i18next";
 import { Dropdown } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
+import "./index.scss";
 
 type Props = {
     onShowWallet?: () => void;
+    onShowAffiliate?: () => void;
 }
 
-const MenuMobile = ({ onShowWallet }: Props) => {
+const MenuMobile = ({ onShowWallet, onShowAffiliate }: Props) => {
     const { t } = useTranslation();
     return <Dropdown className="fn-menu-mobile">
         <Dropdown.Toggle id="dropdown-menu">
@@ -23,8 +23,8 @@ const MenuMobile = ({ onShowWallet }: Props) => {
             <Dropdown.Item onClick={onShowWallet}>
                 {t('Wallet')}
             </Dropdown.Item>
-            <Dropdown.Item>
-                <NavLink to="/affiliate" className={({ isActive }) => isActive ? "active" : ""}>{t('Affiliate')}</NavLink>
+            <Dropdown.Item onClick={onShowAffiliate}>
+                {t('Affiliate')}
             </Dropdown.Item>
             <Dropdown.Item>
                 {t('Setting')}
