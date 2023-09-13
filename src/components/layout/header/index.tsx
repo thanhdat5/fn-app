@@ -13,10 +13,9 @@ import Logo from "./components/logo";
 import Menu from "./components/menu";
 import Setting from "./components/setting";
 import SignIn from "./components/sign-in";
-import SignUp from "./components/sign-up";
 import User from "./components/user";
 import "./index.scss";
-import WalletModal from "components/modals/wallet";
+import SignUp from "./components/sign-up";
 
 const Header = () => {
     const dispatch = useAppDispatch();
@@ -27,7 +26,7 @@ const Header = () => {
     const [showSettings, setShowSettings] = useState(false);
     const [showSignIn, setShowSignIn] = useState<boolean>(false);
     const [showSignUp, setShowSignUp] = useState<boolean>(false);
-    const [showWallet, setShowWallet] = useState<boolean>(false);
+    
 
     useEffect(() => {
         if (loggedUser && loggedUser.tokens?.length) {
@@ -65,7 +64,7 @@ const Header = () => {
                     <Logo />
                     {
                         loggedUser ? <>
-                            <Menu onShowWallet={() => setShowWallet(true)}/>
+                            <Menu />
                             <Balance selectedToken={selectedToken} tokens={loggedUser.tokens} onSelect={setSelectedToken} />
                             <User onClick={() => setShowUserInformation(true)} />
                         </> : <>
@@ -89,7 +88,7 @@ const Header = () => {
         {showSignIn ? <SignInModal onDismiss={() => setShowSignIn(false)} /> : <></>}
         {showSignUp ? <SignUpModal onDismiss={() => setShowSignUp(false)} /> : <></>}
 
-        {showWallet ? <WalletModal onDismiss={() => setShowWallet(false)}/> : <></>}
+        
     </>
 }
 export default Header
