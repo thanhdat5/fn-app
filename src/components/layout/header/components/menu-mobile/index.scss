@@ -1,0 +1,96 @@
+.fn-menu-mobile {
+	display: none;
+	@media (max-width: 767px) {
+		display: block;
+	}
+	&.show {
+		.dropdown-toggle {
+			color: #fff !important;
+		}
+	}
+	.dropdown-toggle {
+		padding: 0;
+		background-color: transparent !important;
+		outline: 0;
+		box-shadow: none;
+		border: 0;
+		color: #9e9e9e !important;
+		transition: all ease-in-out 0.3s;
+		&::after {
+			display: none;
+		}
+	}
+	.dropdown-menu {
+		margin-top: 13px;
+		border: 0;
+		padding: 0;
+		border-radius: 0px 0px 10px 10px;
+		background: rgba($color: #24262b, $alpha: 0.9);
+		min-width: 356px;
+		max-width: 100%;
+		@media(max-width:375px){
+			min-width: 320px;
+		}
+		.dropdown-item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 40px;
+			color: #fff;
+			text-align: center;
+			font-family: Poppins;
+			font-size: 13px;
+			font-weight: 500;
+			line-height: 15px; /* 115.385% */
+			text-transform: uppercase;
+			a {
+				color: #fff;
+				text-align: center;
+				font-family: Poppins;
+				font-size: 13px;
+				font-weight: 500;
+				line-height: 15px; /* 115.385% */
+				text-transform: uppercase;
+				text-decoration: none;
+				transition: all ease-in-out 0.3s;
+				&:hover,
+				&.active {
+					color: #f4cb65;
+				}
+			}
+		}
+		.dropdown-divider {
+			background-color: rgba(158, 158, 158, 0.5);
+			height: 0.7;
+			margin: 0;
+		}
+		.logout {
+			text-align: center;
+			button {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				margin: 21px auto;
+				width: 113px;
+				height: 40px;
+				padding: 11px 13px;
+				border-radius: 10px;
+				background: linear-gradient(
+					180deg,
+					#4ba41a 0%,
+					#013f13 66.47%,
+					#1d803a 100%
+				);
+				box-shadow: 1px -3px 1px -2.28866px #b2b2b2 inset,
+					0px 1px 2px 0px #fff inset, 1px 6px 4px -2px #000,
+					0px 2px 0px 0px #6d5962;
+				color: #fff;
+				font-family: Poppins;
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 15px; /* 107.143% */
+				text-transform: uppercase;
+			}
+		}
+	}
+}

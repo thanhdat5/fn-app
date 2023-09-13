@@ -6,13 +6,23 @@
 	border: 0;
 	padding: 0;
 	outline: 0;
+	min-width: 35px;
 	width: 35px;
 	height: 35px;
 	border-radius: 50%;
 	border: 1px solid #e22197;
 	background-color: #C4C4C4;
 	margin-right: 22px;
+	@media (max-width: 767px) {
+		min-width: 30px;
+		width: 30px;
+		height: 30px;
+		margin-right: 14px;
+	}
 	img {
 		max-height: 24px;
+		@media (max-width: 767px) {
+			max-height: 20px;
+		}
 	}
 }

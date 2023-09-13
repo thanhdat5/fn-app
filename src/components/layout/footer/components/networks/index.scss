@@ -1,35 +1,50 @@
 .fn-networks {
-    position: relative;
-    margin-bottom: 7px;
+	position: relative;
+	margin-bottom: 7px;
+	@media (max-width: 767px) {
+		margin-bottom: 14px;
+	}
 	&-title {
 		color: #fff;
 		font-family: Montserrat;
 		font-size: 24px;
-		font-style: normal;
 		font-weight: 700;
 		line-height: 72px; /* 300% */
 		text-transform: uppercase;
-        margin-bottom: 10px;
+		margin-bottom: 10px;
+		@media (max-width: 767px) {
+			font-size: 13px;
+			line-height: 42.978px; /* 330.598% */
+            margin-bottom: 6px;
+		}
 	}
-    &-list{
-        width: 458px;
-        max-width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-left: auto;
-        margin-right: auto;
-        a{
-            display: inline-flex;
-            width: 46px;
-            height: 46px;
-            text-decoration: none;
-            overflow: hidden;
-            img{
-                max-width: 100%;
-                max-height: 100%;
-                object-fit: contain;
-            }
+	&-list {
+		width: 458px;
+		max-width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-left: auto;
+		margin-right: auto;
+        @media (max-width: 767px) {
+            justify-content: center;
+            gap: 20.3px;
         }
-    }
+		a {
+			display: inline-flex;
+			width: 46px;
+			height: 46px;
+			text-decoration: none;
+			overflow: hidden;
+            @media (max-width: 767px) {
+                width: 27.5px;
+                height: 27.5px;
+            }
+			img {
+				max-width: 100%;
+				max-height: 100%;
+				object-fit: contain;
+			}
+		}
+	}
 }

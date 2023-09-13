@@ -1,8 +1,12 @@
 .fn-partners {
 	position: relative;
-    padding-bottom: 18px;
+	padding-bottom: 18px;
 	border-bottom: 1px rgba($color: #fff, $alpha: 0.1) solid;
-    margin-bottom: 22px;
+	margin-bottom: 22px;
+	@media (max-width: 767px) {
+		padding-bottom: 6px;
+		margin-bottom: 0;
+	}
 	&-title {
 		color: #fff;
 		font-family: Montserrat;
@@ -10,10 +14,20 @@
 		font-weight: 700;
 		line-height: 72px; /* 300% */
 		text-transform: uppercase;
+		@media (max-width: 767px) {
+			font-size: 13px;
+			height: 17px;
+			display: flex;
+			align-items: center;
+			margin-bottom: 3px;
+		}
 	}
 	&-list {
 		margin-top: -11px;
-        text-align: center;
+		text-align: center;
+		@media (max-width: 767px){
+			margin-top: 0;
+		}
 		a {
 			text-decoration: none;
 			overflow: hidden;
@@ -24,8 +38,15 @@
 			border-radius: 6px;
 			border: 0.5px solid rgba($color: #9e9e9e, $alpha: 0.5);
 			width: 143px;
+			@media (max-width: 767px) {
+				width: 72px;
+				padding: 6px 3px 2px;
+			}
 			img {
 				height: 102px;
+				@media (max-width: 767px) {
+					height: 48px;
+				}
 			}
 			span {
 				color: #fff;
@@ -35,6 +56,14 @@
 				font-weight: 700;
 				line-height: 34px; /* 480% */
 				text-transform: uppercase;
+				@media (max-width: 767px) {
+					font-size: 10px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					height: 16px;
+					margin-top: -3px;
+				}
 			}
 		}
 	}

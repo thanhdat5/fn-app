@@ -5,6 +5,9 @@
 	border: 0;
 	padding: 0;
 	outline: 0;
+	@media (max-width: 767px) {
+		display: none;
+	}
 	img {
 		height: 17px;
 	}
@@ -17,5 +20,8 @@
 		line-height: 15px; /* 107.143% */
 		text-transform: uppercase;
 		margin-right: 4px;
+		@media(max-width: 767px){
+			display: none;
+		}
 	}
 }

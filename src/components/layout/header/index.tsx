@@ -17,6 +17,7 @@ import SignUp from "./components/sign-up";
 import User from "./components/user";
 import "./index.scss";
 import WalletModal from "components/modals/wallet";
+import MenuMobile from "./components/menu-mobile";
 
 const Header = () => {
     const dispatch = useAppDispatch();
@@ -69,6 +70,7 @@ const Header = () => {
                             <Menu onShowWallet={() => setShowWallet(true)} />
                             <Balance selectedToken={selectedToken} tokens={loggedUser.tokens} onSelect={setSelectedToken} />
                             <User onClick={() => setShowUserInformation(true)} />
+                            <MenuMobile onShowWallet={() => setShowWallet(true)} />
                         </> : <>
                             <SignUp onClick={() => setShowSignUp(true)} />
                             <SignIn onClick={() => { setShowSignIn(true); }} />
