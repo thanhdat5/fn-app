@@ -14,7 +14,6 @@ import Language from "./components/language";
 import Logo from "./components/logo";
 import Menu from "./components/menu";
 import MenuMobile from "./components/menu-mobile";
-import Setting from "./components/setting";
 import "./index.scss";
 
 const Header = () => {
@@ -85,14 +84,15 @@ const Header = () => {
                             
                         </> : <>
                             <ConnectWallet onClick={handleSignIn}/>
+                            <Language onClick={() => setShowLanguage(true)} />
                             {/* <SignUp onClick={() => setShowSignUp(true)} />
                             <SignIn onClick={() => setShowSignIn(true)} /> */}
                         </>
                     }
-                    <Language onClick={() => setShowLanguage(true)} />
-                    {
+                    
+                    {/* {
                         loggedUser ? <Setting onClick={() => setShowSettings(true)} /> : <></>
-                    }
+                    } */}
                 </div>
             </Container>
         </div>

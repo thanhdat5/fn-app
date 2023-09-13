@@ -23,24 +23,27 @@ const MenuMobile = ({ onShowWallet, onShowAffiliate, onShowSetting, onShowLangua
         </Dropdown.Toggle>
 
         <Dropdown.Menu align="end">
-            <Dropdown.Item onClick={onShowWallet}>
+            {/* <Dropdown.Item onClick={onShowWallet}>
                 {t('Wallet')}
-            </Dropdown.Item>
+            </Dropdown.Item> */}
             <Dropdown.Item onClick={onShowAffiliate}>
-                {t('Affiliate')}
+                {t('Referral')}
             </Dropdown.Item>
-            <Dropdown.Item onClick={onShowSetting}>
+            {/* <Dropdown.Item onClick={onShowSetting}>
                 {t('Setting')}
-            </Dropdown.Item>
+            </Dropdown.Item> */}
             <Dropdown.Item onClick={onShowLanguage}>
                 {t('Language')}
             </Dropdown.Item>
+            <Dropdown.Item onClick={() => {}}>
+                {t('FAQ')}
+            </Dropdown.Item>
             <Dropdown.Divider />
-            <div className="logout">
+            {/* <div className="logout">
                 <button className="logout" type="button" onClick={onLogout}>
                     <span>Log out</span>
                 </button>
-            </div>
+            </div> */}
         </Dropdown.Menu>
     </Dropdown>
 }
