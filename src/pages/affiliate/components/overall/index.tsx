@@ -9,13 +9,13 @@ const Overall = () => {
         <div className="summary">
             <Row className="gx-xl-3">
                 <Col lg="6">
-                    <div className="summary-card">
+                    {/* <div className="summary-card">
                         <img src="/images/icons/gold.png" alt="" />
                         <div className="info">
                             <label>TOTAL REWARD EARNED:</label>
                             <span className="highlight">$ 0.00</span>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="summary-card">
                         <img src="/images/icons/friends.png" alt="" />
                         <div className="info">
@@ -38,9 +38,9 @@ const Overall = () => {
                         </div>
                         <div className="body">
                             <b>$ 0.00</b>
-                            <button className="withdraw">
+                            {/* <button className="withdraw">
                                 <span>Withdraw</span>
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 </Col>
@@ -64,7 +64,9 @@ const Overall = () => {
                             <span>01/07/23 - 31/07/23</span>
                         </div>
                     </div>
-                    <img src="/images/chart.png" alt="" className="w-100" />
+                    <div className="chart-inner">
+                        <img src="/images/chart.png" alt="" className="w-100" />
+                    </div>
                 </Tab>
                 <Tab eventKey="lastMonth" title={t('Last month')}>
                     <div className="header">
@@ -78,7 +80,9 @@ const Overall = () => {
                             <span>01/07/23 - 31/07/23</span>
                         </div>
                     </div>
-                    <img src="/images/chart.png" alt="" className="w-100" />
+                    <div className="chart-inner">
+                        <img src="/images/chart.png" alt="" className="w-100" />
+                    </div>
                 </Tab>
             </Tabs>
         </div>

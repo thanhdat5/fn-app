@@ -1,5 +1,10 @@
 .fn-my-winning {
 	padding: 35px 28px 78px 29px;
+
+	@media (max-width: 575px) {
+		padding: 35px 0 39px 0;
+	}
+
 	h4 {
 		color: #f5f5f5;
 		text-align: center;
@@ -10,46 +15,125 @@
 		text-transform: uppercase;
 		margin-bottom: 33px;
 	}
-	.items {
-		padding-bottom: 58px;
-		.col{
-			background-color: #291A3A;
-			&:nth-child(2n){
-				.item{
-					background-color: #321a42;
-				}
-			}
-		}
-		.item {
-			position: relative;
-			flex: 1;
-			height: 100%;
-			min-height: 305px;
-			padding: 21px 24px 8px ;
-			strong {
-				display: block;
-				text-align: center;
+	// .items {
+	// 	padding-bottom: 58px;
+	// 	.item-td {
+	// 		background-color: transparent !important;
+	// 		justify-self: center;
+
+	// 		p {
+	// 			color: #fff;
+	// 			text-align: center;
+	// 			font-family: Montserrat;
+	// 			font-size: 13px;
+	// 			font-style: normal;
+	// 			font-weight: 500;
+	// 			line-height: 15px; /* 115.385% */
+	// 			text-transform: capitalize;
+	// 			margin-bottom: 10px;
+	// 		}
+	// 	}
+
+	// 	.col {
+	// 		background-color: #291a3a;
+	// 		&:nth-child(2n) {
+	// 			.item {
+	// 				background-color: #321a42;
+	// 			}
+	// 		}
+	// 	}
+	// 	.item {
+	// 		position: relative;
+	// 		flex: 1;
+	// 		height: 100%;
+	// 		min-height: 305px;
+	// 		padding: 21px 24px 8px;
+	// 		strong {
+	// 			display: block;
+	// 			text-align: center;
+	// 			color: #fff;
+	// 			text-align: center;
+	// 			font-family: Montserrat;
+	// 			font-size: 36px;
+	// 			font-weight: 700;
+	// 			height: 60px; /* 41.667% */
+	// 			text-transform: capitalize;
+	// 		}
+	// 		label {
+	// 			position: absolute;
+	// 			bottom: -37px;
+	// 			right: 9px;
+	// 			display: inline-flex;
+	// 			align-items: center;
+	// 			height: 37px;
+	// 			color: #fff;
+	// 			font-family: Montserrat;
+	// 			font-size: 13px;
+	// 			font-weight: 500;
+	// 			line-height: 15px; /* 115.385% */
+	// 			text-transform: capitalize;
+	// 		}
+	// 	}
+	// }
+
+	table {
+		thead {
+			th {
+				background: transparent;
 				color: #fff;
 				text-align: center;
-				font-family: Montserrat;
-				font-size: 36px;
-				font-weight: 700;
-				height: 60px; /* 41.667% */
-				text-transform: capitalize;
-			}
-			label {
-				position: absolute;
-				bottom: -37px;
-				right: 9px;
-				display: inline-flex;
-				align-items: center;
-				height: 37px;
-				color: #fff;
 				font-family: Montserrat;
 				font-size: 13px;
 				font-weight: 500;
 				line-height: 15px; /* 115.385% */
 				text-transform: capitalize;
+
+				@media (max-width: 575px) {
+					font-size: 8px;
+				}
+			}
+		}
+
+		tbody {
+			border: none;
+			tr {
+				td {
+					border: none;
+					text-align: center;
+
+					img {
+						max-width: 100%;
+					}
+				}
+
+				.text-end {
+					background-color: transparent;
+					padding-top: 20px;
+					strong {
+						color: #fff;
+						font-family: Montserrat;
+						font-size: 13px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: 15px;
+						text-transform: capitalize;
+					}
+
+					@media (max-width: 575px) {
+						padding-top: 5px;
+						strong {
+							font-size: 11px;
+						}
+					}
+				}
+
+				.column-odd {
+					background: #321a42;
+				}
+
+				.column-even {
+					background: #291a3a;
+				}
 			}
 		}
 	}
@@ -57,6 +141,7 @@
 .fn-winning-box {
 	padding: 90px 20px 57px;
 	text-align: center;
+
 	> span {
 		display: flex;
 		align-items: center;
@@ -71,5 +156,35 @@
 		text-transform: uppercase;
 		margin-bottom: 29px;
 		height: 45px;
+
+		@media (max-width: 575px) {
+			color: #7c7d7d;
+			font-size: 11px;
+		}
+	}
+
+	.fn-buy-now {
+		color: #fff;
+	}
+
+	@media (max-width: 575px) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 18px 13px 14px 16px;
+
+		> span {
+			margin: 0;
+		}
+
+		.fn-buy-now {
+			width: 127px;
+			height: 29px;
+			padding: 7px 12px;
+
+			span {
+				font-size: 11px;
+			}
+		}
 	}
 }

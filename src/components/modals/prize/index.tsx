@@ -19,7 +19,7 @@ const PrizeModal = ({ onDismiss }: Props) => {
                     <li>The total number of prizes can reach up to 2000.</li>
                 </ul>
                 <Row className="gx-xl-5">
-                    <Col md="4">
+                    <Col md="4" className="mb-md-0 mb-3">
                         <table>
                             <thead>
                                 <tr>
@@ -54,7 +54,7 @@ const PrizeModal = ({ onDismiss }: Props) => {
                             </tbody>
                         </table>
                     </Col>
-                    <Col md="4">
+                    <Col md="4" className="mb-md-0 mb-3">
                         <table>
                             <thead>
                                 <tr>

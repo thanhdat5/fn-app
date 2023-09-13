@@ -19,9 +19,14 @@ const Network = () => {
                     <Col md="5" className="ps-md-4">
                         <div className="divider"></div>
                         <label>View your referrals by Username</label>
-                        <input type="search" placeholder="enter Username"/>
+                        <div className="custom-input">
+                            <input type="search" placeholder="enter Username" />
+                            <button type="button">
+                                <span>Search</span>
+                            </button>
+                        </div>
                     </Col>
-                    <Col md="3">
+                    <Col md="3" className="d-md-block d-none">
                         <label></label>
                         <button type="button">
                             <span>Search</span>

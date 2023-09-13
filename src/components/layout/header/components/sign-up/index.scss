@@ -18,6 +18,11 @@
 	height: 23px;
 	overflow: hidden;
 	position: relative;
+	@media (max-width: 767px) {
+		margin-right: 6px;
+		width: 67px;
+		height: 26px;
+	}
 	span {
 		color: #fff;
 		text-align: center;
@@ -27,6 +32,10 @@
 		line-height: 15px; /* 107.143% */
 		text-transform: uppercase;
 		position: relative;
+		@media (max-width: 767px) {
+			font-size: 11.075px;
+			line-height: 11.866px; /* 107.143% */
+		}
 	}
 	&::before {
 		content: '';

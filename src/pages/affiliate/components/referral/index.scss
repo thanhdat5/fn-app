@@ -3,10 +3,17 @@
 	border: 1px #9e9e9e solid;
 	background-color: #291a3a;
 	overflow: hidden;
+	@media (max-width: 767px) {
+		margin-top: 8px;
+		border: 0.5px solid rgba($color: #9e9e9e, $alpha: 0.5);
+	}
 	.header {
 		background-image: url(../../../../../public/images/gift-bg.svg);
 		background-size: cover;
 		padding: 31px 22px 35px;
+		@media (max-width: 767px) {
+			padding: 17px 5px 21px 19.5px;
+		}
 		h4 {
 			color: #fff;
 			font-family: Montserrat;
@@ -18,6 +25,9 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+			@media (max-width: 767px) {
+				font-size: 24px;
+			}
 			span {
 				display: block;
 				color: #fff;
@@ -33,10 +43,19 @@
 	}
 	.body {
 		padding: 13px 22px 34px 18px;
+		@media (max-width: 767px) {
+			padding: 27px 16px 40px 19.5px;
+		}
 		.form-group {
 			margin-bottom: 17px;
+			@media (max-width: 767px) {
+				margin-bottom: 13px;
+			}
 			&:first-child {
 				margin-bottom: 13px;
+				@media (max-width: 767px) {
+					margin-bottom: 22px;
+				}
 			}
 			label {
 				display: block;
@@ -47,6 +66,14 @@
 				line-height: 15px; /* 115.385% */
 				text-transform: capitalize;
 				margin-bottom: 6px;
+				@media (max-width: 767px) {
+					font-size: 11px;
+					line-height: 15px; /* 136.364% */
+					margin-bottom: 5px;
+					height: 11px;
+					display: flex;
+					align-items: center;
+				}
 			}
 			.input-gr {
 				position: relative;
@@ -86,12 +113,12 @@
 						transition: all ease-in-out 0.3s;
 						opacity: 0;
 					}
-					&:hover{
-						&::before{
+					&:hover {
+						&::before {
 							opacity: 1;
 						}
 					}
-					span{
+					span {
 						position: relative;
 					}
 				}
@@ -109,6 +136,10 @@
 					text-transform: lowercase;
 					outline: 0;
 					border: 0;
+					@media (max-width: 767px) {
+						font-size: 11px;
+						line-height: 15px; /* 136.364% */
+					}
 				}
 			}
 		}
@@ -138,7 +169,14 @@
 				border: 0;
 				position: relative;
 				overflow: hidden;
-				span{
+				@media (max-width: 767px) {
+					width: 147px;
+					height: 34px;
+					font-size: 11px;
+					line-height: 22.5px; /* 204.545% */
+					white-space: nowrap;
+				}
+				span {
 					position: relative;
 				}
 				&::before {
@@ -150,13 +188,15 @@
 					height: 100%;
 					background: linear-gradient(
 						180deg,
-						#4ba41a 0%,
-						#013f13 66.47%,
-						#1d803a 100%
+						#cc65ff 0%,
+						#6500e8 66.47%,
+						#ab00ff 100%
 					);
+
 					/* button effect */
 					box-shadow: 1px -3px 1px -2.28866px #b2b2b2 inset,
-						0px 1px 2px 0px #fff inset, 1px 6px 4px -2px #000, 0px 2px 0px 0px #6d5962;
+						0px 1px 2px 0px #fff inset, 1px 6px 4px -2px #000,
+						0px 2px 0px 0px #6d5962;
 					opacity: 0;
 					transition: all ease-in-out 0.3s;
 				}

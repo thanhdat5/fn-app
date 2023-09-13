@@ -1,4 +1,4 @@
-.fn-signin {
+.fn-connect-wallet {
 	white-space: nowrap;
 	display: inline-flex;
 	align-items: center;
@@ -10,16 +10,17 @@
 		--button,
 		linear-gradient(180deg, #e42299 0%, #750a35 66.47%, #a62159 100%)
 	);
+	background-blend-mode: hue;
 	box-shadow: 2px -3px 2px -1px #938de1 inset,
 		-2px 2px 2px 0px rgba(0, 0, 0, 0.25) inset;
-	margin-left: 6px;
-	width: 90px;
+	margin-left: auto;
+	width: 126px;
 	height: 23px;
-	margin-right: 49px;
+	padding: 4px 28px;
 	overflow: hidden;
 	position: relative;
+	margin-right: 36px;
 	@media (max-width: 767px) {
-		margin-left: 0;
 		margin-right: 6px;
 		width: 67px;
 		height: 26px;
@@ -27,10 +28,11 @@
 	span {
 		color: #fff;
 		text-align: center;
-		font-family: Poppins;
-		font-size: 14px;
+		font-family: Montserrat;
+		font-size: 11px;
+		font-style: normal;
 		font-weight: 700;
-		line-height: 15px; /* 107.143% */
+		line-height: 15px; /* 136.364% */
 		text-transform: uppercase;
 		position: relative;
 		@media (max-width: 767px) {
@@ -47,10 +49,11 @@
 		height: 100%;
 		background: linear-gradient(
 			180deg,
-			#4ba41a 0%,
-			#013f13 66.47%,
-			#1d803a 100%
+			#cc65ff 0%,
+			#6500e8 66.47%,
+			#ab00ff 100%
 		);
+
 		/* button effect */
 		box-shadow: 1px -3px 1px -2.28866px #b2b2b2 inset,
 			0px 1px 2px 0px #fff inset, 1px 6px 4px -2px #000, 0px 2px 0px 0px #6d5962;

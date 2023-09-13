@@ -8,6 +8,7 @@
 	@media (max-width: 1199px) {
 		min-height: fit-content;
 	}
+
 	&-buy {
 		position: absolute;
 		cursor: pointer;
@@ -45,10 +46,15 @@
 			border-radius: 15px;
 			background: linear-gradient(
 				180deg,
-				#4ba41a 0%,
-				#013f13 66.47%,
-				#1d803a 100%
+				#cc65ff 0%,
+				#6500e8 66.47%,
+				#ab00ff 100%
 			);
+
+			/* button effect */
+			box-shadow: 1px -3px 1px -2.28866px #b2b2b2 inset,
+				0px 1px 2px 0px #fff inset, 1px 6px 4px -2px #000,
+				0px 2px 0px 0px #6d5962;
 			/* button effect */
 			box-shadow: 1px -3px 1px -2.28866px #b2b2b2 inset,
 				0px 1px 2px 0px #fff inset, 1px 6px 4px -2px #000,
@@ -78,6 +84,16 @@
 				height: 20px;
 			}
 		}
+
+		@media (max-width: 575px) {
+			width: 80px !important;
+			height: 24px;
+			padding: 0;
+			border-radius: 10px;
+			img {
+				height: 10px;
+			}
+		}
 	}
 	&-box {
 		position: absolute;
@@ -88,6 +104,9 @@
 		@media (max-width: 1199px) {
 			top: 70%;
 		}
+
+		@media (max-width: 575px) {
+		}
 	}
 	&-tickets {
 		position: relative;
@@ -95,6 +114,7 @@
 		border-radius: 10px;
 		display: flex;
 		justify-content: space-between;
+
 		&::before {
 			content: '';
 			position: absolute;
@@ -105,10 +125,6 @@
 			border-radius: 10px;
 			background: #d9d9d9;
 			mix-blend-mode: multiply;
-		}
-
-		@media (max-width: 991px) {
-			justify-content: center;
 		}
 	}
 	.sub-menu {

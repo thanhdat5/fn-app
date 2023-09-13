@@ -129,4 +129,18 @@
 		display: block;
 		margin-top: 6px;
 	}
+
+	@media (max-width: 575px) {
+		padding: 18px 13px 13px 15px;
+	}
+
+	.fn-buy-now {
+		color: #fff;
+
+		@media (max-width: 575px) {
+			width: 127px;
+			height: 29px;
+			font-size: 11px;
+		}
+	}
 }
