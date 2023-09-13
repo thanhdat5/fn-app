@@ -81,15 +81,15 @@ const Header = () => {
                                 onShowSetting={() => setShowSettings(true)}
                                 onLogout={handleSignOut}
                             />
-                            
                         </> : <>
                             <ConnectWallet onClick={handleSignIn}/>
-                            <Language onClick={() => setShowLanguage(true)} />
                             {/* <SignUp onClick={() => setShowSignUp(true)} />
                             <SignIn onClick={() => setShowSignIn(true)} /> */}
                         </>
                     }
-                    
+                       
+                       <Language onClick={() => setShowLanguage(true)} />
+
                     {/* {
                         loggedUser ? <Setting onClick={() => setShowSettings(true)} /> : <></>
                     } */}
