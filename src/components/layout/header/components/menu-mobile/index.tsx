@@ -5,9 +5,12 @@ import "./index.scss";
 type Props = {
     onShowWallet?: () => void;
     onShowAffiliate?: () => void;
+    onShowSetting?: () => void;
+    onShowLanguage?: () => void;
+    onLogout?: () => void;
 }
 
-const MenuMobile = ({ onShowWallet, onShowAffiliate }: Props) => {
+const MenuMobile = ({ onShowWallet, onShowAffiliate, onShowSetting, onShowLanguage, onLogout }: Props) => {
     const { t } = useTranslation();
     return <Dropdown className="fn-menu-mobile">
         <Dropdown.Toggle id="dropdown-menu">
@@ -26,15 +29,15 @@ const MenuMobile = ({ onShowWallet, onShowAffiliate }: Props) => {
             <Dropdown.Item onClick={onShowAffiliate}>
                 {t('Affiliate')}
             </Dropdown.Item>
-            <Dropdown.Item>
+            <Dropdown.Item onClick={onShowSetting}>
                 {t('Setting')}
             </Dropdown.Item>
-            <Dropdown.Item>
+            <Dropdown.Item onClick={onShowLanguage}>
                 {t('Language')}
             </Dropdown.Item>
             <Dropdown.Divider />
             <div className="logout">
-                <button className="logout" type="button">
+                <button className="logout" type="button" onClick={onLogout}>
                     <span>Log out</span>
                 </button>
             </div>

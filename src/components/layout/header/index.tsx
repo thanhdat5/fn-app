@@ -19,6 +19,7 @@ import "./index.scss";
 import WalletModal from "components/modals/wallet";
 import MenuMobile from "./components/menu-mobile";
 import AffiliateModal from "pages/affiliate/modal";
+import LanguageModal from "components/modals/language";
 
 const Header = () => {
     const dispatch = useAppDispatch();
@@ -31,6 +32,7 @@ const Header = () => {
     const [showSignUp, setShowSignUp] = useState<boolean>(false);
     const [showWallet, setShowWallet] = useState<boolean>(false);
     const [showAffiliate, setShowAffiliate] = useState<boolean>(false);
+    const [showLanguage, setShowLanguage] = useState<boolean>(false);
 
     useEffect(() => {
         if (loggedUser && loggedUser.tokens?.length) {
@@ -70,15 +72,24 @@ const Header = () => {
                     {
                         loggedUser ? <>
                             <Menu onShowWallet={() => setShowWallet(true)} />
-                            <Balance selectedToken={selectedToken} tokens={loggedUser.tokens} onSelect={setSelectedToken} />
+                            <Balance
+                                selectedToken={selectedToken}
+                                tokens={loggedUser.tokens}
+                                onSelect={setSelectedToken}
+                            />
                             <User onClick={() => setShowUserInformation(true)} />
-                            <MenuMobile onShowWallet={() => setShowWallet(true)} onShowAffiliate={() => setShowAffiliate(true)} />
+                            <MenuMobile
+                                onShowWallet={() => setShowWallet(true)}
+                                onShowAffiliate={() => setShowAffiliate(true)}
+                                onShowLanguage={() => setShowLanguage(true)}
+                                onLogout={handleSignOut}
+                            />
                         </> : <>
                             <SignUp onClick={() => setShowSignUp(true)} />
-                            <SignIn onClick={() => { setShowSignIn(true); }} />
+                            <SignIn onClick={() => setShowSignIn(true)} />
                         </>
                     }
-                    <Language />
+                    <Language onClick={() => setShowLanguage(true)} />
                     {
                         loggedUser ? <Setting onClick={() => setShowSettings(true)} /> : <></>
                     }
@@ -91,6 +102,7 @@ const Header = () => {
         {showSignUp ? <SignUpModal onDismiss={() => setShowSignUp(false)} /> : <></>}
         {showWallet ? <WalletModal onDismiss={() => setShowWallet(false)} /> : <></>}
         {showAffiliate ? <AffiliateModal onDismiss={() => setShowAffiliate(false)} /> : <></>}
+        {showLanguage ? <LanguageModal onDismiss={() => setShowLanguage(false)} /> : <></>}
     </>
 }
 export default Header

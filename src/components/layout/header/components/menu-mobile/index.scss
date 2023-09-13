@@ -28,6 +28,13 @@
 		background: rgba($color: #24262b, $alpha: 0.9);
 		min-width: 356px;
 		max-width: 100%;
+		@media (max-width: 767px) {
+			position: fixed !important;
+			top: 58px !important;
+			left: 50% !important;
+			transform: translateX(-50%) !important;
+			margin-top: 0;
+		}
 		@media(max-width:375px){
 			min-width: 320px;
 		}

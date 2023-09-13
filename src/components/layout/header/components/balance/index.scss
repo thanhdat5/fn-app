@@ -59,12 +59,21 @@
 		position: relative;
 		margin-bottom: 20px;
 		column-gap: 10px;
+		@media (max-width: 767px) {
+			width: 266px;
+			margin-left: auto;
+			margin-right: auto;
+		}
 		img {
 			position: absolute;
 			top: 50%;
 			left: 20px;
 			width: 20px;
 			transform: translateY(-50%);
+			@media (max-width: 767px) {
+				width: 15px;
+				left: 15px;
+			}
 		}
 		.form-control {
 			outline: 0;
@@ -81,6 +90,12 @@
 			font-weight: 500;
 			line-height: 31.565px; /* 210.435% */
 			text-transform: capitalize;
+			@media (max-width: 767px) {
+				padding: 5.246px 14.99px;
+				padding-left: 38px;
+				font-size: 11.242px;
+				line-height: 23.658px; /* 210.435% */
+			}
 			&:focus {
 				color: #fff;
 				border-color: #e22197;
@@ -91,6 +106,16 @@
 		padding: 38px 16px 12px 17px;
 		min-width: 344px;
 		margin-top: 15px;
+		@media (max-width: 767px) {
+			position: fixed !important;
+			top: 58px !important;
+			left: 50% !important;
+			transform: translateX(-50%) !important;
+			margin-top: 0;
+			padding: 28px 25.5px 26px 22.5px;
+			border-radius: 7.495px;
+			background-color: #17191b;
+		}
 		.fn-token-item {
 			display: flex;
 			align-items: center;
@@ -108,14 +133,24 @@
 			padding: 10px 18px 10px 8px;
 			margin-bottom: 5px;
 			border-radius: 3px;
+			margin-bottom: 6px;
+			@media (max-width: 767px) {
+				padding: 0;
+				margin-bottom: 18px;
+				font-size: 11.242px;
+				line-height: 10.493px; /* 93.333% */
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
 			&::before {
 				content: '';
 				position: absolute;
 				opacity: 0;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
+				top: -6px;
+				left: -6px;
+				width: calc(100% + 12px);
+				height: calc(100% + 12px);
 				border-radius: 3px;
 				border: 1px solid #e22197;
 				transition: all ease-in-out 0.3s;
@@ -123,17 +158,25 @@
 			&.active,
 			&:hover {
 				background-color: rgba($color: #fff, $alpha: 0.05) !important;
+				@media (max-width: 767px) {
+					background-color: transparent !important;
+				}
 			}
-			// &.active {
-			// 	&::before {
-			// 		opacity: 1;
-			// 	}
-			// }
+			&.active {
+				&::before {
+					opacity: 1;
+				}
+			}
 			&:last-child {
 				margin-bottom: 0;
 			}
 			.icon {
 				width: 30px;
+				min-width: 30px;
+				@media (max-width: 767px) {
+					width: 21.5px;
+					min-width: 21.5px;
+				}
 			}
 			.balance {
 				margin-left: auto;
