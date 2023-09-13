@@ -2,7 +2,7 @@
 	position: relative;
 	padding-bottom: 39px;
 	border-bottom: 1px rgba($color: #fff, $alpha: 0.1) solid;
-    margin-bottom: 38px;
+	margin-bottom: 38px;
 	p {
 		color: #fff;
 		font-family: Montserrat;
@@ -11,12 +11,13 @@
 		font-weight: 500;
 		line-height: 24px; /* 184.615% */
 		margin-bottom: 12px;
-        &:first-child{
-            margin-top: 7px;
-        }
+		&:first-child {
+			margin-top: 7px;
+		}
 	}
 	&-email {
-        padding-top: 40px;
+		padding-top: 40px;
+
 		label {
 			display: block;
 			color: #05e8ff;
@@ -34,23 +35,32 @@
 			line-height: 27px; /* 150% */
 			text-decoration-line: underline;
 			transition: all ease-in-out 0.3s;
+
+			@media (max-width: 1199px) {
+				font-size: 15px;
+			}
+
 			&:hover {
 				color: #05e8ff;
 			}
 		}
 	}
 	&-form {
-        position: relative;
-        &::before{
-            content: '';
-            position: absolute;
-            top: 38px;
-            left: -40px;
-            bottom: 0;
-            right: auto;
-            background-color: #fff;
-            width: 1px;
-        }
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 38px;
+			left: -40px;
+			bottom: 0;
+			right: auto;
+			background-color: #fff;
+			width: 1px;
+
+			@media (max-width: 1199px) {
+				left: -30px;
+			}
+		}
 		h4 {
 			color: #fff;
 			font-family: Montserrat;
@@ -89,7 +99,7 @@
 			height: 74px;
 		}
 		.fn-send {
-            border: 0;
+			border: 0;
 			border-radius: 5.286px;
 			background: linear-gradient(
 				180deg,

@@ -1,5 +1,5 @@
 import HttpProvider from 'providers/http-context';
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
@@ -11,16 +11,14 @@ const container = document.getElementById('root')!;
 const root = createRoot(container);
 
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Suspense fallback={<>Loading...</>}></Suspense>
-      <Provider store={store}>
-        <HttpProvider>
-          <App />
-        </HttpProvider>
-      </Provider>
-    </BrowserRouter>
-  </React.StrictMode>
+  <BrowserRouter>
+    <Suspense fallback={<>Loading...</>}></Suspense>
+    <Provider store={store}>
+      <HttpProvider>
+        <App />
+      </HttpProvider>
+    </Provider>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

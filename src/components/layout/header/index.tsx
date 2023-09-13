@@ -13,9 +13,9 @@ import Logo from "./components/logo";
 import Menu from "./components/menu";
 import Setting from "./components/setting";
 import SignIn from "./components/sign-in";
+import SignUp from "./components/sign-up";
 import User from "./components/user";
 import "./index.scss";
-import SignUp from "./components/sign-up";
 
 const Header = () => {
     const dispatch = useAppDispatch();
@@ -51,6 +51,7 @@ const Header = () => {
             totalWinningTickets: 0,
             totalPrizeWon: "TIỀN"
         }))
+        setShowSignIn(false);
     }
 
     const handleSignOut = () => {
@@ -64,31 +65,26 @@ const Header = () => {
                     <Logo />
                     {
                         loggedUser ? <>
-                            <Menu />
+                            <Menu  />
                             <Balance selectedToken={selectedToken} tokens={loggedUser.tokens} onSelect={setSelectedToken} />
                             <User onClick={() => setShowUserInformation(true)} />
                         </> : <>
-                            <SignUp onClick={() => setShowSignUp(true)}/>
-                            <SignIn onClick={() => {
-                                handleSignIn();
-                                setShowSignIn(true);
-                            }} />
+                            <SignUp onClick={() => setShowSignUp(true)} />
+                            <SignIn onClick={() => { setShowSignIn(true); }} />
                         </>
                     }
                     <Language />
                     {
-                        loggedUser ? <Setting onClick={() => setShowSettings(true)}/> : <></>
+                        loggedUser ? <Setting onClick={() => setShowSettings(true)} /> : <></>
                     }
                 </div>
             </Container>
         </div>
         {showUserInformation ? <UserInformationModal onLogout={handleSignOut} onDismiss={() => setShowUserInformation(false)} /> : <></>}
         {showSettings ? <SettingsModal onDismiss={() => setShowSettings(false)} /> : <></>}
-
-        {showSignIn ? <SignInModal onDismiss={() => setShowSignIn(false)} /> : <></>}
+        {showSignIn ? <SignInModal onSignIn={handleSignIn} onSignUp={() => { setShowSignIn(false); setShowSignUp(true) }} onDismiss={() => setShowSignIn(false)} /> : <></>}
         {showSignUp ? <SignUpModal onDismiss={() => setShowSignUp(false)} /> : <></>}
-
-        
+        {/* {showWallet ? <WalletModal onDismiss={() => setShowWallet(false)} /> : <></>} */}
     </>
 }
 export default Header

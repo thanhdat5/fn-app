@@ -4,10 +4,12 @@ import { Form, InputGroup, Modal } from 'react-bootstrap';
 import './index.scss';
 
 type Props = {
+	onSignIn: () => void;
+	onSignUp: () => void;
 	onDismiss: () => void;
 };
 
-const SignInModal = ({ onDismiss }: Props) => {
+const SignInModal = ({onSignIn, onSignUp, onDismiss }: Props) => {
 	const [showPassword, setShowPassword] = useState<boolean>(false);
 
 	return (
@@ -60,14 +62,14 @@ const SignInModal = ({ onDismiss }: Props) => {
 						width="169px"
 						height="35px"
 						borderRadius="5px"
-						onClick={() => {}}
+						onClick={onSignIn}
 						variant="primary"
 					/>
 				</div>
 
 				<div className="sign-in-subtext">
 					New to Qgacha?
-					<span className="subtext-highlight">Create account</span>
+					<span onClick={onSignUp} className="subtext-highlight">Create account</span>
 				</div>
 			</Modal.Body>
 		</Modal>

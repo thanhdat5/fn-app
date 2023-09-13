@@ -4,7 +4,7 @@ import "./index.scss";
 const Contact = () => {
     return <div className="fn-contact">
         <Row className="gx-lg-5">
-            <Col lg="5" className="pe-lg-5">
+            <Col  lg="5" className="pe-lg-5">
                 <p>The online gacha platform has become a widespread and captivating cultural phenomenon nowadays. With the advancement of technology and the internet, players can experience the usual luck-based gift box openings and participate in diverse gaming and entertainment applications that utilize gacha systems.</p>
                 <p>The prominent features of the online gacha platform lie in its commemorative, surprising, and diverse nature. Players often can collect unique items, attractive characters, or high-value goods. This creates excitement, interest, and curiosity not only for young gamers but also draws the attention of adult players.</p>
             </Col>
