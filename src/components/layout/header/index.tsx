@@ -82,6 +82,7 @@ const Header = () => {
                                 onShowWallet={() => setShowWallet(true)}
                                 onShowAffiliate={() => setShowAffiliate(true)}
                                 onShowLanguage={() => setShowLanguage(true)}
+                                onShowSetting={() => setShowSettings(true)}
                                 onLogout={handleSignOut}
                             />
                         </> : <>
