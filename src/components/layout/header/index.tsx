@@ -2,6 +2,7 @@ import LanguageModal from "components/modals/language";
 import SettingsModal from "components/modals/settings";
 import SignInModal from "components/modals/sign-in";
 import SignUpModal from "components/modals/sign-up";
+import UserInformationModal from "components/modals/user-information";
 import WalletModal from "components/modals/wallet";
 import AffiliateModal from "pages/affiliate/modal";
 import { useEffect, useState } from "react";
@@ -13,6 +14,7 @@ import Language from "./components/language";
 import Logo from "./components/logo";
 import Menu from "./components/menu";
 import MenuMobile from "./components/menu-mobile";
+import Setting from "./components/setting";
 import "./index.scss";
 
 const Header = () => {
@@ -20,7 +22,7 @@ const Header = () => {
     const loggedUser = useAppSelector(authUserSelector);
 
     // const [selectedToken, setSelectedToken] = useState<IToken | undefined>(undefined);
-    // const [showUserInformation, setShowUserInformation] = useState(false);
+    const [showUserInformation, setShowUserInformation] = useState(false);
     const [showSettings, setShowSettings] = useState(false);
     const [showSignIn, setShowSignIn] = useState<boolean>(false);
     const [showSignUp, setShowSignUp] = useState<boolean>(false);
@@ -33,7 +35,7 @@ const Header = () => {
             // setSelectedToken(loggedUser.tokens[0])
         }
         if (!loggedUser) {
-            // setShowUserInformation(false);
+            setShowUserInformation(false);
         }
     }, [loggedUser])
 
@@ -72,6 +74,7 @@ const Header = () => {
                                 onSelect={setSelectedToken}
                             /> */}
                             {/* <User onClick={() => setShowUserInformation(true)} /> */}
+                            <ConnectWallet onClick={handleSignIn} title="0xdwd..."/>
                             <MenuMobile
                                 onShowWallet={() => setShowWallet(true)}
                                 onShowAffiliate={() => setShowAffiliate(true)}
@@ -79,21 +82,21 @@ const Header = () => {
                                 onShowSetting={() => setShowSettings(true)}
                                 onLogout={handleSignOut}
                             />
-                            <ConnectWallet onClick={handleSignIn} title="0x...dsa"/>
+                            
                         </> : <>
-                            <ConnectWallet onClick={handleSignIn} />
-                            {/* <SignUp onClick={() => setShowSignUp(true)} /> */}
-                            {/* <SignIn onClick={() => setShowSignIn(true)} /> */}
+                            <ConnectWallet onClick={handleSignIn}/>
+                            {/* <SignUp onClick={() => setShowSignUp(true)} />
+                            <SignIn onClick={() => setShowSignIn(true)} /> */}
                         </>
                     }
                     <Language onClick={() => setShowLanguage(true)} />
-                    {/* {
+                    {
                         loggedUser ? <Setting onClick={() => setShowSettings(true)} /> : <></>
-                    } */}
+                    }
                 </div>
             </Container>
         </div>
-        {/* {showUserInformation ? <UserInformationModal onLogout={handleSignOut} onDismiss={() => setShowUserInformation(false)} /> : <></>} */}
+        {showUserInformation ? <UserInformationModal onLogout={handleSignOut} onDismiss={() => setShowUserInformation(false)} /> : <></>}
         {showSettings ? <SettingsModal onDismiss={() => setShowSettings(false)} /> : <></>}
         {showSignIn ? <SignInModal onSignIn={handleSignIn} onSignUp={() => { setShowSignIn(false); setShowSignUp(true) }} onDismiss={() => setShowSignIn(false)} /> : <></>}
         {showSignUp ? <SignUpModal onDismiss={() => setShowSignUp(false)} /> : <></>}
