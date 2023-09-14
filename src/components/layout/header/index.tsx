@@ -1,10 +1,7 @@
 import LanguageModal from "components/modals/language";
-import SettingsModal from "components/modals/settings";
-import SignInModal from "components/modals/sign-in";
-import SignUpModal from "components/modals/sign-up";
 import UserInformationModal from "components/modals/user-information";
-import WalletModal from "components/modals/wallet";
 import AffiliateModal from "pages/affiliate/modal";
+import FAQModal from "pages/faq/modal";
 import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { authUserSelector, signIn, signOut } from "redux-toolkit-saga/auth";
@@ -15,7 +12,6 @@ import Logo from "./components/logo";
 import Menu from "./components/menu";
 import MenuMobile from "./components/menu-mobile";
 import "./index.scss";
-import FAQModal from "pages/faq/modal";
 
 const Header = () => {
     const dispatch = useAppDispatch();
@@ -23,10 +19,10 @@ const Header = () => {
 
     // const [selectedToken, setSelectedToken] = useState<IToken | undefined>(undefined);
     const [showUserInformation, setShowUserInformation] = useState(false);
-    const [showSettings, setShowSettings] = useState(false);
-    const [showSignIn, setShowSignIn] = useState<boolean>(false);
-    const [showSignUp, setShowSignUp] = useState<boolean>(false);
-    const [showWallet, setShowWallet] = useState<boolean>(false);
+    // const [showSettings, setShowSettings] = useState(false);
+    // const [showSignIn, setShowSignIn] = useState<boolean>(false);
+    // const [showSignUp, setShowSignUp] = useState<boolean>(false);
+    // const [showWallet, setShowWallet] = useState<boolean>(false);
     const [showAffiliate, setShowAffiliate] = useState<boolean>(false);
     const [showLanguage, setShowLanguage] = useState<boolean>(false);
     const [showFAQ, setShowFAQ] = useState<boolean>(false);
@@ -54,7 +50,7 @@ const Header = () => {
             totalWinningTickets: 0,
             totalPrizeWon: "TIỀN"
         }))
-        setShowSignIn(false);
+        // setShowSignIn(false);
     }
 
     const handleSignOut = () => {
@@ -69,42 +65,28 @@ const Header = () => {
                     {
                         loggedUser ? <>
                             <Menu />
-                            {/* <Balance
-                                selectedToken={selectedToken}
-                                tokens={loggedUser.tokens}
-                                onSelect={setSelectedToken}
-                            /> */}
-                            {/* <User onClick={() => setShowUserInformation(true)} /> */}
+                            
                             <ConnectWallet onClick={handleSignIn} title="0xdwd..."/>
                             <MenuMobile
-                                onShowWallet={() => setShowWallet(true)}
+                                
                                 onShowAffiliate={() => setShowAffiliate(true)}
                                 onShowLanguage={() => setShowLanguage(true)}
-                                onShowSetting={() => setShowSettings(true)}
+                                
                                 onShowFAQ={() => setShowFAQ(true)}
-                                onLogout={handleSignOut}
+                                // onLogout={handleSignOut}
                             />
                         </> : <>
                             <ConnectWallet onClick={handleSignIn}/>
-                            {/* <SignUp onClick={() => setShowSignUp(true)} />
-                            <SignIn onClick={() => setShowSignIn(true)} /> */}
+                           
                         </>
                     }
                        
                        <Language onClick={() => setShowLanguage(true)} />
-                       
-
-                    {/* {
-                        loggedUser ? <Setting onClick={() => setShowSettings(true)} /> : <></>
-                    } */}
                 </div>
             </Container>
         </div>
         {showUserInformation ? <UserInformationModal onLogout={handleSignOut} onDismiss={() => setShowUserInformation(false)} /> : <></>}
-        {showSettings ? <SettingsModal onDismiss={() => setShowSettings(false)} /> : <></>}
-        {showSignIn ? <SignInModal onSignIn={handleSignIn} onSignUp={() => { setShowSignIn(false); setShowSignUp(true) }} onDismiss={() => setShowSignIn(false)} /> : <></>}
-        {showSignUp ? <SignUpModal onDismiss={() => setShowSignUp(false)} /> : <></>}
-        {showWallet ? <WalletModal onDismiss={() => setShowWallet(false)} /> : <></>}
+        {/* {showSettings ? <SettingsModal onDismiss={() => setShowSettings(false)} /> : <></>} */}
         {showAffiliate ? <AffiliateModal onDismiss={() => setShowAffiliate(false)} /> : <></>}
         {showLanguage ? <LanguageModal onDismiss={() => setShowLanguage(false)} /> : <></>}
         {showFAQ ? <FAQModal onDismiss={() => setShowFAQ(false)} /> : <></>}

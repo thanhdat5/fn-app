@@ -9,6 +9,10 @@
 		min-height: fit-content;
 	}
 
+	@media (max-width: 991px) {
+		padding-top: 40px;
+	}
+
 	&-buy {
 		position: absolute;
 		cursor: pointer;
@@ -78,7 +82,9 @@
 		}
 
 		@media (max-width: 991px) {
+			top: 57%;
 			width: 160px;
+			height: 43px;
 
 			img {
 				height: 20px;
@@ -90,6 +96,7 @@
 			height: 24px;
 			padding: 0;
 			border-radius: 10px;
+			top: 59%;
 			img {
 				height: 10px;
 			}
@@ -133,6 +140,11 @@
 		left: 0;
 		width: 100%;
 		text-align: right;
+
+		@media (max-width: 991px) {
+			top: 60px;
+		}
+
 		button {
 			margin-left: 20px;
 			border: 0;
@@ -147,6 +159,14 @@
 			transition: all ease-in-out 0.3s;
 			&:hover {
 				color: #f4cb65;
+			}
+
+			@media (max-width: 991px) {
+				font-size: 13px;
+			}
+			@media (max-width: 575px) {
+				font-size: 11px;
+				margin-left: 14px;
 			}
 		}
 	}
