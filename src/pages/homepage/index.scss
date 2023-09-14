@@ -3,6 +3,11 @@
 	.fn-statistics {
 		padding-top: 51px;
 		padding-bottom: 114px;
+
+		@media (max-width: 769px) {
+			padding-top: 100px;
+		}
+
 		.nav-tabs {
 			position: relative;
 			border: 0;
@@ -11,6 +16,7 @@
 			margin-bottom: 11px;
 			display: flex;
 			align-items: center;
+
 			@media (max-width: 575px) {
 				flex-wrap: nowrap;
 			}

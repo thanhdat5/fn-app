@@ -50,7 +50,6 @@ const Header = () => {
             totalWinningTickets: 0,
             totalPrizeWon: "TIỀN"
         }))
-        // setShowSignIn(false);
     }
 
     const handleSignOut = () => {
@@ -73,7 +72,6 @@ const Header = () => {
                                 onShowLanguage={() => setShowLanguage(true)}
                                 
                                 onShowFAQ={() => setShowFAQ(true)}
-                                // onLogout={handleSignOut}
                             />
                         </> : <>
                             <ConnectWallet onClick={handleSignIn}/>
@@ -86,7 +84,6 @@ const Header = () => {
             </Container>
         </div>
         {showUserInformation ? <UserInformationModal onLogout={handleSignOut} onDismiss={() => setShowUserInformation(false)} /> : <></>}
-        {/* {showSettings ? <SettingsModal onDismiss={() => setShowSettings(false)} /> : <></>} */}
         {showAffiliate ? <AffiliateModal onDismiss={() => setShowAffiliate(false)} /> : <></>}
         {showLanguage ? <LanguageModal onDismiss={() => setShowLanguage(false)} /> : <></>}
         {showFAQ ? <FAQModal onDismiss={() => setShowFAQ(false)} /> : <></>}
