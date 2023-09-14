@@ -1,11 +1,25 @@
-import { Col, Modal, Row } from 'react-bootstrap';
+import { Col, Dropdown, Modal, Row } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import './index.scss';
+import { IToken } from 'types/token.model';
+import { useState } from 'react';
 
 type Props = {
 	onDismiss: () => void;
 };
 const BuyTicketsModal = ({ onDismiss }: Props) => {
+	const currencies: IToken[] = [
+		{ symbol: 'USDT', name: 'USDT', icon: '/images/tokens/usdt.svg' },
+		{ symbol: 'BTC', name: 'BTC ', icon: '/images/tokens/btc.svg' },
+		{ symbol: 'BNB', name: 'BNB ', icon: '/images/tokens/bnb.svg' },
+		{ symbol: 'ETH', name: 'ETH ', icon: '/images/tokens/eth.svg' },
+		{ symbol: 'BAKAC', name: 'BAKAC', icon: '/images/tokens/bakac.svg' }
+	];
+
+	const [selectedCurrency, setSelectedCurrency] = useState<IToken>(
+		currencies[0]
+	);
+
 	const { t } = useTranslation();
 	return (
 		<Modal
@@ -64,7 +78,39 @@ const BuyTicketsModal = ({ onDismiss }: Props) => {
 							<div className="fn-form-pay">
 								<label>Pay with</label>
 								<div className="inner">
-									<span>USDT</span>
+									{/* <span>USDT</span> */}
+									<Dropdown className="fn-deposit-currency">
+										<Dropdown.Toggle variant="dark" id="dropdown-currency">
+											<img
+												className="token"
+												src={selectedCurrency.icon}
+												alt=""
+											/>
+											<span>{selectedCurrency.name}</span>
+											<img
+												className="arrow"
+												src="/images/icons/arrow.svg"
+												alt=""
+											/>
+										</Dropdown.Toggle>
+
+										<Dropdown.Menu>
+											{currencies.map(currency => (
+												<Dropdown.Item
+													onClick={() => setSelectedCurrency(currency)}
+													key={currency.name}
+													className={`fn-token-item ${
+														currency.symbol === selectedCurrency.symbol
+															? 'active'
+															: ''
+													}`}
+												>
+													<img className="icon" src={currency.icon} alt="" />
+													<span className="name">{currency.name}</span>
+												</Dropdown.Item>
+											))}
+										</Dropdown.Menu>
+									</Dropdown>
 									<div>
 										<small>balance</small>
 										<b>đ 0.00</b>

@@ -11,6 +11,7 @@ import { Route, Routes } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.scss';
+import FAQPage from "pages/faq";
 
 function App() {
   useEffect(() => {
@@ -69,6 +70,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='/affiliate' element={<AffiliatePage />} />
+          <Route path='/faq' element={<FAQPage />} />
           <Route path='/login' element={<LoginPage />} />
           <Route path='/register' element={<RegisterPage />} />
         </Routes>

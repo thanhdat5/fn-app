@@ -8,9 +8,10 @@ type Props = {
     onShowSetting?: () => void;
     onShowLanguage?: () => void;
     onLogout?: () => void;
+    onShowFAQ?: () => void;
 }
 
-const MenuMobile = ({ onShowWallet, onShowAffiliate, onShowSetting, onShowLanguage, onLogout }: Props) => {
+const MenuMobile = ({ onShowWallet, onShowAffiliate, onShowSetting, onShowLanguage, onLogout, onShowFAQ }: Props) => {
     const { t } = useTranslation();
     return <Dropdown className="fn-menu-mobile">
         <Dropdown.Toggle id="dropdown-menu">
@@ -35,7 +36,7 @@ const MenuMobile = ({ onShowWallet, onShowAffiliate, onShowSetting, onShowLangua
             <Dropdown.Item onClick={onShowLanguage}>
                 {t('Language')}
             </Dropdown.Item>
-            <Dropdown.Item onClick={() => {}}>
+            <Dropdown.Item onClick={onShowFAQ}>
                 {t('FAQ')}
             </Dropdown.Item>
             <Dropdown.Divider />

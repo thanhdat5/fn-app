@@ -15,6 +15,7 @@ import Logo from "./components/logo";
 import Menu from "./components/menu";
 import MenuMobile from "./components/menu-mobile";
 import "./index.scss";
+import FAQModal from "pages/faq/modal";
 
 const Header = () => {
     const dispatch = useAppDispatch();
@@ -28,6 +29,7 @@ const Header = () => {
     const [showWallet, setShowWallet] = useState<boolean>(false);
     const [showAffiliate, setShowAffiliate] = useState<boolean>(false);
     const [showLanguage, setShowLanguage] = useState<boolean>(false);
+    const [showFAQ, setShowFAQ] = useState<boolean>(false);
 
     useEffect(() => {
         if (loggedUser && loggedUser.tokens?.length) {
@@ -79,6 +81,7 @@ const Header = () => {
                                 onShowAffiliate={() => setShowAffiliate(true)}
                                 onShowLanguage={() => setShowLanguage(true)}
                                 onShowSetting={() => setShowSettings(true)}
+                                onShowFAQ={() => setShowFAQ(true)}
                                 onLogout={handleSignOut}
                             />
                         </> : <>
@@ -89,6 +92,7 @@ const Header = () => {
                     }
                        
                        <Language onClick={() => setShowLanguage(true)} />
+                       
 
                     {/* {
                         loggedUser ? <Setting onClick={() => setShowSettings(true)} /> : <></>
@@ -103,6 +107,7 @@ const Header = () => {
         {showWallet ? <WalletModal onDismiss={() => setShowWallet(false)} /> : <></>}
         {showAffiliate ? <AffiliateModal onDismiss={() => setShowAffiliate(false)} /> : <></>}
         {showLanguage ? <LanguageModal onDismiss={() => setShowLanguage(false)} /> : <></>}
+        {showFAQ ? <FAQModal onDismiss={() => setShowFAQ(false)} /> : <></>}
     </>
 }
 export default Header

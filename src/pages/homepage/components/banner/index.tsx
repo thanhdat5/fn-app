@@ -8,11 +8,13 @@ import { useState } from "react";
 import { authUserSelector } from "redux-toolkit-saga/auth";
 import { useAppSelector } from "store/hooks";
 import PrizeModal from "components/modals/prize";
+import BuyTicketsModal from "components/modals/buy-tickets";
 
 const Banner = () => {
     const loggedUser = useAppSelector(authUserSelector);
     const [showHowToPlay, setShowHowToPlay] = useState(false);
     const [showPrize, setShowPrize] = useState(false);
+    const [showModal, setShowModal] = useState(false);
 
     return <>
         <div className="fn-banner">
@@ -25,7 +27,7 @@ const Banner = () => {
                     </Container>
                 </div> : <></>
             }
-            <Link to="/" className="fn-banner-buy">
+            <Link to="/" className="fn-banner-buy" onClick={() => setShowModal(true)}>
                 <img src="/images/ticket/txt-buy.png" alt="Buy" />
             </Link>
             <div className="fn-banner-box">
@@ -34,9 +36,9 @@ const Banner = () => {
                     <Row className="justify-content-center">
                         <Col lg="11">
                             <div className="fn-banner-tickets">
-                                <Ticket title="Only 67 tickets left" image="/images/ticket/ticket-1.png" imageHover="/images/ticket/ticket-1-hover.png" />
-                                <Ticket title="Only 67 tickets left" image="/images/ticket/ticket-2.png" imageHover="/images/ticket/ticket-2-hover.png" />
-                                <Ticket title="Only 67 tickets left" image="/images/ticket/ticket-3.png" imageHover="/images/ticket/ticket-3-hover.png" />
+                                <Ticket title="Only 67 tickets left" image="/images/ticket/ticket-1.png" imageHover="/images/ticket/ticket-1-hover.png" onShowModal={() => setShowModal(true)}/>
+                                <Ticket title="Only 67 tickets left" image="/images/ticket/ticket-2.png" imageHover="/images/ticket/ticket-2-hover.png" onShowModal={() => setShowModal(true)}/>
+                                <Ticket title="Only 67 tickets left" image="/images/ticket/ticket-3.png" imageHover="/images/ticket/ticket-3-hover.png"onShowModal={() => setShowModal(true)} />
                             </div>
                         </Col>
                     </Row>
@@ -45,6 +47,7 @@ const Banner = () => {
         </div>
         {showHowToPlay ? <HowToPlayModal onDismiss={() => setShowHowToPlay(false)} /> : <></>}
         {showPrize ? <PrizeModal onDismiss={() => setShowPrize(false)} /> : <></>}
+        {showModal ? <BuyTicketsModal onDismiss={() => setShowModal(false)} /> : <></>}
     </>
 }
 export default Banner
