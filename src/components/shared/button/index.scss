@@ -32,9 +32,11 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: var(
-			--button,
-			linear-gradient(180deg, #e42299 0%, #750a35 66.47%, #a62159 100%)
+		background: linear-gradient(
+			180deg,
+			#e42299 0%,
+			#750a35 66.47%,
+			#a62159 100%
 		);
 		box-shadow: 2px -3px 2px -1px #938de1 inset,
 			-2px 2px 2px 0px rgba(0, 0, 0, 0.25) inset;
@@ -48,9 +50,11 @@
 	}
 	&.primary {
 		border: 1px solid #575757;
-		background: var(
-			--button,
-			linear-gradient(180deg, #e42299 0%, #750a35 66.47%, #a62159 100%)
+		background: linear-gradient(
+			180deg,
+			#e42299 0%,
+			#750a35 66.47%,
+			#a62159 100%
 		);
 		box-shadow: 2px -3px 2px -1px #938de1 inset,
 			-2px 2px 2px 0px rgba(0, 0, 0, 0.25) inset;

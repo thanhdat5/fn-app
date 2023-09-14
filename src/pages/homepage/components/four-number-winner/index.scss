@@ -1,25 +1,30 @@
 .fn-winner {
 	padding: 15px 7px 31px;
+
+	@media (max-width: 575px) {
+		min-height: 356px;
+	}
+
 	table {
 		margin-bottom: 38px;
 		> :not(caption) > * > * {
 			background-color: transparent;
 		}
-        &.table-striped{
-            > tbody > tr:nth-of-type(odd) > *{
-                background-color: #291A3A;
-            }
-            > tbody > tr:nth-of-type(even) > *{
-                background-color: #321B41;
-            }
-            tbody{
-                tr{
-                    td{
-                        border: 0;
-                    }
-                }
-            }
-        }
+		&.table-striped {
+			> tbody > tr:nth-of-type(odd) > * {
+				background-color: #291a3a;
+			}
+			> tbody > tr:nth-of-type(even) > * {
+				background-color: #321b41;
+			}
+			tbody {
+				tr {
+					td {
+						border: 0;
+					}
+				}
+			}
+		}
 		thead {
 			tr {
 				th {
@@ -33,9 +38,9 @@
 					height: 37px;
 					vertical-align: middle;
 					text-align: center;
-                    &:last-child{
-                        padding-right: 60px;
-                    }
+					&:last-child {
+						padding-right: 60px;
+					}
 				}
 			}
 		}
@@ -60,15 +65,24 @@
 					padding: 7px 9px 9px;
 					vertical-align: middle;
 					text-align: center;
+
+					@media (max-width: 575px) {
+						font-size: 10px;
+					}
+
 					img {
 						height: 47px;
 					}
 					span {
 						color: #e22197;
 					}
-                    &:last-child{
-                        padding-right: 60px;
-                    }
+					&:last-child {
+						padding-right: 60px;
+
+						@media (max-width: 575px) {
+							padding-right: 10px;
+						}
+					}
 				}
 			}
 		}

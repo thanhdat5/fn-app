@@ -1,42 +1,35 @@
-import SettingsModal from "components/modals/settings";
-import SignInModal from "components/modals/sign-in";
-import SignUpModal from "components/modals/sign-up";
+import LanguageModal from "components/modals/language";
 import UserInformationModal from "components/modals/user-information";
+import AffiliateModal from "pages/affiliate/modal";
+import FAQModal from "pages/faq/modal";
 import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { authUserSelector, signIn, signOut } from "redux-toolkit-saga/auth";
 import { useAppDispatch, useAppSelector } from "store/hooks";
-import { IToken } from "types/token.model";
-import Balance from "./components/balance";
+import ConnectWallet from "./components/connect-wallet";
 import Language from "./components/language";
 import Logo from "./components/logo";
 import Menu from "./components/menu";
-import Setting from "./components/setting";
-import SignIn from "./components/sign-in";
-import SignUp from "./components/sign-up";
-import User from "./components/user";
-import "./index.scss";
-import WalletModal from "components/modals/wallet";
 import MenuMobile from "./components/menu-mobile";
-import AffiliateModal from "pages/affiliate/modal";
-import LanguageModal from "components/modals/language";
+import "./index.scss";
 
 const Header = () => {
     const dispatch = useAppDispatch();
     const loggedUser = useAppSelector(authUserSelector);
 
-    const [selectedToken, setSelectedToken] = useState<IToken | undefined>(undefined);
+    // const [selectedToken, setSelectedToken] = useState<IToken | undefined>(undefined);
     const [showUserInformation, setShowUserInformation] = useState(false);
-    const [showSettings, setShowSettings] = useState(false);
-    const [showSignIn, setShowSignIn] = useState<boolean>(false);
-    const [showSignUp, setShowSignUp] = useState<boolean>(false);
-    const [showWallet, setShowWallet] = useState<boolean>(false);
+    // const [showSettings, setShowSettings] = useState(false);
+    // const [showSignIn, setShowSignIn] = useState<boolean>(false);
+    // const [showSignUp, setShowSignUp] = useState<boolean>(false);
+    // const [showWallet, setShowWallet] = useState<boolean>(false);
     const [showAffiliate, setShowAffiliate] = useState<boolean>(false);
     const [showLanguage, setShowLanguage] = useState<boolean>(false);
+    const [showFAQ, setShowFAQ] = useState<boolean>(false);
 
     useEffect(() => {
         if (loggedUser && loggedUser.tokens?.length) {
-            setSelectedToken(loggedUser.tokens[0])
+            // setSelectedToken(loggedUser.tokens[0])
         }
         if (!loggedUser) {
             setShowUserInformation(false);
@@ -57,7 +50,7 @@ const Header = () => {
             totalWinningTickets: 0,
             totalPrizeWon: "TIỀN"
         }))
-        setShowSignIn(false);
+        // setShowSignIn(false);
     }
 
     const handleSignOut = () => {
@@ -71,39 +64,32 @@ const Header = () => {
                     <Logo />
                     {
                         loggedUser ? <>
-                            <Menu onShowWallet={() => setShowWallet(true)} />
-                            <Balance
-                                selectedToken={selectedToken}
-                                tokens={loggedUser.tokens}
-                                onSelect={setSelectedToken}
-                            />
-                            <User onClick={() => setShowUserInformation(true)} />
+                            <Menu />
+                            
+                            <ConnectWallet onClick={handleSignIn} title="0xdwd..."/>
                             <MenuMobile
-                                onShowWallet={() => setShowWallet(true)}
+                                
                                 onShowAffiliate={() => setShowAffiliate(true)}
                                 onShowLanguage={() => setShowLanguage(true)}
-                                onShowSetting={() => setShowSettings(true)}
-                                onLogout={handleSignOut}
+                                
+                                onShowFAQ={() => setShowFAQ(true)}
+                                // onLogout={handleSignOut}
                             />
                         </> : <>
-                            <SignUp onClick={() => setShowSignUp(true)} />
-                            <SignIn onClick={() => setShowSignIn(true)} />
+                            <ConnectWallet onClick={handleSignIn}/>
+                           
                         </>
                     }
-                    <Language onClick={() => setShowLanguage(true)} />
-                    {
-                        loggedUser ? <Setting onClick={() => setShowSettings(true)} /> : <></>
-                    }
+                       
+                       <Language onClick={() => setShowLanguage(true)} />
                 </div>
             </Container>
         </div>
         {showUserInformation ? <UserInformationModal onLogout={handleSignOut} onDismiss={() => setShowUserInformation(false)} /> : <></>}
-        {showSettings ? <SettingsModal onDismiss={() => setShowSettings(false)} /> : <></>}
-        {showSignIn ? <SignInModal onSignIn={handleSignIn} onSignUp={() => { setShowSignIn(false); setShowSignUp(true) }} onDismiss={() => setShowSignIn(false)} /> : <></>}
-        {showSignUp ? <SignUpModal onDismiss={() => setShowSignUp(false)} /> : <></>}
-        {showWallet ? <WalletModal onDismiss={() => setShowWallet(false)} /> : <></>}
+        {/* {showSettings ? <SettingsModal onDismiss={() => setShowSettings(false)} /> : <></>} */}
         {showAffiliate ? <AffiliateModal onDismiss={() => setShowAffiliate(false)} /> : <></>}
         {showLanguage ? <LanguageModal onDismiss={() => setShowLanguage(false)} /> : <></>}
+        {showFAQ ? <FAQModal onDismiss={() => setShowFAQ(false)} /> : <></>}
     </>
 }
 export default Header

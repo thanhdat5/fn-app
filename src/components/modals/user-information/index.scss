@@ -74,7 +74,7 @@
 		}
 	}
 	.username {
-		color: var(--text, #e22197);
+		color: #e22197;
 		text-align: center;
 		font-family: Montserrat;
 		font-size: 15px;
@@ -175,9 +175,11 @@
 			text-align: center;
 			border-radius: 3px;
 			border: 1px solid #575757;
-			background: var(
-				--button,
-				linear-gradient(180deg, #e42299 0%, #750a35 66.47%, #a62159 100%)
+			background: linear-gradient(
+				180deg,
+				#e42299 0%,
+				#750a35 66.47%,
+				#a62159 100%
 			);
 			box-shadow: 2px -3px 2px -1px #938de1 inset,
 				-2px 2px 2px 0px rgba(0, 0, 0, 0.25) inset;
@@ -270,9 +272,11 @@
 			&::before {
 				content: '';
 				position: absolute;
-				background: var(
-					--button,
-					linear-gradient(180deg, #e42299 0%, #750a35 66.47%, #a62159 100%)
+				background: linear-gradient(
+					180deg,
+					#e42299 0%,
+					#750a35 66.47%,
+					#a62159 100%
 				);
 				top: 0;
 				left: 0;

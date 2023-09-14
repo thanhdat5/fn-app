@@ -13,7 +13,7 @@
 		padding-bottom: 0;
 	}
 	.summary {
-		margin-bottom: 56px;
+		margin-bottom: 20px;
 		padding-left: 23px;
 		padding-right: 16px;
 		@media (max-width: 767px) {
@@ -26,6 +26,7 @@
 			padding: 17px 17px 16px;
 			border-radius: 3px;
 			background-color: #1b172f;
+			height: 100%;
 			&:not(:last-child) {
 				margin-bottom: 18px;
 			}

@@ -7,7 +7,12 @@
 	padding: 0;
 	list-style: none;
 	column-gap: 91px;
-	@media(max-width: 767px){
+
+	@media (max-width: 991px) {
+		padding: 0 20px;
+	}
+
+	@media (max-width: 767px) {
 		display: none;
 	}
 	a {
@@ -19,9 +24,9 @@
 		line-height: 15px; /* 107.143% */
 		text-transform: uppercase;
 		text-decoration: none;
-		transition: all ease-in-out .3s;
+		transition: all ease-in-out 0.3s;
 		&:hover,
-		&.active{
+		&.active {
 			color: #f4cb65;
 		}
 	}

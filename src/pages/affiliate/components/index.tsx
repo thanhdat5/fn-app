@@ -2,10 +2,8 @@ import { Col, Row, Tab, Tabs } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import GetInTouch from "./get-in-touch";
 import "./index.scss";
-import Network from "./network";
 import Overall from "./overall";
 import Referral from "./referral";
-import Stats from "./stats";
 
 const Affiliate = () => {
     const { t } = useTranslation();
@@ -20,24 +18,25 @@ const Affiliate = () => {
                 <Row>
                     <Col md="8">
                         <Overall />
-                        <Row className="d-md-flex d-none">
+                        {/* <Row className="d-md-flex d-none">
                             <Col xl="6" lg="7">
                                 <GetInTouch />
                             </Col>
-                        </Row>
+                        </Row> */}
                     </Col>
                     <Col md="4">
                         <Referral />
-                        <Stats />
+                        {/* <Stats /> */}
+                        <GetInTouch />
                     </Col>
                 </Row>
-                <div className="d-md-none d-block">
+                {/* <div className="d-md-none d-block">
                     <GetInTouch />
-                </div>
+                </div> */}
             </Tab>
-            <Tab eventKey="network" title={t('Network Management')}>
+            {/* <Tab eventKey="network" title={t('Network Management')}>
                 <Network />
-            </Tab>
+            </Tab> */}
         </Tabs>
     </div>
 }
