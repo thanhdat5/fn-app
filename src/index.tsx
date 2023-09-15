@@ -1,3 +1,4 @@
+import Loading from 'components/shared/loading';
 import HttpProvider from 'providers/http-context';
 import { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
@@ -12,12 +13,13 @@ const root = createRoot(container);
 
 root.render(
   <BrowserRouter>
-    <Suspense fallback={<>Loading...</>}></Suspense>
+    <Suspense fallback={<Loading />}>
     <Provider store={store}>
       <HttpProvider>
         <App />
       </HttpProvider>
     </Provider>
+    </Suspense>
   </BrowserRouter>
 );
 
