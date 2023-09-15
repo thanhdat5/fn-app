@@ -1,34 +1,43 @@
-import { Dropdown } from "react-bootstrap";
-import "./index.scss";
+import { LANGUAGES } from 'constants/language';
+import i18n from 'i18n';
+import { Dropdown } from 'react-bootstrap';
+import './index.scss';
 
 type Props = {
-    onClick?: () => void;
+  selectedLang: string;
+  onChangeLanguage: (value: string) => void;
 }
-const Language = ({ onClick }: Props) => {
 
-    // return <button type="button" className="fn-language" onClick={onClick}>
-    //     <span>ENG</span>
-    //     <img src="/images/icons/language.svg" alt="lang" />
-    // </button>
+const Language = ({selectedLang, onChangeLanguage}: Props) => {
+	// const [selectedLang, setSelectedLang] = useState<string>(DEFAULT_LANGUAGE);
 
-    return (
-    <Dropdown className="fn-language">
-      <Dropdown.Toggle variant="dark" >
-      <span>ENG</span>
-        <img src="/images/icons/language.svg" alt="lang" />
-      </Dropdown.Toggle>
+	const handleSelectLanguage = (e: any, value: string) => {
+		e.preventDefault();
+		onChangeLanguage(value);
+		i18n.changeLanguage(value);
+	};
 
-      <Dropdown.Menu>
-        <Dropdown.Item href="#">English</Dropdown.Item>
-        <Dropdown.Item href="#" className="active">Việt Nam</Dropdown.Item>
-        <Dropdown.Item href="#">한국어</Dropdown.Item>
-        <Dropdown.Item href="#">日本語</Dropdown.Item>
-        <Dropdown.Item href="#">Filipino</Dropdown.Item>
-        <Dropdown.Item href="#">हिन्दी</Dropdown.Item>
-        <Dropdown.Item href="#">nigeria</Dropdown.Item>
-        <Dropdown.Item href="#">日本語</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-    )
-}
-export default Language
+	return (
+		<Dropdown className="fn-language">
+			<Dropdown.Toggle variant="dark">
+				<span>ENG</span>
+				<img src="/images/icons/language.svg" alt="lang" />
+			</Dropdown.Toggle>
+
+			<Dropdown.Menu>
+				{LANGUAGES.map(language => (
+					<Dropdown.Item
+						href={language.value}
+						className={selectedLang === language.value ? 'active' : ''}
+						onClick={e => handleSelectLanguage(e, language.value)}
+					>
+						{language.label}
+					</Dropdown.Item>
+				))}
+
+				
+			</Dropdown.Menu>
+		</Dropdown>
+	);
+};
+export default Language;

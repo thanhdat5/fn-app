@@ -81,8 +81,8 @@ const Banner = () => {
 										initialSlide={1}
 										grabCursor={true}
 										centeredSlides={true}
-										// loop={true}
 										slidesPerView={'auto'}
+										slideToClickedSlide={true}
 										coverflowEffect={{
 											rotate: 0,
 											stretch: 0,
@@ -92,19 +92,19 @@ const Banner = () => {
 										modules={[EffectCoverflow]}
 										className="swiper_container"
 									>
-										<SwiperSlide>
+										<SwiperSlide onClick={() => setShowModal(true)}>
 											<img
 												src="./images/ticket/ticket-1-hover.png"
 												alt="slide_image"
 											/>
 										</SwiperSlide>
-										<SwiperSlide>
+										<SwiperSlide onClick={() => setShowModal(true)}>
 											<img
 												src="./images/ticket/ticket-2-hover.png"
 												alt="slide_image"
 											/>
 										</SwiperSlide>
-										<SwiperSlide>
+										<SwiperSlide onClick={() => setShowModal(true)}>
 											<img
 												src="./images/ticket/ticket-3-hover.png"
 												alt="slide_image"

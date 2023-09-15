@@ -5,13 +5,16 @@ import "i18n";
 import AffiliatePage from "pages/affiliate";
 import LoginPage from 'pages/auth/login';
 import RegisterPage from 'pages/auth/register';
-import Homepage from 'pages/homepage';
-import { useEffect } from "react";
+import FAQPage from "pages/faq";
+import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.scss';
-import FAQPage from "pages/faq";
+
+const HomepageLoading = React.lazy(() => {
+  return new Promise(resolve => setTimeout(resolve, 3000)).then(() => import('./pages/homepage'));
+})
 
 function App() {
   useEffect(() => {
@@ -68,7 +71,7 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route path='/' element={<Homepage />} />
+          <Route path='/' element={<HomepageLoading />} />
           <Route path='/affiliate' element={<AffiliatePage />} />
           <Route path='/faq' element={<FAQPage />} />
           <Route path='/login' element={<LoginPage />} />

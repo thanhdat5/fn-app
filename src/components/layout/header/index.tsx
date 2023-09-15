@@ -12,6 +12,7 @@ import Logo from "./components/logo";
 import Menu from "./components/menu";
 import MenuMobile from "./components/menu-mobile";
 import "./index.scss";
+import { DEFAULT_LANGUAGE } from "constants/language";
 
 const Header = () => {
     const dispatch = useAppDispatch();
@@ -26,6 +27,7 @@ const Header = () => {
     const [showAffiliate, setShowAffiliate] = useState<boolean>(false);
     const [showLanguage, setShowLanguage] = useState<boolean>(false);
     const [showFAQ, setShowFAQ] = useState<boolean>(false);
+    const [selectedLang, setSelectedLang] = useState<string>(DEFAULT_LANGUAGE);
 
     useEffect(() => {
         if (loggedUser && loggedUser.tokens?.length) {
@@ -67,10 +69,8 @@ const Header = () => {
                             
                             <ConnectWallet onClick={handleSignIn} title="0xdwd..."/>
                             <MenuMobile
-                                
                                 onShowAffiliate={() => setShowAffiliate(true)}
                                 onShowLanguage={() => setShowLanguage(true)}
-                                
                                 onShowFAQ={() => setShowFAQ(true)}
                             />
                         </> : <>
@@ -79,13 +79,13 @@ const Header = () => {
                         </>
                     }
                        
-                       <Language onClick={() => setShowLanguage(true)} />
+                       <Language selectedLang={selectedLang} onChangeLanguage={setSelectedLang}/>
                 </div>
             </Container>
         </div>
         {showUserInformation ? <UserInformationModal onLogout={handleSignOut} onDismiss={() => setShowUserInformation(false)} /> : <></>}
         {showAffiliate ? <AffiliateModal onDismiss={() => setShowAffiliate(false)} /> : <></>}
-        {showLanguage ? <LanguageModal onDismiss={() => setShowLanguage(false)} /> : <></>}
+        {showLanguage ? <LanguageModal onDismiss={() => setShowLanguage(false)} selectedLang={selectedLang} onChangeLanguage={setSelectedLang}/> : <></>}
         {showFAQ ? <FAQModal onDismiss={() => setShowFAQ(false)} /> : <></>}
     </>
 }
