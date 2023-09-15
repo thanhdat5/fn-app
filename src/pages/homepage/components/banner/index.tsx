@@ -78,6 +78,7 @@ const Banner = () => {
 								<div className="fn-banner-tickets-mobile">
 									<Swiper
 										effect={'coverflow'}
+										initialSlide={1}
 										grabCursor={true}
 										centeredSlides={true}
 										// loop={true}
@@ -109,6 +110,7 @@ const Banner = () => {
 												alt="slide_image"
 											/>
 										</SwiperSlide>
+									
 									</Swiper>
 								</div>
 							</Col>

@@ -1,5 +1,6 @@
 import { Col, Row } from "react-bootstrap";
 import "./index.scss";
+import { Link } from "react-router-dom";
 
 const Info = () => {
     return <div className="fn-info">
@@ -24,7 +25,7 @@ const Info = () => {
                 <h4>DOCS</h4>
                 <ul>
                     <li>
-                        <a href="https://google.com">FAQ</a>
+                        <Link to="/faq">FAQ</Link>
                     </li>
                     <li>
                         <a href="https://google.com">Privacy Policy</a>
