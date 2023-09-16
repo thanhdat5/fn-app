@@ -44,6 +44,9 @@ const Info = () => {
 						<li>
 							<a href="https://google.com">Terms & Conditions</a>
 						</li>
+						<li>
+							<img src="./images/18+.svg" alt="" />
+						</li>
 					</ul>
 				</Col>
 			</Row>

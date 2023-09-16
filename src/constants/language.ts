@@ -1,7 +1,7 @@
 import { ILanguage } from "types/language.model";
 
 
-export const DEFAULT_LANGUAGE = 'vi';
+export const DEFAULT_LANGUAGE = 'en';
 
 export const LANGUAGES: ILanguage[] = [
   {
