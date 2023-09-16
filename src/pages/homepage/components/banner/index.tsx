@@ -84,7 +84,7 @@ const Banner = () => {
 			<div className="fn-banner">
 				<img src={`${windowSize <= 1199 ? "./images/banner-mobile.png" : "/images/banner.png"}`} className="w-100" alt="" />
 				
-				{!loggedUser ? (
+				
 					<div className="sub-menu">
 						<Container>
 							<button type="button" onClick={() => setShowPrize(true)}>
@@ -99,9 +99,7 @@ const Banner = () => {
 							</h1>
 						</Container>
 					</div>
-				) : (
-					<></>
-				)}
+				
 				<Link
 					to="/"
 					className="fn-banner-buy"
@@ -119,19 +117,19 @@ const Banner = () => {
 										title="Only 67 tickets left"
 										image="/images/ticket/ticket-1.png"
 										imageHover="/images/ticket/ticket-1-hover.png"
-										onShowModal={() => setShowModal(true)}
+										onShowModal={() =>{}}
 									/>
 									<Ticket
 										title="Only 67 tickets left"
 										image="/images/ticket/ticket-2.png"
 										imageHover="/images/ticket/ticket-2-hover.png"
-										onShowModal={() => setShowModal(true)}
+										onShowModal={() =>{}}
 									/>
 									<Ticket
 										title="Only 67 tickets left"
 										image="/images/ticket/ticket-3.png"
 										imageHover="/images/ticket/ticket-3-hover.png"
-										onShowModal={() => setShowModal(true)}
+										onShowModal={() =>{}}
 									/>
 								</div>
 

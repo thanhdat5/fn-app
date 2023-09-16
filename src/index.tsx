@@ -7,12 +7,14 @@ import { BrowserRouter } from 'react-router-dom';
 import { store } from 'store/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ScrollToTop from 'components/shared/scroll-top';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
 root.render(
   <BrowserRouter>
+    <ScrollToTop />
     <Suspense fallback={<Loading />}>
     <Provider store={store}>
       <HttpProvider>
