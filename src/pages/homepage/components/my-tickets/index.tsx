@@ -38,7 +38,7 @@ const MyTickets = () => {
             </Pagination>
             <div className="text-center">
                 <button type="button" className="fn-more">
-                    <span>More</span>
+                    <span>buy ticket</span>
                 </button>
             </div>
         </div>

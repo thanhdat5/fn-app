@@ -27,7 +27,7 @@ const Referral = () => {
             </div>
             <div className="form-action">
                 <button type="button" className="more">
-                    <span>More info our affiliate</span>
+                    <span>More info</span>
                 </button>
             </div>
         </div>

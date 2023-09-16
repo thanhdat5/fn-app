@@ -18,25 +18,16 @@ const Affiliate = () => {
                 <Row>
                     <Col md="8">
                         <Overall />
-                        {/* <Row className="d-md-flex d-none">
-                            <Col xl="6" lg="7">
-                                <GetInTouch />
-                            </Col>
-                        </Row> */}
+                        
                     </Col>
                     <Col md="4">
                         <Referral />
-                        {/* <Stats /> */}
                         <GetInTouch />
                     </Col>
                 </Row>
-                {/* <div className="d-md-none d-block">
-                    <GetInTouch />
-                </div> */}
+               
             </Tab>
-            {/* <Tab eventKey="network" title={t('Network Management')}>
-                <Network />
-            </Tab> */}
+            
         </Tabs>
     </div>
 }

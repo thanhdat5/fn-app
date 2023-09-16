@@ -60,7 +60,7 @@
 							margin-left: 32px;
 
 							@media (max-width: 575px) {
-								font-size: 13px;
+								font-size: 11px;
 								margin-left: 12px;
 							}
 						}
@@ -90,6 +90,10 @@
 						&:hover {
 							opacity: 0.8;
 						}
+					}
+
+					@media (max-width: 575px) {
+						padding: 20px 10px;
 					}
 				}
 			}

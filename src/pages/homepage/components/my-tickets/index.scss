@@ -65,26 +65,27 @@
 		margin-right: 29px;
 	}
 	.fn-more {
-		color: #17191b;
+		color: #fff;
+		white-space: nowrap;
 		text-align: center;
 		font-family: Montserrat;
 		font-size: 14px;
 		font-weight: 700;
 		line-height: 15px; /* 115.385% */
 		text-transform: uppercase;
-		border-radius: 6px;
+		border-radius: 3px;
 		background: conic-gradient(
 			from 0deg at 50% 50%,
 			#e22197 0deg,
 			#9b1258 360deg
 		);
-		width: 101px;
-		height: 35px;
+		width: 212px;
+		height: 49px;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 		text-decoration: none;
-		padding: 0;
+		padding: 17px 66px 17px 65px;
 		border: 0;
 		position: relative;
 		overflow: hidden;
