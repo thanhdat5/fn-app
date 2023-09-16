@@ -16,7 +16,7 @@ const GetInTouch = () => {
                     <label>Email</label>
                     <a href="mailto:support@qgacha.com">
                         <img src="/images/icons/mail.svg" alt="" />
-                        <span>Support@qgacha.com</span>
+                        <span>Support@4number.io</span>
                     </a>
                 </div>
             </div>

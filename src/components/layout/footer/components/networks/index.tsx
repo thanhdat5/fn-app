@@ -16,8 +16,14 @@ const Networks = () => {
             <a href="https://google.com" title="ETH">
                 <img src="/images/tokens/eth.svg" alt=""/>
             </a>
+            <a href="https://google.com" title="DOGE">
+                <img src="/images/tokens/doge.svg" alt=""/>
+            </a>
+            <a href="https://google.com" title="SHIB">
+                <img src="/images/tokens/shib.svg" alt=""/>
+            </a>
             <a href="https://google.com" title="BAKAC">
-                <img src="/images/tokens/bakac.svg" alt=""/>
+                <img src="/images/tokens/BAKAC.svg" alt=""/>
             </a>
         </div>
     </div>

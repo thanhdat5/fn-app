@@ -43,10 +43,12 @@ const Header = () => {
             walletAddress: '123',
             tokens: [
                 { symbol: 'USDT', name: 'USDT', icon: '/images/tokens/usdt.svg', balance: '9.99999999' },
-                { symbol: 'BTC', name: 'BTC (upcoming)', icon: '/images/tokens/btc.svg', balance: '0' },
-                { symbol: 'BNB', name: 'BNB (upcoming)', icon: '/images/tokens/bnb.svg', balance: '0' },
-                { symbol: 'ETH', name: 'ETH (upcoming)', icon: '/images/tokens/eth.svg', balance: '0' },
-                { symbol: 'BAKAC', name: 'BAKAC', icon: '/images/tokens/bakac.svg', balance: '9.99999999' },
+                { symbol: 'BTC', name: 'BTC (upcoming)', icon: '/images/tokens/btc.svg', balance: '9.99999999' },
+                { symbol: 'BNB', name: 'BNB (upcoming)', icon: '/images/tokens/bnb.svg', balance: '9.99999999' },
+                { symbol: 'ETH', name: 'ETH (upcoming)', icon: '/images/tokens/eth.svg', balance: '9.99999999' },
+                { symbol: 'BAKAC', name: 'BAKAC (upcoming)', icon: '/images/tokens/bakac.svg', balance: '9.99999999' },
+                { symbol: 'DOGE', name: 'DOGE (upcoming)', icon: '/images/tokens/dge.svg', balance: '9.99999999' },
+                { symbol: 'SHIB', name: 'SHIB (upcoming)', icon: '/images/tokens/shib.svg', balance: '9.99999999' },
             ],
             totalTickets: 3,
             totalWinningTickets: 0,
@@ -63,10 +65,9 @@ const Header = () => {
             <Container>
                 <div className="fn-header-inner">
                     <Logo />
-                    {
+                    {/* {
                         loggedUser ? <>
                             <Menu />
-                            
                             <ConnectWallet onClick={handleSignIn} title="0xdwd..."/>
                             <MenuMobile
                                 onShowAffiliate={() => setShowAffiliate(true)}
@@ -77,8 +78,14 @@ const Header = () => {
                             <ConnectWallet onClick={handleSignIn}/>
                            
                         </>
-                    }
-                       
+                    } */}
+                         <Menu />
+                            <ConnectWallet onClick={handleSignIn} title={loggedUser ? '0xdwd...' : undefined} signOut={handleSignOut}/>
+                            <MenuMobile
+                                onShowAffiliate={() => setShowAffiliate(true)}
+                                onShowLanguage={() => setShowLanguage(true)}
+                                onShowFAQ={() => setShowFAQ(true)}
+                            />
                        <Language selectedLang={selectedLang} onChangeLanguage={setSelectedLang}/>
                 </div>
             </Container>

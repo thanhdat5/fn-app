@@ -20,46 +20,6 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       toast(<Message
-        type="error"
-        title="Error"
-        message="Invalid two-factor authentication"
-      />, { type: 'error' });
-    }, 5000)
-
-    setTimeout(() => {
-      toast(<Message
-        type="success"
-        title="Deposit confirmed"
-        message="Your deposit of <span>0.000 USDT</span> has been successfully processed"
-      />, { type: 'success' });
-    }, 14000)
-
-    setTimeout(() => {
-      toast(<Message
-        type="error"
-        title="Error"
-        message="Withdrawal address is incorrect or the wallet is temporarily unavailable."
-      />, { type: 'error' });
-    }, 23000)
-
-    setTimeout(() => {
-      toast(<Message
-        type="info"
-        title="withdrawal"
-        message="Your withdrawal of <span>0.000000 USDT</span> was successfull"
-      />, { type: 'info' });
-    }, 32000)
-
-    setTimeout(() => {
-      toast(<Message
-        type="info"
-        title="Password Reset Email Sen"
-        message="We have sent an account recovery email to <span>xnxx@gmail.com</span>"
-      />, { type: 'info' });
-    }, 41000)
-
-    setTimeout(() => {
-      toast(<Message
         type="info"
         message="<b>Congratulation! You've Successfully Bought <span>23 Four Numbers Ticket</span>. Good Luck!</b>"
       />, { type: 'info' });

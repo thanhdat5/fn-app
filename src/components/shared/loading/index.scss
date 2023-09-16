@@ -11,6 +11,11 @@
 	img {
 		animation: loading 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 		animation-delay: -0.5s;
+
+		@media (max-width: 575px) {
+			width: 200px;
+			height: auto;
+		}
 	}
 
 	@keyframes loading {

@@ -83,11 +83,17 @@
 			background-color: #1b172f;
 			height: 100%;
 			overflow: hidden;
+
+			@media (max-width: 768px) {
+				margin-top: 5px;
+			}
+
 			.header {
 				background-color: #000;
 				display: flex;
 				align-items: center;
-				justify-content: space-between;
+				// justify-content: space-between;
+				gap: 6px;
 				padding: 7px 15px 6px 6px;
 				@media (max-width: 767px) {
 					padding: 4.5px 5px 4px;

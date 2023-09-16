@@ -58,7 +58,7 @@ const MenuMobile = ({ onShowAffiliate, onShowLanguage, onShowFAQ }: Props) => {
 			</Dropdown.Toggle>
 
 			<Dropdown.Menu align="end">
-				<Dropdown.Item onClick={onShowAffiliate}>{t('Referral')}</Dropdown.Item>
+				<Dropdown.Item onClick={onShowAffiliate}>{t('Affeliate')}</Dropdown.Item>
 
 				<Dropdown.Item onClick={onShowLanguage}>{t('Language')}</Dropdown.Item>
 				<Dropdown.Item onClick={onShowFAQ}>{t('FAQ')}</Dropdown.Item>

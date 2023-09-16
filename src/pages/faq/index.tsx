@@ -15,107 +15,100 @@ const FAQPage = () => {
 						id="uncontrolled-tab-example"
 					>
 						<Tab eventKey="general" title={t('FAQ')}>
-              <div className="content">
-							<Accordion >
-								<Accordion.Item eventKey="0">
-									<Accordion.Header>
-										<span className="index">01</span>
-										<label className="title">What is Gacha game?</label>
-									</Accordion.Header>
-									<Accordion.Body>
-										A gacha game operates by spending money to open gift boxes
-										and collect valuable items. The rarity and value of these
-										items depend on the player’s luck.
-									</Accordion.Body>
-								</Accordion.Item>
-								<Accordion.Item eventKey="1">
-									<Accordion.Header>
-										<span className="index">02</span>
-										<label className="title">
-											What are the different genres of Gacha games?
-										</label>
-									</Accordion.Header>
-									<Accordion.Body>
-										There are different genres of Gacha Games like: Complete
-										Gacha, Box Gacha, Re-roll Gacha, Upgrade Gacha, Volume
-										Gacha, Consecutive Gacha, Mystery Gacha, Sugoroku Gacha.
-									</Accordion.Body>
-								</Accordion.Item>
-								<Accordion.Item eventKey="2">
-									<Accordion.Header>
-										<span className="index">03</span>
-										<label className="title">
-											What does the QGacha ecosystem offer?
-										</label>
-									</Accordion.Header>
-									<Accordion.Body>
-										The QGacha ecosystem offers a community-based platform
-										revolutionizing Gacha gaming through blockchain. It provides
-										an enhanced Gacha experience with NFT ownership, supports
-										game developers, and offers various Gacha game variations.
-										QGacha aims to become the world's largest Gacha platform,
-										fostering a global community of Gacha enthusiasts.
-									</Accordion.Body>
-								</Accordion.Item>
+							<div className="content">
+								<Accordion>
+									<Accordion.Item eventKey="0">
+										<Accordion.Header>
+											<span className="index">01</span>
+											<label className="title">What is Four Number?</label>
+										</Accordion.Header>
+										<Accordion.Body>
+											Challenge Fate with Mind: The "Four Numbers" Game
+											<br />
+											<br />
+											Have you ever wondered if luck is on your side when buying
+											lottery tickets? Try the “Four Numbers” game now - an
+											exciting game that promises the chance of winning big.
+											<br />
+											<br />
+											This game's thrilling and anticipation-filled experiences
+											make buying lottery tickets more exciting than ever. You
+											can test your luck daily and feel the special thrill when
+											your numbers match the winning combination.
+										</Accordion.Body>
+									</Accordion.Item>
+									<Accordion.Item eventKey="1">
+										<Accordion.Header>
+											<span className="index">02</span>
+											<label className="title">
+												"Why should you participate in the "Four Numbers" game?
+											</label>
+										</Accordion.Header>
+										<Accordion.Body>
+											In these challenging economic times, the "Four Numbers"
+											game offers more than just an exciting source of
+											entertainment. Firstly, this game ensures transparency and
+											fairness, with no interference from anyone. This means
+											everyone has an equal opportunity to participate and try
+											their luck.
+											<br /> <br />
+											The game boasts an incredibly high winning rate, and the
+											more people who participate, the more prizes emerge,
+											giving everyone a taste of luck. A simple, fun, and
+											rewarding game is always something people aspire to. Aside
+											from providing you with a new pastime during your leisure
+											time, the rewards from "Four Numbers" can also become an
+											additional source of income for many.
+											<br /> <br />
+											So, join the "Four Numbers" game to experience joy,
+											excitement, and the opportunity to improve your personal
+											and family finances."
+										</Accordion.Body>
+									</Accordion.Item>
+									<Accordion.Item eventKey="2">
+										<Accordion.Header>
+											<span className="index">03</span>
+											<label className="title">
+												What about the credibility of Four Numbers?
+											</label>
+										</Accordion.Header>
+										<Accordion.Body>
+											The credibility of the "Four Numbers" game is always
+											highly regarded and ensured. This game operates on strict
+											rules and regulations to guarantee transparency and
+											fairness in selecting the winning numbers. There is a
+											rigorous management system in place, along with regular
+											checks, to ensure that all transactions and results are
+											executed accurately and honestly. Additionally, the system
+											is entirely free from external interference or influence,
+											and transparency is our top priority.
+											<br /> <br />
+											We are finalizing all procedures to obtain the necessary
+											licenses for the system to operate smoothly.
+										</Accordion.Body>
+									</Accordion.Item>
 
-								<Accordion.Item eventKey="3">
-									<Accordion.Header>
-										<span className="index">04</span>
-										<label className="title">How to deposit?</label>
-									</Accordion.Header>
-									<Accordion.Body>
-										Deposit Instructions: <br />
-										<br />
-										<label className="highlight">Log into Your Account: </label>
-										Access your cryptocurrency exchange or wallet account using
-										your credentials. Navigate to Deposit Section: Find and
-										click on the "Deposit" or "Add Funds" section within your
-										account dashboard.
-										<br />
-										<br />{' '}
-										<label className="highlight">
-											{' '}
-											Select Cryptocurrency:{' '}
-										</label>{' '}
-										Choose the specific cryptocurrency you wish to deposit from
-										the list provided. Generate Deposit Address: Your exchange
-										or wallet will provide a unique address. This address is
-										essential for correctly receiving the cryptocurrency.
-										<br />
-										<br />{' '}
-										<label className="highlight">
-											{' '}
-											Copy Deposit Address:{' '}
-										</label>{' '}
-										Carefully copy the provided deposit address. Make sure there
-										are no typos or errors.
-										<br />
-										<br />{' '}
-										<label className="highlight"> Initiate Transfer:</label> In
-										your external wallet, initiate a transfer by sending the
-										desired amount of cryptocurrency to the deposit address you
-										copied.
-										<br />
-										<br />{' '}
-										<label className="highlight">
-											{' '}
-											Confirm Transaction:{' '}
-										</label>{' '}
-										Once you've sent the cryptocurrency, wait for network
-										confirmations (the number may vary depending on the
-										cryptocurrency) to validate the transaction.
-										<br />
-										<br />{' '}
-										<label className="highlight">
-											{' '}
-											Check Deposit Status:{' '}
-										</label>{' '}
-										Return to your account dashboard and check the deposit
-										history to see if the transaction has been credited.
-									</Accordion.Body>
-								</Accordion.Item>
-							</Accordion>
-              </div>
+									<Accordion.Item eventKey="3">
+										<Accordion.Header>
+											<span className="index">04</span>
+											<label className="title">Conditions for participating</label>
+										</Accordion.Header>
+										<Accordion.Body>
+										You must be at least 18 years old or reach the age of majority under your jurisdiction. You must be permitted to play online games by the applicable laws.
+										</Accordion.Body>
+									</Accordion.Item>
+
+									<Accordion.Item eventKey="4">
+										<Accordion.Header>
+											<span className="index">05</span>
+											<label className="title">Start your game journey</label>
+										</Accordion.Header>
+										<Accordion.Body>
+										Connect your wallet and begin. More information is in the video below.
+										</Accordion.Body>
+									</Accordion.Item>
+								</Accordion>
+							</div>
 						</Tab>
 					</Tabs>
 				</div>

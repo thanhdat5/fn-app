@@ -9,13 +9,7 @@ const Overall = () => {
         <div className="summary">
             <Row className="gx-xl-3">
                 <Col lg="6">
-                    {/* <div className="summary-card">
-                        <img src="/images/icons/gold.png" alt="" />
-                        <div className="info">
-                            <label>TOTAL REWARD EARNED:</label>
-                            <span className="highlight">$ 0.00</span>
-                        </div>
-                    </div> */}
+                   
                     <div className="summary-card">
                         <img src="/images/icons/friends.png" alt="" />
                         <div className="info">
@@ -29,18 +23,16 @@ const Overall = () => {
                         <div className="header">
                             <img src="/images/icons/commission.svg" alt="" />
                             <span>COMMISSION REWARDS</span>
-                            <a href="https://google.com">
+                            {/* <a href="https://google.com">
                                 Details
                                 <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5.07814 3.23178C5.55789 3.63157 5.55789 4.36843 5.07813 4.76822L1.64018 7.63318C0.988856 8.17595 0 7.7128 0 6.86496V1.13504C0 0.287204 0.988857 -0.175952 1.64018 0.36682L5.07814 3.23178Z" fill="#E22197" />
                                 </svg>
-                            </a>
+                            </a> */}
                         </div>
                         <div className="body">
                             <b>$ 0.00</b>
-                            {/* <button className="withdraw">
-                                <span>Withdraw</span>
-                            </button> */}
+                            
                         </div>
                     </div>
                 </Col>
