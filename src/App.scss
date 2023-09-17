@@ -65,7 +65,7 @@ body {
 		background-color: #1e2125;
 		border-radius: 0;
 		@media (max-width: 575px) {
-			animation: modal-display 0.5s cubic-bezier(0, 0.2, 0.8, 1) forwards !important;
+			animation: modal-display 0.3s cubic-bezier(0, 0.2, 0.8, 1) forwards !important;
 
 			@keyframes modal-display {
 				0% {

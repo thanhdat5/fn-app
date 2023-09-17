@@ -54,10 +54,12 @@
 						text-transform: capitalize;
 						height: 50px;
 						display: inline-flex;
-						align-items: center;
+						align-items: end;
+						// text-align: end;
 
 						img {
-							width: 100%;
+							width: 70%;
+							margin-left: auto;
 
 							@media (max-width: 575px) {
 								width: 49px;
