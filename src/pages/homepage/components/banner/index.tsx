@@ -23,6 +23,7 @@ const Banner = () => {
 	const [showHowToPlay, setShowHowToPlay] = useState(false);
 	const [showPrize, setShowPrize] = useState(false);
 	const [showModal, setShowModal] = useState(false);
+	const [selectedTicket, setSelectedTicket] = useState<number>(1);
 	const dispatch = useAppDispatch();
 
 	const [windowSize, setWindowSize] = useState(
@@ -117,19 +118,22 @@ const Banner = () => {
 										title="Only 67 tickets left"
 										image="/images/ticket/ticket-1.png"
 										imageHover="/images/ticket/ticket-1-hover.png"
-										onShowModal={() =>{}}
+										isSelected={selectedTicket === 1 ? true : false}
+										onSelect={() => setSelectedTicket(1)}
 									/>
 									<Ticket
 										title="Only 67 tickets left"
 										image="/images/ticket/ticket-2.png"
 										imageHover="/images/ticket/ticket-2-hover.png"
-										onShowModal={() =>{}}
+										isSelected={selectedTicket === 2 ? true : false}
+										onSelect={() => setSelectedTicket(2)}
 									/>
 									<Ticket
 										title="Only 67 tickets left"
 										image="/images/ticket/ticket-3.png"
 										imageHover="/images/ticket/ticket-3-hover.png"
-										onShowModal={() =>{}}
+										isSelected={selectedTicket === 3 ? true : false}
+										onSelect={() => setSelectedTicket(3)}
 									/>
 								</div>
 
