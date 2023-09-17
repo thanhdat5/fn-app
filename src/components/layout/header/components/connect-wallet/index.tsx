@@ -37,7 +37,7 @@ const ConnectWallet = ({onClick, title = 'connect wallet', signOut}: Props) => {
       useOutsideAlerter(wrapperRef);
 
     return (
-        <div className="wrapper">
+        <div className="wrapper" ref={wrapperRef}>
             <button type="button" className="fn-connect-wallet" onClick={() => {
                 if(loggedUser){
                     setShowModal(!showModal)
@@ -51,7 +51,7 @@ const ConnectWallet = ({onClick, title = 'connect wallet', signOut}: Props) => {
     </button>
 
     {showModal ? (
-        <div className="fn-connect-wallet-modal" ref={wrapperRef}>
+        <div className="fn-connect-wallet-modal" >
             <div className="wallet">
                 <div className="wallet-title">
                     <img src="./images/icons/meta.svg" alt="meta-icon" />

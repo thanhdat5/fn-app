@@ -7,9 +7,8 @@ const FourNumberWinner = () => {
 	const loggedUser = useAppSelector(authUserSelector);
 
 	return (
-		<div className={`fn-winner ${loggedUser ? 'logged' : ''}`}>
-			{loggedUser ? (
-				<>
+		<div className={`fn-winner`}>
+			
 					<Table responsive striped={loggedUser ? true : false}>
 						<thead>
 							<tr>
@@ -55,10 +54,7 @@ const FourNumberWinner = () => {
 						<Pagination.Prev className="prev" />
 						<Pagination.Next className="next" />
 					</Pagination>
-				</>
-			) : (
-				<></>
-			)}
+			
 		</div>
 	);
 };

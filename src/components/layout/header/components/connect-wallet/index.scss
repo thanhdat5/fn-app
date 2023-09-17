@@ -32,7 +32,9 @@
 		}
 
 		@media (max-width: 575px) {
-			max-width: 121px;
+			margin-left: 20vw;
+			width: 121px;
+			justify-content: center;
 		}
 
 		span {
@@ -86,29 +88,29 @@
 	.fn-connect-wallet-modal {
 		position: fixed !important;
 		top: 60px !important;
-
+		// right: -30vw;
 		padding: 13px 12px 16px 13px;
 		width: 257px;
 		height: 175px;
 		border-radius: 6px;
 		background: #202327;
-		animation: show 0.5s cubic-bezier(0, 0.2, 0.8, 1) forwards;
+		animation: add 0.3s cubic-bezier(0, 0.2, 0.8, 1) forwards;
 
-		@keyframes show {
+		@keyframes add {
 			0% {
-				left: 100%;
+				right: -30vw;
 			}
 			25% {
-				left: 79%;
+				right: -20vw;
 			}
 			50% {
-				left: 58%;
+				right: -10vw;
 			}
 			75% {
-				left: 37%;
+				right: 0;
 			}
 			100% {
-				left: 18%;
+				right: 13vw;
 			}
 		}
 
