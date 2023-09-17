@@ -7,7 +7,7 @@ type Props = {
 }
 const HowToPlayModal = ({ onDismiss }: Props) => {
     const { t } = useTranslation();
-    return <Modal className="fn-modal" size="lg" centered backdrop keyboard={false} show onHide={onDismiss}>
+    return <Modal className="fn-modal fn-how-to-play" size="lg" centered backdrop keyboard={false} show onHide={onDismiss}>
         <Modal.Header closeButton>
             <Modal.Title>{t('how to play?')}</Modal.Title>
         </Modal.Header>

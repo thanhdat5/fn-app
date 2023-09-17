@@ -1,11 +1,12 @@
 .fn-language-modal {
-	.modal-dialog{
+	.modal-dialog {
 		width: 375px;
 		max-width: 90vw;
 		margin-left: auto;
 		margin-right: auto;
 	}
 	.modal-content {
+		top: 60px;
 		.modal-body {
 			padding: 0 0 15px !important;
 			ul {
@@ -32,7 +33,7 @@
 						&::before {
 							background-color: #9e9e9e;
 						}
-						&::after{
+						&::after {
 							display: block;
 						}
 					}
