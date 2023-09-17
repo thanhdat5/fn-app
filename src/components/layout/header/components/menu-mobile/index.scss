@@ -31,29 +31,26 @@
 
 		@media (max-width: 767px) {
 			position: fixed !important;
-			margin-top: 0;
-			animation: menu-animation 0.5s cubic-bezier(0, 0.2, 0.8, 1) forwards !important;
+			top: 50px !important;
+			// margin-top: 0;
+			transform: none !important;
+			animation: menu-animation 0.4s cubic-bezier(0, 0.2, 0.8, 1) forwards !important;
 
 			@keyframes menu-animation {
 				0% {
-					top: 5%;
-					left: 100%;
+					right: -30vw;
 				}
 				25% {
-					top: 5%;
-					left: 76%;
+					right: -20vw;
 				}
 				50% {
-					top: 5%;
-					left: 52%;
+					right: -10vw;
 				}
 				75% {
-					top: 5%;
-					left: 28%;
+					right: 0;
 				}
 				100% {
-					top: 5%;
-					left: 7%;
+					right: 4vw;
 				}
 			}
 		}

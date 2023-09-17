@@ -94,9 +94,9 @@
 		height: 175px;
 		border-radius: 6px;
 		background: #202327;
-		animation: add 0.3s cubic-bezier(0, 0.2, 0.8, 1) forwards;
+		animation: connect-animation 0.3s cubic-bezier(0, 0.2, 0.8, 1) forwards;
 
-		@keyframes add {
+		@keyframes connect-animation {
 			0% {
 				right: -30vw;
 			}

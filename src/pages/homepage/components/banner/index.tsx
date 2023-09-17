@@ -1,20 +1,20 @@
+import BuyTicketsModal from 'components/modals/buy-tickets';
+import HowToPlayModal from 'components/modals/how-to-play';
+import PrizeModal from 'components/modals/prize';
+import { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { authUserSelector, signIn } from 'redux-toolkit-saga/auth';
+import { useAppDispatch, useAppSelector } from 'store/hooks';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import Countdown from './components/countdown';
 import Ticket from './components/ticket';
 import './index.scss';
-import HowToPlayModal from 'components/modals/how-to-play';
-import { useEffect, useState } from 'react';
-import { authUserSelector, signIn } from 'redux-toolkit-saga/auth';
-import { useAppDispatch, useAppSelector } from 'store/hooks';
-import PrizeModal from 'components/modals/prize';
-import BuyTicketsModal from 'components/modals/buy-tickets';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 import { EffectCoverflow } from 'swiper';
 
@@ -26,10 +26,7 @@ const Banner = () => {
 	const [selectedTicket, setSelectedTicket] = useState<number>(1);
 	const dispatch = useAppDispatch();
 
-	const [windowSize, setWindowSize] = useState(
-		window.innerWidth,
-	 
-	);
+	const [windowSize, setWindowSize] = useState(window.innerWidth);
 
 	useEffect(() => {
 		const handleWindowResize = () => {
@@ -83,24 +80,47 @@ const Banner = () => {
 	return (
 		<>
 			<div className="fn-banner">
-				<img src={`${windowSize <= 1199 ? "./images/banner-mobile.png" : "/images/banner.png"}`} className="w-100" alt="" />
-				
-				
-					<div className="sub-menu">
-						<Container>
-							<button type="button" onClick={() => setShowPrize(true)}>
-								prize
-							</button>
-							<button type="button" onClick={() => setShowHowToPlay(true)}>
-								how to play?
-							</button>
-							<h1 className='slogan'>
-								Don't work for  <span><strong>money</strong><br/> Make <strong>money</strong> work
-								for you </span>
-							</h1>
-						</Container>
-					</div>
-				
+				<img
+					src={`${
+						windowSize <= 1199
+							? './images/banner-mobile.png'
+							: '/images/banner.png'
+					}`}
+					className="w-100"
+					alt=""
+				/>
+
+				<div className="sub-menu">
+					<Container>
+						<button type="button" onClick={() => setShowPrize(true)}>
+							prize
+						</button>
+						<button type="button" onClick={() => setShowHowToPlay(true)}>
+							how to play?
+						</button>
+						<h1 className="slogan">
+							Don't work for{' '}
+							<span>
+								<strong>money</strong>
+								<br /> Make <strong>money</strong> work for you{' '}
+							</span>
+						</h1>
+
+						{windowSize < 576 ? (
+							<div className="countdown-mobile">
+								<label>Next Draw Start in</label>
+								<span>00H:00M:00S</span>
+							</div>
+						) : (
+							<></>
+						)}
+					</Container>
+				</div>
+
+				{/* {
+					windowSize < 576 ? <Countdown /> : <></>
+				} */}
+
 				<Link
 					to="/"
 					className="fn-banner-buy"
@@ -110,7 +130,8 @@ const Banner = () => {
 				</Link>
 				<div className="fn-banner-box">
 					<Container>
-						<Countdown />
+						{windowSize > 576 ? <Countdown /> : <></>}
+
 						<Row className="justify-content-center">
 							<Col lg="11" className="p-0">
 								<div className="fn-banner-tickets">

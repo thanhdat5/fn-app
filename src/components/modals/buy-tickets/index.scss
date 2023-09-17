@@ -383,9 +383,11 @@
 				.dropdown-menu {
 					padding: 14px !important;
 					width: 100%;
-					margin-top: 5px;
-
 					background: #17191b;
+					margin-top: 5px;
+					height: 180px;
+					max-height: 180px;
+					overflow-y: scroll !important;
 
 					.fn-token-item {
 						display: flex;
