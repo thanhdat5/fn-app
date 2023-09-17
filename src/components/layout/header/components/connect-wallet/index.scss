@@ -84,35 +84,31 @@
 	}
 
 	.fn-connect-wallet-modal {
-		position: absolute;
+		position: fixed !important;
+		top: 60px !important;
 
 		padding: 13px 12px 16px 13px;
 		width: 257px;
 		height: 175px;
 		border-radius: 6px;
 		background: #202327;
-		animation: display 0.5s cubic-bezier(0, 0.2, 0.8, 1) forwards;
+		animation: show 0.5s cubic-bezier(0, 0.2, 0.8, 1) forwards;
 
-		@keyframes display {
+		@keyframes show {
 			0% {
-				top: 44px;
 				left: 100%;
 			}
 			25% {
-				top: 44px;
-				left: 50%;
+				left: 79%;
 			}
 			50% {
-				top: 44px;
-				left: 0;
+				left: 58%;
 			}
 			75% {
-				top: 44px;
-				left: -50%;
+				left: 37%;
 			}
 			100% {
-				top: 44px;
-				left: -70%;
+				left: 18%;
 			}
 		}
 

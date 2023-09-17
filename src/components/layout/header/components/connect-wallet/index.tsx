@@ -1,8 +1,8 @@
+import { MutableRefObject, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import "./index.scss";
-import { useState } from "react";
-import { useAppSelector } from "store/hooks";
 import { authUserSelector } from "redux-toolkit-saga/auth";
+import { useAppSelector } from "store/hooks";
+import "./index.scss";
 
 type Props = {
     onClick: () => void;
@@ -10,10 +10,32 @@ type Props = {
     title?: string
 }
 
+
+
 const ConnectWallet = ({onClick, title = 'connect wallet', signOut}: Props) => {
     const [showModal, setShowModal] = useState<boolean>(false);
     const loggedUser = useAppSelector(authUserSelector);
     const {t} = useTranslation();
+    const wrapperRef = useRef(null);
+
+
+    function useOutsideAlerter(ref: MutableRefObject<HTMLDivElement | null>) {
+        useEffect(() => {
+        
+          function handleClickOutside(event: any) {
+            if (ref.current && !ref.current.contains(event.target)) {
+                setShowModal(false)
+            }
+          }
+          document.addEventListener("mousedown", handleClickOutside);
+          return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+          };
+        }, [ref]);
+      }
+
+      useOutsideAlerter(wrapperRef);
+
     return (
         <div className="wrapper">
             <button type="button" className="fn-connect-wallet" onClick={() => {
@@ -29,7 +51,7 @@ const ConnectWallet = ({onClick, title = 'connect wallet', signOut}: Props) => {
     </button>
 
     {showModal ? (
-        <div className="fn-connect-wallet-modal">
+        <div className="fn-connect-wallet-modal" ref={wrapperRef}>
             <div className="wallet">
                 <div className="wallet-title">
                     <img src="./images/icons/meta.svg" alt="meta-icon" />
@@ -61,19 +83,6 @@ const ConnectWallet = ({onClick, title = 'connect wallet', signOut}: Props) => {
         </div>
     )
 
-    // return (
-    //     <Dropdown className="fn-connect-wallet">
-    //           <Dropdown.Toggle variant="dark" id="dropdown-basic">
-    //         <span>{title}</span>
-    //         <img className="arrow" src="/images/icons/arrow.svg" alt="" />
-    //     </Dropdown.Toggle>
-
-    //     <Dropdown.Menu>
-    //     <Dropdown.Item>
-    //         123
-    //     </Dropdown.Item>
-    //     </Dropdown.Menu>
-    //     </Dropdown>
-    // )
+   
 }
 export default ConnectWallet

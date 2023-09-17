@@ -28,12 +28,37 @@
 		background: rgba($color: #24262b, $alpha: 0.9);
 		min-width: 356px;
 		max-width: 100%;
+
 		@media (max-width: 767px) {
 			position: fixed !important;
-			top: 58px !important;
-			left: 50% !important;
-			transform: translateX(-50%) !important;
+			// top: 58px !important;
+			// left: 50% !important;
+			// transform: translateX(-50%) !important;
 			margin-top: 0;
+			animation: display 0.5s cubic-bezier(0, 0.2, 0.8, 1) forwards !important;
+
+			@keyframes display {
+				0% {
+					top: 5%;
+					left: 100%;
+				}
+				25% {
+					top: 5%;
+					left: 76%;
+				}
+				50% {
+					top: 5%;
+					left: 52%;
+				}
+				75% {
+					top: 5%;
+					left: 28%;
+				}
+				100% {
+					top: 5%;
+					left: 7%;
+				}
+			}
 		}
 		@media (max-width: 375px) {
 			min-width: 320px;
