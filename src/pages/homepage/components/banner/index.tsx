@@ -106,7 +106,12 @@ const Banner = () => {
 							</span>
 						</h1>
 
-						{windowSize < 576 ? (
+						
+					</Container>
+				</div>
+
+				
+				{windowSize < 576 ? (
 							<div className="countdown-mobile">
 								<label>Next Draw Start in</label>
 								<span>00H:00M:00S</span>
@@ -114,12 +119,6 @@ const Banner = () => {
 						) : (
 							<></>
 						)}
-					</Container>
-				</div>
-
-				{/* {
-					windowSize < 576 ? <Countdown /> : <></>
-				} */}
 
 				<Link
 					to="/"
