@@ -1,8 +1,25 @@
 import { Col, Row } from 'react-bootstrap';
 import './index.scss';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import FAQModal from 'pages/faq/modal';
 
 const Info = () => {
+	const [windowSize, setWindowSize] = useState<number>(window.innerWidth);
+	const [showModal, setShowModal] = useState<boolean>(false);
+
+	useEffect(() => {
+		const handleWindowResize = () => {
+			setWindowSize(window.innerWidth);
+		};
+
+		window.addEventListener('resize', handleWindowResize);
+
+		return () => {
+			window.removeEventListener('resize', handleWindowResize);
+		};
+	}, []);
+
 	return (
 		<div className="fn-info">
 			<img className="logo d-md-none d-block" src="/images/logo.png" alt="" />
@@ -36,7 +53,11 @@ const Info = () => {
 					<h4>DOCS</h4>
 					<ul>
 						<li>
-							<Link to="/faq">FAQ</Link>
+							<Link to={windowSize > 576 ? "/faq" : "/"} onClick={() => {
+								if(windowSize <= 576) {
+									setShowModal(true)
+								}
+							}}>FAQ</Link>
 						</li>
 						<li>
 							<a href="https://google.com">Privacy Policy</a>
@@ -50,6 +71,10 @@ const Info = () => {
 					</ul>
 				</Col>
 			</Row>
+
+			{
+				showModal ? <FAQModal onDismiss={() => setShowModal(false)} /> :<></>
+			}
 		</div>
 	);
 };
