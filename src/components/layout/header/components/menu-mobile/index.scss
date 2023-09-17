@@ -35,9 +35,9 @@
 			// left: 50% !important;
 			// transform: translateX(-50%) !important;
 			margin-top: 0;
-			animation: display 0.5s cubic-bezier(0, 0.2, 0.8, 1) forwards !important;
+			animation: menu-animation 0.5s cubic-bezier(0, 0.2, 0.8, 1) forwards !important;
 
-			@keyframes display {
+			@keyframes menu-animation {
 				0% {
 					top: 5%;
 					left: 100%;
