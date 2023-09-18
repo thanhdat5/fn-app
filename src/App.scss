@@ -64,7 +64,6 @@ body {
 	@media (max-width: 575px) {
 		&.fade {
 			animation: modal-display 0.4s cubic-bezier(0, 0.2, 0.8, 1) forwards !important;
-			top: 0 !important;
 
 			@keyframes modal-display {
 				0% {
