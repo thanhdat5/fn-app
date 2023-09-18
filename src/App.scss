@@ -62,27 +62,36 @@ body {
 }
 .fn-modal {
 	@media (max-width: 575px) {
-		&.fade {
-			animation: modal-display 0.4s cubic-bezier(0, 0.2, 0.8, 1) forwards !important;
-
-			@keyframes modal-display {
-				0% {
-					left: 100%;
-				}
-				25% {
-					left: 75%;
-				}
-				50% {
-					left: 50%;
-				}
-				75% {
-					left: 25%;
-				}
-				100% {
-					left: 0;
-				}
-			}
+		&.modal {
+			display: block !important;
+			transition: all 0.3s ease-in;
+			transform: translateX(100%);
 		}
+		&.show {
+			display: block !important;
+			transform: translateX(0%) translateY(0px);
+		}
+		// &.fade {
+		// 	animation: modal-display 0.4s cubic-bezier(0, 0.2, 0.8, 1) forwards !important;
+
+		// 	@keyframes modal-display {
+		// 		0% {
+		// 			left: 100%;
+		// 		}
+		// 		25% {
+		// 			left: 75%;
+		// 		}
+		// 		50% {
+		// 			left: 50%;
+		// 		}
+		// 		75% {
+		// 			left: 25%;
+		// 		}
+		// 		100% {
+		// 			left: 0;
+		// 		}
+		// 	}
+		// }
 	}
 
 	.modal-content {
