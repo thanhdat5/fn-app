@@ -23,7 +23,7 @@ const Networks = () => {
                 <img src="/images/tokens/shib.svg" alt=""/>
             </a>
             <a href="https://google.com" title="BAKAC">
-                <img src="/images/tokens/BAKAC.svg" alt=""/>
+                <img src="/images/tokens/bakac.svg" alt=""/>
             </a>
         </div>
     </div>
