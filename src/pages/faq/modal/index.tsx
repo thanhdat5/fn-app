@@ -16,6 +16,7 @@ const FAQModal = ({ onDismiss }: Props) => {
 			keyboard={false}
 			show
 			onHide={onDismiss}
+			animation={true}
 		>
 			<Modal.Header closeButton>
 				<Modal.Title>

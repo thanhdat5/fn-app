@@ -19,7 +19,7 @@ const LanguageModal = ({ onDismiss, selectedLang, onChangeLanguage }: Props) => 
         onDismiss();
 	};
 
-    return <Modal className="fn-modal fn-language-modal"  backdrop keyboard={false} show onHide={onDismiss}>
+    return <Modal className="fn-modal fn-language-modal"  backdrop keyboard={false} show onHide={onDismiss} animation={true}>
         <Modal.Header closeButton>
             <Modal.Title>{t('Language')}</Modal.Title>
         </Modal.Header>
