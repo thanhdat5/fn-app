@@ -7,7 +7,7 @@ type Props = {
 }
 const PrizeModal = ({ onDismiss }: Props) => {
     const { t } = useTranslation();
-    return <Modal className="fn-modal fn-prize" size="lg" centered backdrop keyboard={false} show onHide={onDismiss}>
+    return <Modal className="fn-modal fn-prize" size="lg" centered backdrop keyboard={false} show onHide={onDismiss} animation={true}>
         <Modal.Header closeButton>
             <Modal.Title>{t('Prize')}</Modal.Title>
         </Modal.Header>

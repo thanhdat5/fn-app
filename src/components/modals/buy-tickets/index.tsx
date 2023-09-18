@@ -27,13 +27,15 @@ const BuyTicketsModal = ({ onDismiss }: Props) => {
 	const { t } = useTranslation();
 	return (
 		<Modal
-			className="fn-modal fn-buy-ticket"
+			className="fn-modal fn-buy-ticket fade" 
 			size="xl"
 			centered
 			backdrop
 			keyboard={false}
 			show
 			onHide={onDismiss}
+			animation={true}
+			
 		>
 			<Modal.Header closeButton>
 				<Modal.Title>{t('Buy four numbers Tickets')}</Modal.Title>

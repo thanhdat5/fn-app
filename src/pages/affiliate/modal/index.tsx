@@ -6,7 +6,7 @@ type Props = {
     onDismiss: () => void;
 }
 const AffiliateModal = ({ onDismiss }: Props) => {
-    return <Modal className="fn-modal fn-modal-affiliate" size="lg" fullscreen centered backdrop keyboard={false} show onHide={onDismiss}>
+    return <Modal className="fn-modal fn-modal-affiliate" size="lg" fullscreen centered animation={true} backdrop keyboard={false} show onHide={onDismiss}>
         <Modal.Header closeButton>
             <Modal.Title>
                 <img src="/images/logo.png" alt="" height={25} />
