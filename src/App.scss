@@ -69,7 +69,7 @@ body {
 		}
 		&.show {
 			display: block !important;
-			transform: translateX(0%);
+			transform: translateX(0%) translateY(0px);
 		}
 		// &.fade {
 		// 	animation: modal-display 0.4s cubic-bezier(0, 0.2, 0.8, 1) forwards !important;
