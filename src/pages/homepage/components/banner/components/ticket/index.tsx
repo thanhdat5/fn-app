@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import './index.scss';
 
 type Props = {
@@ -14,9 +15,11 @@ const Ticket = ({
 	isSelected = false,
 	onSelect
 }: Props) => {
+
+	const {t} = useTranslation();
 	return (
 		<div className="fn-ticket" onClick={onSelect}>
-			<span>{title}</span>
+			<span>{t(title)}</span>
 			<img className="original" src={`${isSelected ? imageHover : image}`} alt="" />
 			<img className="hover" src={imageHover} alt="" />
 		</div>

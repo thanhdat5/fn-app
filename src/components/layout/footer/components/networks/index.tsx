@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next";
 import "./index.scss";
 
 const Networks = () => {
+    const { t } = useTranslation();
     return <div className="fn-networks">
-        <div className="fn-networks-title">Accepted Networks</div>
+        <div className="fn-networks-title">{t('Accept Networks')}</div>
         <div className="fn-networks-list">
             <a href="https://google.com" title="USDT">
                 <img src="/images/tokens/usdt.svg" alt=""/>
@@ -22,9 +24,9 @@ const Networks = () => {
             <a href="https://google.com" title="SHIB">
                 <img src="/images/tokens/shib.svg" alt=""/>
             </a>
-            <a href="https://google.com" title="BAKAC">
+            {/* <a href="https://google.com" title="BAKAC">
                 <img src="/images/tokens/bakac.svg" alt=""/>
-            </a>
+            </a> */}
         </div>
     </div>
 }

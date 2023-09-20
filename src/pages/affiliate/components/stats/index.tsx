@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import "./index.scss";
 
 const Stats = () => {
+    const {t} = useTranslation();
     return <div className="fn-stats">
         <div className="header">
             <img src="/images/icons/chart.svg" alt="" />
@@ -38,7 +40,7 @@ const Stats = () => {
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td>Total</td>
+                        <td>{t('Total')}</td>
                         <td>$999.999.999</td>
                     </tr>
                 </tfoot>

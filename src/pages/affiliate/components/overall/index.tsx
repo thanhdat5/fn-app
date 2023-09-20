@@ -13,7 +13,7 @@ const Overall = () => {
                     <div className="summary-card">
                         <img src="/images/icons/friends.png" alt="" />
                         <div className="info">
-                            <label>TOTAL FRIENDS REFERRED:</label>
+                            <label>{t('TOTAL FRIENDS REFERRED')}:</label>
                             <span>0</span>
                         </div>
                     </div>
@@ -22,7 +22,7 @@ const Overall = () => {
                     <div className="commission">
                         <div className="header">
                             <img src="/images/icons/commission.svg" alt="" />
-                            <span>COMMISSION REWARDS</span>
+                            <span>{t('COMMISSION REWARDS')}</span>
                             {/* <a href="https://google.com">
                                 Details
                                 <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,13 +46,13 @@ const Overall = () => {
             >
                 <Tab eventKey="thisMonth" title={t('This month')}>
                     <div className="header">
-                        <h4>Stats</h4>
+                        <h4>{t('Stats')}</h4>
                         <div className="item">
-                            <label>Total</label>
+                            <label>{t('Total')}</label>
                             <span>$150.000</span>
                         </div>
                         <div className="item">
-                            <label>By time</label>
+                            <label>{t('By time')}</label>
                             <span>01/07/23 - 31/07/23</span>
                         </div>
                     </div>
@@ -62,13 +62,13 @@ const Overall = () => {
                 </Tab>
                 <Tab eventKey="lastMonth" title={t('Last month')}>
                     <div className="header">
-                        <h4>Stats</h4>
+                        <h4>{t('Stats')}</h4>
                         <div className="item">
-                            <label>Total</label>
+                            <label>{t('Total')}</label>
                             <span>$150.000</span>
                         </div>
                         <div className="item">
-                            <label>By time</label>
+                            <label>{t('By time')}</label>
                             <span>01/07/23 - 31/07/23</span>
                         </div>
                     </div>

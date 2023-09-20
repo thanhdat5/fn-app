@@ -34,7 +34,7 @@
 			top: 50px !important;
 			// margin-top: 0;
 			transform: none !important;
-			animation: menu-animation 0.5s cubic-bezier(0, 0.2, 0.8, 1) forwards !important;
+			animation: menu-animation 0.28s ease-in-out forwards !important;
 
 			@keyframes menu-animation {
 				0% {

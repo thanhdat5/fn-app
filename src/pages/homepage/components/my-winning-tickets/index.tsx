@@ -5,24 +5,26 @@ import { useAppSelector } from 'store/hooks';
 import GameFilter from '../game-filter';
 import './index.scss';
 import { Pagination, Table } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
 
 const MyWinningTickets = () => {
 	const loggedUser = useAppSelector(authUserSelector);
 	const [showModal, setShowModal] = useState(false);
+	const {t} = useTranslation();
 
 	return loggedUser ? (
 		<>
 			<GameFilter />
 			<div className="fn-my-winning">
-				<h4>My WINNING</h4>
+				<h4>{t('My winning')}</h4>
 				<Table responsive variant="dark">
 					<thead>
 						<tr>
-							<th>first prize</th>
-							<th>second prize</th>
-							<th>third prize</th>
-							<th>fourth prize</th>
-							<th>fifth prize</th>
+							<th>{t('First Prize')}</th>
+							<th>{t('Second Prize')}</th>
+							<th>{t('Third Prize')}</th>
+							<th>{t('Fourth Prize')}</th>
+							<th>{t('Fifth Prize')}</th>
 						</tr>
 					</thead>
 
@@ -117,13 +119,13 @@ const MyWinningTickets = () => {
 	) : (
 		<>
 			<div className="fn-winning-box">
-				<span>You have no ticket! Buy Now </span>
+				<span>{t('You have no ticket! Buy now')} </span>
 				<button
 					className="fn-buy-now"
 					type="button"
 					onClick={() => setShowModal(true)}
 				>
-					<span>bUY TICKET now</span>
+					<span>{t('Buy ticket now')}</span>
 				</button>
 			</div>
 			{showModal ? (

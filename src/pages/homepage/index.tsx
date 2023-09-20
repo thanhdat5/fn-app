@@ -7,9 +7,11 @@ import MyTickets from "./components/my-tickets";
 import MyWinningTickets from "./components/my-winning-tickets";
 import Statistics from "./components/statistics";
 import "./index.scss";
+import { useTranslation } from "react-i18next";
 
 const Homepage = () => {
     const loggedUser = useAppSelector(authUserSelector);
+    const {t} = useTranslation();
     return <div className="fn-homepage">
         <Banner />
         <div className="fn-statistics">
@@ -18,15 +20,15 @@ const Homepage = () => {
                     defaultActiveKey="myTicket"
                     id="uncontrolled-tab-example"
                 >
-                    <Tab eventKey="myTicket" title={`My Ticket (${loggedUser?.totalTickets || 0})`}>
+                    <Tab eventKey="myTicket" title={`${t('My ticket')} (${loggedUser?.totalTickets || 0})`}>
                         <Statistics />
                         <MyTickets />
                     </Tab>
-                    <Tab eventKey="myWinning" title="my winning">
+                    <Tab eventKey="myWinning" title={t('My winning')}>
                         <Statistics />
                         <MyWinningTickets />
                     </Tab>
-                    <Tab eventKey="fnWinner" title="four Numbers Winner">
+                    <Tab eventKey="fnWinner" title={t('Four Number winner')}>
                         <FourNumberWinner />
                     </Tab>
                 </Tabs>

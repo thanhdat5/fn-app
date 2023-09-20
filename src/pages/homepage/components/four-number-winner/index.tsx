@@ -2,10 +2,11 @@ import { Pagination, Table } from 'react-bootstrap';
 import './index.scss';
 import { useAppSelector } from 'store/hooks';
 import { authUserSelector } from 'redux-toolkit-saga/auth';
+import { useTranslation } from 'react-i18next';
 
 const FourNumberWinner = () => {
 	const loggedUser = useAppSelector(authUserSelector);
-
+	const {t} = useTranslation();
 	return (
 		<div className={`fn-winner`}>
 			
@@ -13,9 +14,9 @@ const FourNumberWinner = () => {
 						<thead>
 							<tr>
 								<th style={{ width: 140 }}>ID</th>
-								<th>Winner</th>
-								<th>Tickets</th>
-								<th className="text-end">Prize</th>
+								<th>{t('Winner')}</th>
+								<th>{t('Tickets')}</th>
+								<th className="text-end">{t('Prize')}</th>
 							</tr>
 						</thead>
 						<tbody>

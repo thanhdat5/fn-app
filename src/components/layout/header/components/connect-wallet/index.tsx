@@ -12,7 +12,7 @@ type Props = {
 
 
 
-const ConnectWallet = ({onClick, title = 'connect wallet', signOut}: Props) => {
+const ConnectWallet = ({onClick, title = 'Connect wallet', signOut}: Props) => {
     const [showModal, setShowModal] = useState<boolean>(false);
     const loggedUser = useAppSelector(authUserSelector);
     const {t} = useTranslation();
@@ -68,11 +68,11 @@ const ConnectWallet = ({onClick, title = 'connect wallet', signOut}: Props) => {
                 signOut();
 
             }}>
-            disconnect
+            {t('Disconnected')}
             </button>
 
             <div className="network">
-                <h3>Network</h3>
+                <h3>{t('Network')}</h3>
                 <div className="chain">
                     <img src="./images/tokens/bnb.svg" alt="" />
                     <p>BNB Chain</p>

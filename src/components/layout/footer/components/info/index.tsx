@@ -3,10 +3,12 @@ import './index.scss';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import FAQModal from 'pages/faq/modal';
+import { useTranslation } from 'react-i18next';
 
 const Info = () => {
 	const [windowSize, setWindowSize] = useState<number>(window.innerWidth);
 	const [showModal, setShowModal] = useState<boolean>(false);
+	const {t} = useTranslation();
 
 	useEffect(() => {
 		const handleWindowResize = () => {
@@ -31,11 +33,8 @@ const Info = () => {
 						alt=""
 					/>
 					<p>
-						"Perseverance pays off" is the message Four Number wants to convey
-						to our customers. When someone comes to Four Number, their belief
-						can turn into an opportunity for growth and improvement, which is
-						the value that Four Number pursues. Our goal is to become a top-tier
-						entertainment gaming company on a global scale..
+					{t("'Perseverance pays off' is the message Four Number wants to convey to our customers. When someone comes to Four Number, their belief can turn into an opportunity for growth and improvement, which is the value that Four Number pursues. Our goal is to become a top-tier entertainment gaming company on a global scale.")}
+						
 					</p>
 					<div className="socials">
 						<a href="https://google.com">
@@ -60,10 +59,12 @@ const Info = () => {
 							}}>FAQ</Link>
 						</li>
 						<li>
-							<a href="https://google.com">Privacy Policy</a>
+							<a href="https://google.com">
+							{t('Privacy Policy')}
+							</a>
 						</li>
 						<li>
-							<a href="https://google.com">Terms & Conditions</a>
+							<a href="https://google.com">{t('Terms & Conditions')}</a>
 						</li>
 						<li>
 							<img src="./images/18+.svg" alt="" />

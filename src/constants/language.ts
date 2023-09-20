@@ -5,10 +5,6 @@ export const DEFAULT_LANGUAGE = 'en';
 
 export const LANGUAGES: ILanguage[] = [
   {
-    label: 'Việt Nam',
-    value: 'vi'
-  },
-  {
     label: 'English',
     value: 'en'
   },
@@ -18,18 +14,18 @@ export const LANGUAGES: ILanguage[] = [
   },
   {
     label: 'Filipino',
-    value: 'fi'
+    value: 'phi'
   },
   {
     label: 'हिन्दी',
     value: 'hi'
   },
   {
-    label: 'nigeria',
-    value: 'ni'
-  },
-  {
     label: '日本語',
     value: 'ja'
+  },
+  {
+    label: 'Việt Nam',
+    value: 'vi'
   },
 ];
