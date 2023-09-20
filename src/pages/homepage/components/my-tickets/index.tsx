@@ -5,11 +5,13 @@ import { authUserSelector, signIn } from 'redux-toolkit-saga/auth';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import GameFilter from '../game-filter';
 import './index.scss';
+import { useTranslation } from 'react-i18next';
 
 const MyTickets = () => {
 	const loggedUser = useAppSelector(authUserSelector);
 	const [showModal, setShowModal] = useState(false);
 	const dispatch = useAppDispatch();
+	const {t} = useTranslation();
 
 	
 	const handleSignIn = () => {
@@ -40,7 +42,7 @@ const MyTickets = () => {
 							<thead>
 								<tr>
 									<th style={{ width: 150 }}>Ordinal</th>
-									<th className="text-end">Ticket Numbers</th>
+									<th className="text-end">{t('Ticket numbers')}</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -77,13 +79,13 @@ const MyTickets = () => {
 			) : (
 				<>
 					<div className="fn-ticket-box">
-						<span>You have no ticket!</span>
+						<span>{t('You have no ticket!')}</span>
 						<button
 							className="fn-buy-now"
 							type="button"
 							onClick={() => handleSignIn()}
 						>
-							<span>bUY TICKET now</span>
+							<span>{t('Buy ticket now')}</span>
 						</button>
 					</div>
 				</>

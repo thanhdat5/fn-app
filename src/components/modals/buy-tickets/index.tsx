@@ -15,7 +15,7 @@ const BuyTicketsModal = ({ onDismiss }: Props) => {
 		{ symbol: 'BTC', name: 'BTC (upcoming)', icon: '/images/tokens/btc.svg', balance: '0' },
 		{ symbol: 'BNB', name: 'BNB (upcoming)', icon: '/images/tokens/bnb.svg', balance: '0' },
 		{ symbol: 'ETH', name: 'ETH (upcoming)', icon: '/images/tokens/eth.svg', balance: '0' },
-		{ symbol: 'BAKAC', name: 'BAKAC (upcoming)', icon: '/images/tokens/bakac.svg', balance: '0' },
+		// { symbol: 'BAKAC', name: 'BAKAC (upcoming)', icon: '/images/tokens/bakac.svg', balance: '0' },
 		{ symbol: 'DOGE', name: 'DOGE (upcoming)', icon: '/images/tokens/doge.svg', balance: '0' },
 		{ symbol: 'SHIB', name: 'SHIB (upcoming)', icon: '/images/tokens/shib.svg', balance: '0' },
 ];
@@ -45,7 +45,7 @@ const BuyTicketsModal = ({ onDismiss }: Props) => {
 					<Col lg="7" className="pe-lg-2 order-1 order-lg-0">
 						<div className="fn-buy-heading">
 							<label>Numbers Of Ticket</label>
-							<span>1 Ticket = {usdt} USDT</span>
+							<span>1 {t('Ticket')} = {usdt} USDT</span>
 						</div>
 						<div className="fn-buy-card-form">
 							<div className="fn-buy-input">
@@ -165,19 +165,19 @@ const BuyTicketsModal = ({ onDismiss }: Props) => {
 							</div>
 							<div className="details">
 								<div className="line">
-									<label>5 tickets</label>
+									<label>5 {t('Ticket')}</label>
 									<span>
-										1 Ticket <b>X 5</b>
+										1 {t('Ticket')} <b>X 5</b>
 									</span>
 								</div>
 							</div>
 							<div className="total">
-								<span>total</span>
+								<span>{t('Total')}</span>
 								<span>50 USDT</span>
 							</div>
 							<div className="d-flex justify-content-center">
 								<button type="button" className="buy">
-									<span>bUY TICKET</span>
+									<span>{t('Buy Ticket')}</span>
 								</button>
 							</div>
 						</div>

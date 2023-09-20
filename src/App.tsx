@@ -11,17 +11,20 @@ import { Route, Routes } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.scss';
+import { useTranslation } from "react-i18next";
 
 const HomepageLoading = React.lazy(() => {
   return new Promise(resolve => setTimeout(resolve, 3000)).then(() => import('./pages/homepage'));
 })
 
 function App() {
+  const {t} = useTranslation();
   useEffect(() => {
+    const message = `<b>${t("Congratulation! You've Successfully Bought")} <span>23 Four Numbers Ticket</span>. Good Luck!</b>`
     setTimeout(() => {
       toast(<Message
         type="info"
-        message="<b>Congratulation! You've Successfully Bought <span>23 Four Numbers Ticket</span>. Good Luck!</b>"
+        message={message}
       />, { type: 'info' });
     }, 50000)
   }, [])

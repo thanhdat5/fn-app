@@ -1,12 +1,13 @@
 import { Accordion, Modal } from 'react-bootstrap';
 import './index.scss';
+import { useTranslation } from 'react-i18next';
 
 type Props = {
 	onDismiss: () => void;
 };
 
 const FAQModal = ({ onDismiss }: Props) => {
-	// const { t } = useTranslation();
+	const { t } = useTranslation();
 	return (
 		<Modal
 			className="fn-modal fn-faq"
@@ -32,7 +33,7 @@ const FAQModal = ({ onDismiss }: Props) => {
 						<Accordion.Item eventKey="0">
 										<Accordion.Header>
 											<span className="index">01</span>
-											<label className="title">What is Four Number?</label>
+											<label className="title">{t('What is Four Number?')}</label>
 										</Accordion.Header>
 										<Accordion.Body>
 											Challenge Fate with Mind: The "Four Numbers" Game

@@ -1,10 +1,12 @@
+import { useTranslation } from "react-i18next";
 import "./index.scss";
 
 const GetInTouch = () => {
+    const {t} = useTranslation();
     return <div className="fn-get-in-touch">
         <div className="header">
             <img src="/images/icons/support.svg" alt="" />
-            <span>Get in touch</span>
+            <span>{t('Get in touch')}</span>
         </div>
         <div className="body">
             <div className="contact">

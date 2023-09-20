@@ -14,9 +14,9 @@ const PrizeModal = ({ onDismiss }: Props) => {
         <Modal.Body>
             <div className="fn-prize-body">
                 <ul>
-                    <li>The more players there are, the more extensive the prize.</li>
-                    <li>The number of prizes will increase with the number of players.</li>
-                    <li>The total number of prizes can reach up to 2000.</li>
+                    <li>{t('The more players there are, the more extensive the prize')}</li>
+                    <li>{t('The number of prizes will increase with the number of players.')}</li>
+                    <li>{t('The total number of prizes can reach up to 2000.')}</li>
                 </ul>
                 <Row className="gx-xl-5">
                     <Col md="4" className="mb-md-0 mb-3">
@@ -26,8 +26,8 @@ const PrizeModal = ({ onDismiss }: Props) => {
                                     <th colSpan={2}>2 USDT</th>
                                 </tr>
                                 <tr>
-                                    <th>prize</th>
-                                    <th>Reward</th>
+                                    <th>{t('Prize')}</th>
+                                    <th>{t('Reward')}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -61,8 +61,8 @@ const PrizeModal = ({ onDismiss }: Props) => {
                                     <th colSpan={2}>5 USDT</th>
                                 </tr>
                                 <tr>
-                                    <th>prize</th>
-                                    <th>Reward</th>
+                                    <th>{t('Prize')}</th>
+                                    <th>{t('Reward')}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -96,8 +96,8 @@ const PrizeModal = ({ onDismiss }: Props) => {
                                     <th colSpan={2}>10 USDT</th>
                                 </tr>
                                 <tr>
-                                    <th>prize</th>
-                                    <th>Reward</th>
+                                    <th>{t('Prize')}</th>
+                                    <th>{t('Reward')}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -125,7 +125,7 @@ const PrizeModal = ({ onDismiss }: Props) => {
                         </table>
                     </Col>
                 </Row>
-                <div className="note">* this is the highest prize for each pool of tickets.</div>
+                <div className="note">* {t('This is the highest prize for each pool of tickets')}</div>
             </div>
         </Modal.Body>
     </Modal>

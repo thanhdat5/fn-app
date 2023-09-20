@@ -65,7 +65,7 @@ body {
 		&.modal {
 			display: block !important;
 			transition: all 0.3s ease-in;
-			transform: translateX(100%);
+			transform: translateX(100%) translateY(0px);
 		}
 		&.show {
 			display: block !important;

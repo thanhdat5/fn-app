@@ -17,6 +17,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import { EffectCoverflow } from 'swiper';
+import { useTranslation } from 'react-i18next';
 
 const Banner = () => {
 	const loggedUser = useAppSelector(authUserSelector);
@@ -25,6 +26,7 @@ const Banner = () => {
 	const [showModal, setShowModal] = useState(false);
 	const [selectedTicket, setSelectedTicket] = useState<number>(1);
 	const dispatch = useAppDispatch();
+	const {t} = useTranslation();
 
 	const [windowSize, setWindowSize] = useState(window.innerWidth);
 
@@ -93,10 +95,11 @@ const Banner = () => {
 				<div className="sub-menu">
 					<Container>
 						<button type="button" onClick={() => setShowPrize(true)}>
-							prize
+							{t('Prize')}
 						</button>
 						<button type="button" onClick={() => setShowHowToPlay(true)}>
-							how to play?
+						{t('How to play')}
+							
 						</button>
 						<h1 className="slogan">
 							Don't work for{' '}
@@ -113,7 +116,10 @@ const Banner = () => {
 				
 				{windowSize < 576 ? (
 							<div className="countdown-mobile">
-								<label>Next Draw Start in</label>
+								<label>
+								{t('Next draw start in')}
+
+								</label>
 								<span>00H:00M:00S</span>
 							</div>
 						) : (
@@ -179,21 +185,24 @@ const Banner = () => {
 												src="./images/ticket/ticket-1.png"
 												alt="slide_image"
 											/>
-											<p>Only 67 tickets left</p>
+											<p>
+											{t('Only 67 tickets left')}
+
+											</p>
 										</SwiperSlide>
 										<SwiperSlide>
 											<img
 												src="./images/ticket/ticket-2.png"
 												alt="slide_image"
 											/>
-											<p>Only 67 tickets left</p>
+											<p>{t('Only 67 tickets left')}</p>
 										</SwiperSlide>
 										<SwiperSlide>
 											<img
 												src="./images/ticket/ticket-3.png"
 												alt="slide_image"
 											/>
-											<p>Only 67 tickets left</p>
+											<p>{t('Only 67 tickets left')}</p>
 										</SwiperSlide>
 									</Swiper>
 								</div>
