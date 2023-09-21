@@ -1,9 +1,11 @@
 import LanguageModal from "components/modals/language";
 import UserInformationModal from "components/modals/user-information";
+import { DEFAULT_LANGUAGE } from "constants/language";
 import AffiliateModal from "pages/affiliate/modal";
 import FAQModal from "pages/faq/modal";
 import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import { authUserSelector, signIn, signOut } from "redux-toolkit-saga/auth";
 import { useAppDispatch, useAppSelector } from "store/hooks";
 import ConnectWallet from "./components/connect-wallet";
@@ -12,11 +14,11 @@ import Logo from "./components/logo";
 import Menu from "./components/menu";
 import MenuMobile from "./components/menu-mobile";
 import "./index.scss";
-import { DEFAULT_LANGUAGE } from "constants/language";
 
 const Header = () => {
     const dispatch = useAppDispatch();
     const loggedUser = useAppSelector(authUserSelector);
+    
 
     // const [selectedToken, setSelectedToken] = useState<IToken | undefined>(undefined);
     const [showUserInformation, setShowUserInformation] = useState(false);
@@ -28,6 +30,7 @@ const Header = () => {
     const [showLanguage, setShowLanguage] = useState<boolean>(false);
     const [showFAQ, setShowFAQ] = useState<boolean>(false);
     const [selectedLang, setSelectedLang] = useState<string>(DEFAULT_LANGUAGE);
+    const {t} = useTranslation();
 
     useEffect(() => {
         if (loggedUser && loggedUser.tokens?.length) {
@@ -39,16 +42,17 @@ const Header = () => {
     }, [loggedUser])
 
     const handleSignIn = () => {
+        
         dispatch(signIn({
             walletAddress: '123',
             tokens: [
                 { symbol: 'USDT', name: 'USDT', icon: '/images/tokens/usdt.svg', balance: '9.99999999' },
-                { symbol: 'BTC', name: 'BTC (upcoming)', icon: '/images/tokens/btc.svg', balance: '9.99999999' },
-                { symbol: 'BNB', name: 'BNB (upcoming)', icon: '/images/tokens/bnb.svg', balance: '9.99999999' },
-                { symbol: 'ETH', name: 'ETH (upcoming)', icon: '/images/tokens/eth.svg', balance: '9.99999999' },
-                { symbol: 'BAKAC', name: 'BAKAC (upcoming)', icon: '/images/tokens/bakac.svg', balance: '9.99999999' },
-                { symbol: 'DOGE', name: 'DOGE (upcoming)', icon: '/images/tokens/dge.svg', balance: '9.99999999' },
-                { symbol: 'SHIB', name: 'SHIB (upcoming)', icon: '/images/tokens/shib.svg', balance: '9.99999999' },
+                { symbol: 'BTC', name: `BTC ${t('Upcoming')}`, icon: '/images/tokens/btc.svg', balance: '9.99999999' },
+                { symbol: 'BNB', name: `BNB ${t('Upcoming')}`, icon: '/images/tokens/bnb.svg', balance: '9.99999999' },
+                { symbol: 'ETH', name: `ETH ${t('Upcoming')}`, icon: '/images/tokens/eth.svg', balance: '9.99999999' },
+                { symbol: 'BAKAC', name: `BAKAC ${t('Upcoming')}`, icon: '/images/tokens/bakac.svg', balance: '9.99999999' },
+                { symbol: 'DOGE', name: `DOGE ${t('Upcoming')}`, icon: '/images/tokens/dge.svg', balance: '9.99999999' },
+                { symbol: 'SHIB', name: `SHIB ${t('Upcoming')}`, icon: '/images/tokens/shib.svg', balance: '9.99999999' },
             ],
             totalTickets: 3,
             totalWinningTickets: 0,

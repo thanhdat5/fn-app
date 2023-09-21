@@ -19,12 +19,12 @@ const MyTickets = () => {
 				walletAddress: '123',
 				tokens: [
 						{ symbol: 'USDT', name: 'USDT', icon: '/images/tokens/usdt.svg', balance: '9.99999999' },
-						{ symbol: 'BTC', name: 'BTC (upcoming)', icon: '/images/tokens/btc.svg', balance: '9.99999999' },
-						{ symbol: 'BNB', name: 'BNB (upcoming)', icon: '/images/tokens/bnb.svg', balance: '9.99999999' },
-						{ symbol: 'ETH', name: 'ETH (upcoming)', icon: '/images/tokens/eth.svg', balance: '9.99999999' },
-						{ symbol: 'BAKAC', name: 'BAKAC (upcoming)', icon: '/images/tokens/bakac.svg', balance: '9.99999999' },
-						{ symbol: 'DOGE', name: 'DOGE (upcoming)', icon: '/images/tokens/dge.svg', balance: '9.99999999' },
-						{ symbol: 'SHIB', name: 'SHIB (upcoming)', icon: '/images/tokens/shib.svg', balance: '9.99999999' },
+						{ symbol: 'BTC', name: `BTC ${t('Upcoming')}`, icon: '/images/tokens/btc.svg', balance: '9.99999999' },
+						{ symbol: 'BNB', name: `BNB ${t('Upcoming')}`, icon: '/images/tokens/bnb.svg', balance: '9.99999999' },
+						{ symbol: 'ETH', name: `ETH ${t('Upcoming')}`, icon: '/images/tokens/eth.svg', balance: '9.99999999' },
+						{ symbol: 'BAKAC', name: `BAKAC ${t('Upcoming')}`, icon: '/images/tokens/bakac.svg', balance: '9.99999999' },
+						{ symbol: 'DOGE', name: `DOGE ${t('Upcoming')}`, icon: '/images/tokens/dge.svg', balance: '9.99999999' },
+						{ symbol: 'SHIB', name: `SHIB ${t('Upcoming')}`, icon: '/images/tokens/shib.svg', balance: '9.99999999' },
 				],
 				totalTickets: 3,
 				totalWinningTickets: 0,
@@ -71,7 +71,7 @@ const MyTickets = () => {
 								className="fn-more"
 								onClick={() => setShowModal(true)}
 							>
-								<span>buy ticket</span>
+								<span>{t('Buy ticket now')}</span>
 							</button>
 						</div>
 					</div>
