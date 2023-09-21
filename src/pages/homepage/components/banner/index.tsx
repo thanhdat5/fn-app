@@ -16,8 +16,10 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import { EffectCoverflow } from 'swiper';
 import { useTranslation } from 'react-i18next';
+import { EffectCoverflow } from 'swiper';
+import { LANGUAGES } from 'constants/language';
+import { ILanguage } from 'types/language.model';
 
 const Banner = () => {
 	const loggedUser = useAppSelector(authUserSelector);
@@ -26,7 +28,8 @@ const Banner = () => {
 	const [showModal, setShowModal] = useState(false);
 	const [selectedTicket, setSelectedTicket] = useState<number>(1);
 	const dispatch = useAppDispatch();
-	const {t} = useTranslation();
+	const {t, i18n } = useTranslation();
+	const dataLanguage = LANGUAGES.filter((language: ILanguage) => language.value === i18n.language)[0]
 
 	const [windowSize, setWindowSize] = useState(window.innerWidth);
 
@@ -131,7 +134,7 @@ const Banner = () => {
 					className="fn-banner-buy"
 					onClick={() => (!loggedUser ? handleSignIn() : setShowModal(true))}
 				>
-					<img src="/images/ticket/txt-buy.png" alt="Buy" />
+					<img src={dataLanguage.img} alt="Buy" />
 				</Link>
 				<div className="fn-banner-box">
 					<Container>

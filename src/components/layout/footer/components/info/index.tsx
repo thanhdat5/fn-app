@@ -49,7 +49,7 @@ const Info = () => {
 					<div className="line"></div>
 				</Col>
 				<Col md="4" xs="4">
-					<h4>DOCS</h4>
+					<h4>{t('Docs')}</h4>
 					<ul>
 						<li>
 							<Link to={windowSize > 576 ? "/faq" : "/"} onClick={() => {

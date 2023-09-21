@@ -19,7 +19,7 @@ const Contact = () => {
 					</div>
 				</Col>
 				<Col lg="7">
-					<h4 className="d-md-none d-flex form-title">Get in touch</h4>
+					<h4 className="d-md-none d-flex form-title">{t('Get in touch')}</h4>
 					<Row>
 						<Col md="5" xs="6">
 							<div className="fn-contact-email">

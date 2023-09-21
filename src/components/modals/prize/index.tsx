@@ -16,7 +16,7 @@ const PrizeModal = ({ onDismiss }: Props) => {
                 <ul>
                     <li>{t('The more players there are, the more extensive the prize')}</li>
                     <li>{t('The number of prizes will increase with the number of players.')}</li>
-                    <li>{t('The total number of prizes can reach up to 2000.')}</li>
+                    <li>{t('The total number of prizes can reach up to $200.000.')}</li>
                 </ul>
                 <Row className="gx-xl-5">
                     <Col md="4" className="mb-md-0 mb-3">

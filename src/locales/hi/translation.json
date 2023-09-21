@@ -20,7 +20,7 @@
 	"Message": "संदेश",
 	"The more players there are, the more extensive the prize": "जितने अधिक खिलाड़ी होते हैं, उतना ही विशाल होता है पुरस्कार।",
 	"The number of prizes will increase with the number of players.": "पुरस्कारों की संख्या खिलाड़ियों की संख्या के साथ बढ़ेगी।",
-	"The total number of prizes can reach up to 2000.": "पुरस्कारों की कुल संख्या 2000$ तक पहुँच सकती है।",
+	"The total number of prizes can reach up to $200.000.": "पुरस्कारों की कुल संख्या 200.000$ तक पहुँच सकती है।",
 	"Reward": "पुरस्कार",
 	"This is the highest prize for each pool of tickets": "यह टिकटों के प्रत्येक पूल के लिए सबसे ऊपरी पुरस्कार है",
 	"Four numbers Instructions": "Four Number निर्देश",
@@ -86,5 +86,7 @@
 	"4Numbers will only collaborate with the leader at the helm of your system. If a member within the system wishes to expand or achieve significant revenue and desires a unique mechanism, please get in touch with your system's leader to initiate the discussion.": "4Numbers केवल आपके प्रणाली के प्रमुख के साथ सहयोग करेगा। अगर प्रणाली के अंदर का कोई सदस्य विस्तार करना चाहता है या महत्वपूर्ण आय या एक विशेष प्रक्रिया प्राप्त करना चाहता है, तो कृपया अपनी प्रणाली के प्रमुख से संपर्क करके चर्चा की शुरुआत करें।",
 	"work with us": "हमारे साथ काम करें",
 	"Network": "नेटवर्क",
-	"Rank": "रैंक"
+	"Rank": "रैंक",
+	"Refferal code": "रेफरल कोड",
+	"Docs": "दस्तावेज़"
 }
