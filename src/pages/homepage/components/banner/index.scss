@@ -23,7 +23,7 @@
 		display: flex;
 		width: 224px;
 		height: 56px;
-		padding: 10px 64.082px 0px 64.082px;
+		padding: 4px 64.082px 0px 64.082px;
 		justify-content: center;
 		align-items: center;
 		border-radius: 15px;
@@ -74,7 +74,7 @@
 
 		@media (max-width: 1199px) {
 			top: 62%;
-			width: 30%;
+			width: 35%;
 			height: 7%;
 
 			img {
@@ -86,7 +86,7 @@
 			top: 69%;
 
 			img {
-				height: 58%;
+				height: 53%;
 			}
 		}
 	}

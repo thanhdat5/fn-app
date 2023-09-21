@@ -18,16 +18,17 @@ const HomepageLoading = React.lazy(() => {
 })
 
 function App() {
-  const {t} = useTranslation();
+
+  const {t, i18n} = useTranslation();
   useEffect(() => {
-    const message = `<b>${t("Congratulation! You've Successfully Bought")} <span>23 Four Numbers Ticket</span>. Good Luck!</b>`
+    const message = `<b>${t("Congratulation! You've Successfully Bought")} <span>${t('23 Four Numbers Ticket')}</span>. ${t('Good Luck!')}</b>`
     setTimeout(() => {
       toast(<Message
         type="info"
         message={message}
       />, { type: 'info' });
-    }, 50000)
-  }, [])
+    }, 1000)
+  }, [i18n.language, t])
 
   return (
     <div data-bs-theme="dark" className="fn-app">
