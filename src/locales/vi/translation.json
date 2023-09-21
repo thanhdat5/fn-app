@@ -7,7 +7,7 @@
 	"How to play": "Hướng Dẫn Chơi",
 	"Buy Ticket": "Mua Vé",
 	"Only 67 tickets left": "Chỉ Còn 67 Vé",
-	"Next draw start in": "Bắt đầu lượt bốc thăm tiếp theo trong",
+	"Next draw start in": "lượt bốc thăm tiếp theo",
 	"Accept Networks": "Những Mạng Lưới Được Chấp Thuận",
 	"Partner": "Đối Tác",
 	"Together, we are changing lives.": "Cùng nhau chúng ta đang thay đổi cuộc sống.",
@@ -19,7 +19,7 @@
 	"Message": "Tin Nhắn",
 	"The more players there are, the more extensive the prize": "Càng có nhiều người chơi, giải thưởng càng phong phú.",
 	"The number of prizes will increase with the number of players.": "Số lượng giải thưởng sẽ tăng theo số lượng người chơi.",
-	"The total number of prizes can reach up to 2000.": "Tổng số giải thưởng có thể lên đến 2000$.",
+	"The total number of prizes can reach up to $200.000.": "Tổng số giải thưởng có thể lên đến 200.000$.",
 	"Reward": "Giải thưởng",
 	"This is the highest prize for each pool of tickets": "Đây Là Giải Thưởng Cao Nhất Trong Môi Bể Vé",
 	"Four numbers Instructions": "Hướng dẫn chơi Four Number",
@@ -85,5 +85,7 @@
 	"4Numbers will only collaborate with the leader at the helm of your system. If a member within the system wishes to expand or achieve significant revenue and desires a unique mechanism, please get in touch with your system's leader to initiate the discussion.": "4number sẽ chỉ làm việc với 1 trưởng nhóm đứng đầu hệ thống đó. Trong trường hợp 1 thành viên trong hệ thống muốn phát triển mạnh hay đạt được doanh thu lớn mà muốn sở hữu cơ chế riêng, vui lòng liên hệ với trưởng nhóm của bạn để trao đổi.",
 	"work with us": "Hợp Tác Với Chúng Tôi",
 	"Network": "Mạng",
-	"Rank": "Hạng"
+	"Rank": "Hạng",
+	"Refferal code": "Mã giới thiệu",
+	"Docs": "Tài liệu"
 }

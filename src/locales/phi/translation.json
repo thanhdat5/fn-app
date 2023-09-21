@@ -20,7 +20,7 @@
 	"Message": "Mensahe",
 	"The more players there are, the more extensive the prize": "Kasama ang higit pang mga manlalaro, mas malalawak ang premyo.",
 	"The number of prizes will increase with the number of players.": "Ang bilang ng mga premyo ay tataas habang dumarami ang mga manlalaro.",
-	"The total number of prizes can reach up to 2000.": "Ang kabuuang bilang ng mga premyo ay maaaring umabot ng hanggang 2000$",
+	"The total number of prizes can reach up to $200.000.": "Ang kabuuang bilang ng mga premyo ay maaaring umabot ng hanggang 200.000$",
 	"Reward": "Gantimpala",
 	"This is the highest prize for each pool of tickets": "Ito ang pinakamataas na premyo para sa bawat pool ng tiket",
 	"Four numbers Instructions": "Nakalagay sa mga Tagubilin ng Four Numbers",
@@ -84,5 +84,7 @@
 	"Contact Information": "Mga Detalye ng Pagkontak",
 	"Telegram: t.me/Fnb_support": "Telegram: t.me/Fnb_support",
 	"4Numbers will only collaborate with the leader at the helm of your system. If a member within the system wishes to expand or achieve significant revenue and desires a unique mechanism, please get in touch with your system's leader to initiate the discussion.": "Ang Four Numbers ay makikipagtulungan lamang sa lider na namumuno sa iyong sistema. Kung may miyembro sa loob ng sistema na nais mag-expand o magkaruon ng malaking kita at nagnanais ng isang natatanging mekanismo, mangyaring makipag-ugnayan sa lider ng iyong sistema upang simulan ang diskusyon.",
-	"work with us": "Magtrabaho Kasama Kami"
+	"work with us": "Magtrabaho Kasama Kami",
+	"Refferal code": "code ng referral",
+	"Docs": "mga dokumento"
 }

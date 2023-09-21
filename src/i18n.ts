@@ -9,7 +9,7 @@ import resourceKO from "locales/ko/translation.json";
 import { DEFAULT_LANGUAGE } from "constants/language";
 
 const resources = {
-  en: {
+  eng: {
     translation: { ...resourceEN },
   },
   vi: {
@@ -21,10 +21,10 @@ const resources = {
   hi: {
     translation: { ...resourceHI}
   },
-  ja: {
+  jp: {
     translation: { ...resourceJA}
   },
-  ko: {
+  kr: {
     translation: { ...resourceKO}
   }
 };

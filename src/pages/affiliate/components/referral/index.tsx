@@ -20,7 +20,7 @@ const Referral = () => {
 				</div>
 				<div className="body">
 					<div className="form-group">
-						<label>Referral Code</label>
+						<label>{t('Refferal code')}</label>
 						<div className="input-gr">
 							<input readOnly value="abcdefgh" />
 							<button type="button" className="copy">

@@ -1,31 +1,37 @@
 import { ILanguage } from "types/language.model";
 
 
-export const DEFAULT_LANGUAGE = 'en';
+export const DEFAULT_LANGUAGE = 'eng';
 
 export const LANGUAGES: ILanguage[] = [
   {
     label: 'English',
-    value: 'en'
+    value: 'eng',
+    img: '/images/ticket/txt-buy.png',
   },
   {
     label: '한국어',
-    value: 'ko'
+    value: 'kr',
+    img: '/images/ticket/txt-buy-korea.png',
   },
   {
     label: 'Filipino',
-    value: 'phi'
+    value: 'phi',
+    img: '/images/ticket/txt-buy-philip.png',
   },
   {
     label: 'हिन्दी',
-    value: 'hi'
+    value: 'hi',
+    img: '/images/ticket/txt-buy-hindi.png',
   },
   {
     label: '日本語',
-    value: 'ja'
+    value: 'jp',
+    img: '/images/ticket/txt-buy-japan.png',
   },
   {
     label: 'Việt Nam',
-    value: 'vi'
+    value: 'vi',
+    img: '/images/ticket/txt-buy-vn.png',
   },
 ];
