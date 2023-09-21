@@ -44,7 +44,7 @@ const BuyTicketsModal = ({ onDismiss }: Props) => {
 				<Row>
 					<Col lg="7" className="pe-lg-2 order-1 order-lg-0">
 						<div className="fn-buy-heading">
-							<label>Numbers Of Ticket</label>
+							<label>{t('Numbers Of Ticket')}</label>
 							<span>1 {t('Ticket')} = {usdt} USDT</span>
 						</div>
 						<div className="fn-buy-card-form">
@@ -76,7 +76,7 @@ const BuyTicketsModal = ({ onDismiss }: Props) => {
 									className="clear"
 									onClick={() => setTicket(1)}
 								>
-									Clear
+									{t('Clear')}
 								</button>
 							</div>
 							<div className="fn-buy-buttons">
@@ -94,7 +94,7 @@ const BuyTicketsModal = ({ onDismiss }: Props) => {
 					</Col>
 					<Col lg="1" className="order-0 order-lg-1">
 						<div className="fn-buy-tickets">
-							<label className="title d-none">select the ticket price</label>
+							<label className="title d-none">{t('Select the ticket price')}</label>
 							<div className="fn-buy-card-options">
 								<div
 									className={`fn-buy-option ${usdt === 2 ? 'active' : ''}`}
@@ -120,7 +120,7 @@ const BuyTicketsModal = ({ onDismiss }: Props) => {
 					<Col lg="4" className="order-2">
 						<div className="fn-buy-card-pay">
 							<div className="fn-form-pay">
-								<label>Pay with</label>
+								<label>{t('Pay with')}</label>
 
 								<Dropdown className="fn-deposit-currency">
 									<Dropdown.Toggle variant="dark" id="dropdown-currency">
@@ -134,7 +134,7 @@ const BuyTicketsModal = ({ onDismiss }: Props) => {
 										</div>
 
 										<div className="balance">
-											<small>balance</small>
+											<small>{t('Balance')}</small>
 											<b>đ {selectedCurrency.balance}</b>
 										</div>
 										<img

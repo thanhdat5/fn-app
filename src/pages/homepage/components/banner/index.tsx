@@ -58,19 +58,19 @@ const Banner = () => {
 					},
 					{
 						symbol: 'BTC',
-						name: 'BTC (upcoming)',
+						name: `BTC ${t('Upcoming')}`,
 						icon: '/images/tokens/btc.svg',
 						balance: '0'
 					},
 					{
 						symbol: 'BNB',
-						name: 'BNB (upcoming)',
+						name: `BNB ${t('Upcoming')}`,
 						icon: '/images/tokens/bnb.svg',
 						balance: '0'
 					},
 					{
 						symbol: 'ETH',
-						name: 'ETH (upcoming)',
+						name: `ETH ${t('Upcoming')}`,
 						icon: '/images/tokens/eth.svg',
 						balance: '0'
 					}
