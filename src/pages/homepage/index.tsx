@@ -32,8 +32,6 @@ const Homepage = () => {
 						onSelect={handleTabSelect}
 					>
 						<Tab
-							mountOnEnter={true}
-							unmountOnExit={true}
 							eventKey="myTicket"
 							title={`${t('My ticket')} (${loggedUser?.totalTickets || 0})`}
 						>
@@ -45,8 +43,7 @@ const Homepage = () => {
 							)}
 						</Tab>
 						<Tab
-							mountOnEnter={true}
-							unmountOnExit={true}
+							
 							eventKey="myWinning"
 							title={t('My winning')}
 						>
@@ -58,8 +55,7 @@ const Homepage = () => {
 							)}
 						</Tab>
 						<Tab
-							mountOnEnter={true}
-							unmountOnExit={true}
+							
 							eventKey="fnWinner"
 							title={t('Four Number winner')}
 						>
