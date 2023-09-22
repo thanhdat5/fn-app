@@ -133,7 +133,7 @@ const Referral = () => {
 									</tbody>
 								</table>
                             </Tab>
-							<Tab eventKey="work-with-us" title={t('work with us')}>
+							<Tab eventKey="work-with-us" title={t('Work With Us')}>
                                <div className='work-with-us'>
                                 <div>{t("If you own a community or a large group of players, or if you manage a large-scale system, don't hesitate to get in touch with us to discuss exclusive offers tailored just for you.")}</div>
                                 <div>{t('Contact Information')}:</div>
