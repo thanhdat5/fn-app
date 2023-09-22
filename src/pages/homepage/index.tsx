@@ -8,9 +8,15 @@ import MyWinningTickets from './components/my-winning-tickets';
 import Statistics from './components/statistics';
 import './index.scss';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 
 const Homepage = () => {
 	const loggedUser = useAppSelector(authUserSelector);
+	const [activeTab, setActiveTab] = useState('tab1');
+
+	const handleTabSelect = (eventKey: any) => {
+		setActiveTab(eventKey);
+	};
 	const { t } = useTranslation();
 	return (
 		<div className="fn-homepage">
@@ -23,6 +29,7 @@ const Homepage = () => {
 						unmountOnExit={true}
 						mountOnEnter={true}
 						transition={false}
+						onSelect={handleTabSelect}
 					>
 						<Tab
 							mountOnEnter={true}
@@ -30,8 +37,12 @@ const Homepage = () => {
 							eventKey="myTicket"
 							title={`${t('My ticket')} (${loggedUser?.totalTickets || 0})`}
 						>
-							<Statistics />
-							<MyTickets />
+							{activeTab === 'myTicket' && (
+								<>
+									<Statistics />
+									<MyTickets />
+								</>
+							)}
 						</Tab>
 						<Tab
 							mountOnEnter={true}
@@ -39,8 +50,12 @@ const Homepage = () => {
 							eventKey="myWinning"
 							title={t('My winning')}
 						>
-							<Statistics />
-							<MyWinningTickets />
+							{activeTab === 'myWinning' && (
+								<>
+									<Statistics />
+									<MyWinningTickets />
+								</>
+							)}
 						</Tab>
 						<Tab
 							mountOnEnter={true}
@@ -48,7 +63,7 @@ const Homepage = () => {
 							eventKey="fnWinner"
 							title={t('Four Number winner')}
 						>
-							<FourNumberWinner />
+							{activeTab === 'fnWinner' && <FourNumberWinner />}
 						</Tab>
 					</Tabs>
 				</Container>
