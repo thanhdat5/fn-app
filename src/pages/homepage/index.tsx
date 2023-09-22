@@ -19,16 +19,17 @@ const Homepage = () => {
                 <Tabs
                     defaultActiveKey="myTicket"
                     id="uncontrolled-tab-example"
+                    unmountOnExit={true}
                 >
-                    <Tab eventKey="myTicket" title={`${t('My ticket')} (${loggedUser?.totalTickets || 0})`}>
+                    <Tab mountOnEnter={true} unmountOnExit={true} eventKey="myTicket" title={`${t('My ticket')} (${loggedUser?.totalTickets || 0})`}>
                         <Statistics />
                         <MyTickets />
                     </Tab>
-                    <Tab eventKey="myWinning" title={t('My winning')}>
+                    <Tab mountOnEnter={true} unmountOnExit={true} eventKey="myWinning" title={t('My winning')}>
                         <Statistics />
                         <MyWinningTickets />
                     </Tab>
-                    <Tab eventKey="fnWinner" title={t('Four Number winner')}>
+                    <Tab mountOnEnter={true} unmountOnExit={true} eventKey="fnWinner" title={t('Four Number winner')}>
                         <FourNumberWinner />
                     </Tab>
                 </Tabs>
