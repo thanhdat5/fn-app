@@ -14,7 +14,7 @@ const Referral = () => {
 					<h4>
 						{t('INVITE A FRIEND TO GET')}:
 						<span>
-							<strong>8%</strong> {t('COMMISSION REWARDS')}
+							<strong>7%</strong> {t('COMMISSION REWARDS')}
 						</span>
 					</h4>
 				</div>
