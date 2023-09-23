@@ -16,11 +16,11 @@ const Affiliate = () => {
         >
             <Tab eventKey="general" title={t('General')}>
                 <Row className="gy-md-3">
-                    <Col  lg="8">
+                    <Col  lg="7">
                         <Overall />
                         
                     </Col>
-                    <Col  lg="4">
+                    <Col  lg="5">
                         <Referral />
                         <GetInTouch />
                     </Col>
