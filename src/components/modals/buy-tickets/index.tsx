@@ -10,21 +10,22 @@ type Props = {
 const BuyTicketsModal = ({ onDismiss }: Props) => {
 	const [usdt, setUsdt] = useState(2);
 	const [ticket, setTicket] = useState(5);
+	const { t } = useTranslation();
 	const currencies: IToken[] =  [
 		{ symbol: 'USDT', name: 'USDT', icon: '/images/tokens/usdt.svg',  },
-		{ symbol: 'BTC', name: 'BTC (upcoming)', icon: '/images/tokens/btc.svg',  },
-		{ symbol: 'BNB', name: 'BNB (upcoming)', icon: '/images/tokens/bnb.svg', },
-		{ symbol: 'ETH', name: 'ETH (upcoming)', icon: '/images/tokens/eth.svg',  },
-		// { symbol: 'BAKAC', name: 'BAKAC (upcoming)', icon: '/images/tokens/bakac.svg', balance: '0' },
-		{ symbol: 'DOGE', name: 'DOGE (upcoming)', icon: '/images/tokens/doge.svg',  },
-		{ symbol: 'SHIB', name: 'SHIB (upcoming)', icon: '/images/tokens/shib.svg',  },
+		{ symbol: 'BTC', name: `BTC (${t('Upcoming')})`, icon: '/images/tokens/btc.svg',  },
+		{ symbol: 'BNB', name: `BNB (${t('Upcoming')})`, icon: '/images/tokens/bnb.svg', },
+		{ symbol: 'ETH', name: `ETH (${t('Upcoming')})`, icon: '/images/tokens/eth.svg',  },
+		// { symbol: 'BAKAC', name: 'BAKAC ${t('Upcoming')}', icon: '/images/tokens/bakac.svg', balance: '0' },
+		{ symbol: 'DOGE', name: `DOGE (${t('Upcoming')})`, icon: '/images/tokens/doge.svg',  },
+		{ symbol: 'SHIB', name: `SHIB (${t('Upcoming')})`, icon: '/images/tokens/shib.svg',  },
 ];
 
 	const [selectedCurrency, setSelectedCurrency] = useState<IToken>(
 		currencies[0]
 	);
 
-	const { t } = useTranslation();
+	
 	return (
 		<Modal
 			className="fn-modal fn-buy-ticket fade" 
