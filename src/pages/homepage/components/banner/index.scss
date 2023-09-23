@@ -140,7 +140,7 @@
 		display: flex;
 		justify-content: space-between;
 
-		@media (max-width: 769px) {
+		@media (max-width: 1024px) {
 			display: none;
 		}
 
@@ -162,7 +162,7 @@
 		margin: 0 auto;
 		display: none;
 
-		@media (max-width: 769px) {
+		@media (max-width: 1024px) {
 			display: block;
 		}
 
@@ -202,7 +202,7 @@
 						font-size: 11px !important;
 					}
 
-					@media (max-width: 768px) {
+					@media (max-width: 1024px) {
 						font-size: 13px;
 						transform: translate(-34%, -100%);
 					}

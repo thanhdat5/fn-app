@@ -9,7 +9,7 @@ const Referral = () => {
 
 	return (
 		<>
-			<div className="fn-referral">
+			<div className="fn-referral mb-3">
 				<div className="header">
 					<h4>
 						{t('INVITE A FRIEND TO GET')}:

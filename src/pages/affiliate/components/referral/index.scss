@@ -214,6 +214,14 @@
 	.modal-content {
 		border-radius: 6px 6px 0 0 !important;
 		overflow: hidden !important;
+
+		@media (max-width: 991px) {
+			position: fixed;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			height: fit-content;
+		}
 	}
 
 	.fn-referral-tabs {
