@@ -24,7 +24,7 @@
 		padding: 4px 5%;
 		overflow: hidden;
 		position: relative;
-		margin-right: 50px;
+		margin-right: 46px;
 
 		@media (max-width: 767px) {
 			margin-right: 5px;
@@ -35,9 +35,10 @@
 		}
 
 		@media (max-width: 575px) {
-			margin-left: 20%;
+			margin-left: 22%;
 			width: 121px;
 			justify-content: center;
+			transform: none;
 		}
 
 		span {
