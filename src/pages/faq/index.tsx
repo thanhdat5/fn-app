@@ -1,9 +1,12 @@
 import { Accordion, Container, Tab, Tabs } from 'react-bootstrap';
 import './index.scss';
 import { useTranslation } from 'react-i18next';
+import React, { Suspense } from 'react';
 
 const FAQPage = () => {
 	const { t } = useTranslation();
+	const FirstLazyAcc = React.lazy(() => import('./what-is-four-number'));
+
 	return (
 		<div className="fn-faq-page">
 			<Container>
@@ -22,15 +25,10 @@ const FAQPage = () => {
 											<span className="index">01</span>
 											<label className="title">{t('What is Four Number?')}</label>
 										</Accordion.Header>
-										<Accordion.Body>
-											{t("Challenge Fate with Mind: The 'Four Numbers' Game")}
-											<br />
-											<br />
-											{t('Have you ever wondered if luck is on your side when buying lottery tickets? Try the “Four Numbers” game now - an exciting game that promises the chance of winning big.')}
-											<br />
-											<br />
-											{t("This game's thrilling and anticipation-filled experiences make buying lottery tickets more exciting than ever. You can test your luck daily and feel the special thrill when your numbers match the winning combination.")}
-										</Accordion.Body>
+										<Suspense fallback={<div>Loading...</div>}>
+
+										<FirstLazyAcc />
+										</Suspense>
 									</Accordion.Item>
 									<Accordion.Item eventKey="1">
 										<Accordion.Header>
