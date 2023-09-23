@@ -11,13 +11,13 @@ const BuyTicketsModal = ({ onDismiss }: Props) => {
 	const [usdt, setUsdt] = useState(2);
 	const [ticket, setTicket] = useState(5);
 	const currencies: IToken[] =  [
-		{ symbol: 'USDT', name: 'USDT', icon: '/images/tokens/usdt.svg', balance: '9.99999999' },
-		{ symbol: 'BTC', name: 'BTC (upcoming)', icon: '/images/tokens/btc.svg', balance: '0' },
-		{ symbol: 'BNB', name: 'BNB (upcoming)', icon: '/images/tokens/bnb.svg', balance: '0' },
-		{ symbol: 'ETH', name: 'ETH (upcoming)', icon: '/images/tokens/eth.svg', balance: '0' },
+		{ symbol: 'USDT', name: 'USDT', icon: '/images/tokens/usdt.svg',  },
+		{ symbol: 'BTC', name: 'BTC (upcoming)', icon: '/images/tokens/btc.svg',  },
+		{ symbol: 'BNB', name: 'BNB (upcoming)', icon: '/images/tokens/bnb.svg', },
+		{ symbol: 'ETH', name: 'ETH (upcoming)', icon: '/images/tokens/eth.svg',  },
 		// { symbol: 'BAKAC', name: 'BAKAC (upcoming)', icon: '/images/tokens/bakac.svg', balance: '0' },
-		{ symbol: 'DOGE', name: 'DOGE (upcoming)', icon: '/images/tokens/doge.svg', balance: '0' },
-		{ symbol: 'SHIB', name: 'SHIB (upcoming)', icon: '/images/tokens/shib.svg', balance: '0' },
+		{ symbol: 'DOGE', name: 'DOGE (upcoming)', icon: '/images/tokens/doge.svg',  },
+		{ symbol: 'SHIB', name: 'SHIB (upcoming)', icon: '/images/tokens/shib.svg',  },
 ];
 
 	const [selectedCurrency, setSelectedCurrency] = useState<IToken>(
@@ -133,10 +133,10 @@ const BuyTicketsModal = ({ onDismiss }: Props) => {
 											<span>{selectedCurrency.name}</span>
 										</div>
 
-										<div className="balance">
+										{/* <div className="balance">
 											<small>{t('Balance')}</small>
 											<b>đ {selectedCurrency.balance}</b>
-										</div>
+										</div> */}
 										<img
 											className="arrow"
 											src="/images/icons/arrow.svg"
@@ -157,7 +157,7 @@ const BuyTicketsModal = ({ onDismiss }: Props) => {
 											>
 												<img className="icon" src={currency.icon} alt="" />
 												<span className="name">{currency.name}</span>
-												<span className="balance">{currency.balance}</span>
+												{/* <span className="balance">{currency.balance}</span> */}
 											</Dropdown.Item>
 										))}
 									</Dropdown.Menu>
