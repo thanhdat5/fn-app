@@ -15,12 +15,12 @@ const Affiliate = () => {
             id="uncontrolled-tab-example"
         >
             <Tab eventKey="general" title={t('General')}>
-                <Row>
-                    <Col md="8">
+                <Row className="gy-md-3">
+                    <Col  lg="8">
                         <Overall />
                         
                     </Col>
-                    <Col md="4">
+                    <Col  lg="4">
                         <Referral />
                         <GetInTouch />
                     </Col>

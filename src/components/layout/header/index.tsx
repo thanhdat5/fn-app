@@ -69,20 +69,7 @@ const Header = () => {
             <Container>
                 <div className="fn-header-inner">
                     <Logo />
-                    {/* {
-                        loggedUser ? <>
-                            <Menu />
-                            <ConnectWallet onClick={handleSignIn} title="0xdwd..."/>
-                            <MenuMobile
-                                onShowAffiliate={() => setShowAffiliate(true)}
-                                onShowLanguage={() => setShowLanguage(true)}
-                                onShowFAQ={() => setShowFAQ(true)}
-                            />
-                        </> : <>
-                            <ConnectWallet onClick={handleSignIn}/>
-                           
-                        </>
-                    } */}
+                  
                          <Menu />
                             <ConnectWallet onClick={handleSignIn} title={loggedUser ? '0xdwd...' : undefined} signOut={handleSignOut}/>
                             <MenuMobile
