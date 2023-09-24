@@ -19,7 +19,7 @@ const Referral = () => {
 					</h4>
 				</div>
 				<div className="body">
-					<div className="form-group">
+					{/* <div className="form-group">
 						<label>{t('Refferal code')}</label>
 						<div className="input-gr">
 							<input readOnly value="abcdefgh" />
@@ -27,7 +27,7 @@ const Referral = () => {
 								<img src="/images/icons/copy.svg" alt="" />
 							</button>
 						</div>
-					</div>
+					</div> */}
 					<div className="form-group">
 						<label>{t('Referral Link')}</label>
 						<div className="input-gr">

@@ -1,12 +1,9 @@
 import { Accordion, Container, Tab, Tabs } from 'react-bootstrap';
 import './index.scss';
 import { useTranslation } from 'react-i18next';
-import React, { Suspense } from 'react';
 
 const FAQPage = () => {
 	const { t } = useTranslation();
-
-	const LazyFirstAcc = React.lazy(() => import('./what-is-for-number'));
 	return (
 		<div className="fn-faq-page">
 			<Container>
@@ -23,35 +20,31 @@ const FAQPage = () => {
 									<Accordion.Item eventKey="0">
 										<Accordion.Header>
 											<span className="index">01</span>
-											<label className="title">
-												{t('What is Four Number?')}
-											</label>
+											<label className="title">{t('What is Four Number?')}</label>
 										</Accordion.Header>
-										<Suspense fallback={<div>Loading...</div>}>
-											<LazyFirstAcc />
-										</Suspense>
+										<Accordion.Body>
+											{t("Challenge Fate with Mind: The 'Four Numbers' Game")}
+											<br />
+											<br />
+											{t('Have you ever wondered if luck is on your side when buying lottery tickets? Try the “Four Numbers” game now - an exciting game that promises the chance of winning big.')}
+											<br />
+											<br />
+											{t("This game's thrilling and anticipation-filled experiences make buying lottery tickets more exciting than ever. You can test your luck daily and feel the special thrill when your numbers match the winning combination.")}
+										</Accordion.Body>
 									</Accordion.Item>
 									<Accordion.Item eventKey="1">
 										<Accordion.Header>
 											<span className="index">02</span>
 											<label className="title">
-												{t(
-													"Why should you participate in the 'Four Numbers' game?"
-												)}
+												{t("Why should you participate in the 'Four Numbers' game?")}
 											</label>
 										</Accordion.Header>
 										<Accordion.Body>
-											{t(
-												"In these challenging economic times, the 'Four Numbers' game offers more than just an exciting source of entertainment. Firstly, this game ensures transparency and fairness, with no interference from anyone. This means everyone has an equal opportunity to participate and try their luck."
-											)}
+											{t("In these challenging economic times, the 'Four Numbers' game offers more than just an exciting source of entertainment. Firstly, this game ensures transparency and fairness, with no interference from anyone. This means everyone has an equal opportunity to participate and try their luck.")}
 											<br /> <br />
-											{t(
-												"The game boasts an incredibly high winning rate, and the more people who participate, the more prizes emerge, giving everyone a taste of luck. A simple, fun, and rewarding game is always something people aspire to. Aside from providing you with a new pastime during your leisure time, the rewards from 'Four Numbers' can also become an additional source of income for many."
-											)}
+											{t("The game boasts an incredibly high winning rate, and the more people who participate, the more prizes emerge, giving everyone a taste of luck. A simple, fun, and rewarding game is always something people aspire to. Aside from providing you with a new pastime during your leisure time, the rewards from 'Four Numbers' can also become an additional source of income for many.")}
 											<br /> <br />
-											{t(
-												"So, join the 'Four Numbers' game to experience joy, excitement, and the opportunity to improve your personal and family finances."
-											)}
+											{t("So, join the 'Four Numbers' game to experience joy, excitement, and the opportunity to improve your personal and family finances.")}
 										</Accordion.Body>
 									</Accordion.Item>
 									<Accordion.Item eventKey="2">
@@ -62,41 +55,29 @@ const FAQPage = () => {
 											</label>
 										</Accordion.Header>
 										<Accordion.Body>
-											{t(
-												"The credibility of the 'Four Numbers' game is always highly regarded and ensured. This game operates on strict rules and regulations to guarantee transparency and fairness in selecting the winning numbers. There is a rigorous management system in place, along with regular checks, to ensure that all transactions and results are executed accurately and honestly. Additionally, the system is entirely free from external interference or influence, and transparency is our top priority."
-											)}
+											{t("The credibility of the 'Four Numbers' game is always highly regarded and ensured. This game operates on strict rules and regulations to guarantee transparency and fairness in selecting the winning numbers. There is a rigorous management system in place, along with regular checks, to ensure that all transactions and results are executed accurately and honestly. Additionally, the system is entirely free from external interference or influence, and transparency is our top priority.")}
 											<br /> <br />
-											{t(
-												'We are finalizing all procedures to obtain the necessary licenses for the system to operate smoothly.'
-											)}
+											{t('We are finalizing all procedures to obtain the necessary licenses for the system to operate smoothly.')}
 										</Accordion.Body>
 									</Accordion.Item>
 
 									<Accordion.Item eventKey="3">
 										<Accordion.Header>
 											<span className="index">04</span>
-											<label className="title">
-												{t('Conditions for participating')}
-											</label>
+											<label className="title">{t('Conditions for participating')}</label>
 										</Accordion.Header>
 										<Accordion.Body>
-											{t(
-												'You must be at least 18 years old or reach the age of majority under your jurisdiction. You must be permitted to play online games by the applicable laws.'
-											)}
+										{t('You must be at least 18 years old or reach the age of majority under your jurisdiction. You must be permitted to play online games by the applicable laws.')}
 										</Accordion.Body>
 									</Accordion.Item>
 
 									<Accordion.Item eventKey="4">
 										<Accordion.Header>
 											<span className="index">05</span>
-											<label className="title">
-												{t('Start your game journey')}
-											</label>
+											<label className="title">{t('Start your game journey')}</label>
 										</Accordion.Header>
 										<Accordion.Body>
-											{t(
-												'Connect your wallet and begin. More information is in the video below.'
-											)}
+										{t('Connect your wallet and begin. More information is in the video below.')}
 										</Accordion.Body>
 									</Accordion.Item>
 								</Accordion>
