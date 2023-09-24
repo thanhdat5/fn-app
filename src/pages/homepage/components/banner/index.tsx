@@ -172,13 +172,14 @@ const Banner = () => {
 										initialSlide={1}
 										grabCursor={true}
 										centeredSlides={true}
-										slidesPerView={'auto'}
+										slidesPerView={3}
 										slideToClickedSlide={true}
 										coverflowEffect={{
 											rotate: 0,
 											stretch: 0,
 											depth: 100,
-											modifier: 1
+											modifier: 0,
+											
 										}}
 										modules={[EffectCoverflow]}
 										className="swiper_container"
