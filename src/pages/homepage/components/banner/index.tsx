@@ -172,13 +172,13 @@ const Banner = () => {
 										initialSlide={1}
 										grabCursor={true}
 										centeredSlides={true}
-										slidesPerView={'auto'}
+										slidesPerView={1}
 										slideToClickedSlide={true}
 										coverflowEffect={{
 											rotate: 0,
 											stretch: 0,
 											depth: 100,
-											modifier: 0,
+											modifier: 1,
 											
 										}}
 										modules={[EffectCoverflow]}
