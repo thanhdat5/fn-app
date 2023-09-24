@@ -169,6 +169,7 @@
 		.swiper,
 		.swiper-container {
 			@media (max-width: 567px) {
+				transform: translateX(-5%);
 				.swiper-slide {
 					width: 168px;
 					height: 100px;
