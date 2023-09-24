@@ -178,7 +178,7 @@ const Banner = () => {
 											rotate: 0,
 											stretch: 0,
 											depth: 100,
-											modifier: 1,
+											modifier: 0,
 											
 										}}
 										modules={[EffectCoverflow]}
