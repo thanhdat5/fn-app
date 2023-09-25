@@ -1,0 +1,19 @@
+body {
+	margin: 0;
+	overflow: auto !important;
+
+	.fn-comming-soon {
+		width: 100vw;
+		height: 100vh;
+		margin: 0;
+		display: flex; /* or grid */
+		align-items: center; /* Center vertically */
+		justify-content: center; /* Center horizontally */
+		overflow: auto !important;
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+	}
+}
