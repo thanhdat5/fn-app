@@ -3,13 +3,20 @@
 		margin: 0;
 
 		.modal-content {
-			height: 100vh;
-			// position: absolute;
-			// top: 0;
-			// left: 0;
-			// right: 0;
-			// bottom: 0;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
 			overflow-y: scroll;
+			-ms-overflow-style: none; /* Internet Explorer 10+ */
+			scrollbar-width: none; /* Firefox */
+			border-radius: 10px !important;
+			// overflow: hidden;
+
+			&::-webkit-scrollbar {
+				display: none; /* Safari and Chrome */
+			}
 		}
 	}
 	.fn-prize-body {

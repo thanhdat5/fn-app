@@ -169,6 +169,7 @@
 		.swiper,
 		.swiper-container {
 			@media (max-width: 567px) {
+				transform: translateX(-5%);
 				.swiper-slide {
 					width: 168px;
 					height: 100px;
@@ -197,14 +198,18 @@
 					width: 200px;
 					margin: 0;
 
-					@media (max-width: 575px) {
-						transform: translate(-28%, 30%) !important;
-						font-size: 11px !important;
-					}
-
 					@media (max-width: 1024px) {
 						font-size: 13px;
-						transform: translate(-34%, -100%);
+						transform: translate(-37.5%, -100%);
+					}
+
+					@media (max-width: 991px) {
+						transform: translate(-26%, -100%);
+					}
+
+					@media (max-width: 575px) {
+						transform: translate(-16%, 30%) !important;
+						font-size: 11px !important;
 					}
 				}
 				transform: translate3d(0px, -20px, -100.192px) rotateX(0deg)
@@ -223,12 +228,32 @@
 			}
 
 			.swiper-slide-prev {
-				transform: translate3d(35px, -10px, -100.192px) rotateX(0deg)
+				transform: translate3d(60px, -5px, -100.192px) rotateX(0deg)
 					rotateY(0deg) scale(0.8) !important;
+
+				@media (max-width: 768px) {
+					transform: translate3d(30px, -5px, -100.192px) rotateX(0deg)
+						rotateY(0deg) scale(0.8) !important;
+				}
+
+				@media (max-width: 575px) {
+					transform: translate3d(5px, -10px, -100.192px) rotateX(0deg)
+						rotateY(0deg) scale(0.8) !important;
+				}
 			}
 			.swiper-slide-next {
-				transform: translate3d(-35px, -10px, -100.192px) rotateX(0deg)
+				transform: translate3d(-68px, -10px, -100.192px) rotateX(0deg)
 					rotateY(0deg) scale(0.8) !important;
+
+				@media (max-width: 768px) {
+					transform: translate3d(-25px, -10px, -100.192px) rotateX(0deg)
+						rotateY(0deg) scale(0.8) !important;
+				}
+
+				@media (max-width: 575px) {
+					transform: translate3d(0, -10px, -100.192px) rotateX(0deg)
+						rotateY(0deg) scale(0.8) !important;
+				}
 			}
 
 			.swiper-slide-active {

@@ -172,7 +172,7 @@ const Banner = () => {
 										initialSlide={1}
 										grabCursor={true}
 										centeredSlides={true}
-										slidesPerView={'auto'}
+										slidesPerView={3}
 										slideToClickedSlide={true}
 										coverflowEffect={{
 											rotate: 0,

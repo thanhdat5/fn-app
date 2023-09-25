@@ -8,6 +8,7 @@ import { store } from 'store/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ScrollToTop from 'components/shared/scroll-top';
+// import ComingSoon from 'pages/coming-soon';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
@@ -19,6 +20,7 @@ root.render(
     <Provider store={store}>
       <HttpProvider>
         <App />
+        {/* <ComingSoon /> */}
       </HttpProvider>
     </Provider>
     </Suspense>
