@@ -97,5 +97,21 @@
 	"Clear": "지우다",
 	"Upcoming": "다가오는",
 	"Select the ticket price": "티켓 가격을 선택하세요",
-	"Balance": "균형"
+	"Balance": "균형",
+
+	"Claim Reward": "청구 보상",
+	"Total reward earned": "총 보상 획득",
+	"Claim with": "청구",
+	"Winning rewards": "당첨 보상",
+	"Claim": "클레임",
+	"Currency": "통화",
+	"Amount": "금액",
+	"Status": "상태",
+	"Comment": "주석",
+	"History": "역사",
+	"Nickname": "별명",
+	"I agree to the collection of information in cookies, I agree with Privacy Policy and with Terms of Use. Lottery is not for people under 18 years old": "쿠키에 대한 정보 수집에 동의하고 개인정보 보호정책 및 이용 약관에 동의합니다. 복권은 18세 미만은 구매할 수 없습니다.",
+	"Create": "만들다",
+	"PENDING": "대기 중",
+	"SUCCESSFUL": "성공적"
 }

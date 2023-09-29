@@ -1,6 +1,7 @@
 import { Dropdown } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import './index.scss';
+import { Link } from 'react-router-dom';
 
 type Props = {
 	onShowAffiliate?: () => void;
@@ -61,6 +62,7 @@ const MenuMobile = ({ onShowAffiliate, onShowLanguage, onShowFAQ }: Props) => {
 				<Dropdown.Item onClick={onShowAffiliate}>{t('Affiliate')}</Dropdown.Item>
 
 				<Dropdown.Item onClick={onShowLanguage}>{t('Language')}</Dropdown.Item>
+				<Dropdown.Item><Link to="/claim-reward">{t('Claim Reward')}</Link></Dropdown.Item>
 				<Dropdown.Item onClick={onShowFAQ}>{t('FAQ')}</Dropdown.Item>
 				<Dropdown.Divider />
 			</Dropdown.Menu>

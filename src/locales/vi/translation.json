@@ -97,5 +97,22 @@
 	"Clear": "Xóa",
 	"Upcoming": "Sắp ra mắt",
 	"Select the ticket price": "lựa chọn giá vé",
-	"Balance": "Tỉ giá"
+	"Balance": "Tỉ giá",
+
+	"Claim Reward": "Nhận phần thưởng",
+"Total reward earned": "Phần thưởng kiếm được",
+"Claim with": "Rút bằng",
+"Winning reward": "Phần thưởng chiến thắng",
+"Claim": "Rút",
+"Currency": "Tiền tệ",
+"Amount": "số lượng",
+"Status": "tình trạng",
+"Comment": "Chú thích",
+"History": "Lịch sử",
+"Nickname": "biệt danh",
+"I agree to the collection of information in cookies, I agree with Privacy Policy and with Terms of Use. Lottery is not for people under 18 years old" : "Tôi đồng ý với việc thu thập thông tin trong cookie, tôi đồng ý với Chính sách bảo mật và Điều khoản sử dụng. Xổ số không dành cho người dưới 18 tuổi.",
+"Create": "Tạo",
+"PENDING": "Đang chờ",
+"SUCCESSFUL": "Thành công"
+
 }

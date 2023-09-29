@@ -14,6 +14,7 @@ import Logo from "./components/logo";
 import Menu from "./components/menu";
 import MenuMobile from "./components/menu-mobile";
 import "./index.scss";
+import LicenseModal from "components/modals/license";
 
 const Header = () => {
     const dispatch = useAppDispatch();
@@ -30,11 +31,13 @@ const Header = () => {
     const [showLanguage, setShowLanguage] = useState<boolean>(false);
     const [showFAQ, setShowFAQ] = useState<boolean>(false);
     const [selectedLang, setSelectedLang] = useState<string>(DEFAULT_LANGUAGE);
+    const [showLicense, setShowLicense] = useState<boolean>(false);
     const {t} = useTranslation();
 
     useEffect(() => {
         if (loggedUser && loggedUser.tokens?.length) {
             // setSelectedToken(loggedUser.tokens[0])
+            setShowLicense(true);
         }
         if (!loggedUser) {
             setShowUserInformation(false);
@@ -85,6 +88,7 @@ const Header = () => {
         {showAffiliate ? <AffiliateModal onDismiss={() => setShowAffiliate(false)} /> : <></>}
         {showLanguage ? <LanguageModal onDismiss={() => setShowLanguage(false)} selectedLang={selectedLang} onChangeLanguage={setSelectedLang}/> : <></>}
         {showFAQ ? <FAQModal onDismiss={() => setShowFAQ(false)} /> : <></>}
+        {showLicense ? <LicenseModal onDismiss={() => setShowLicense(false)}/> : <></>} 
     </>
 }
 export default Header

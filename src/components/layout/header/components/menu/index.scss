@@ -8,8 +8,14 @@
 	list-style: none;
 	column-gap: 91px;
 
+	@media (max-width: 1199px) {
+		
+	}
+
 	@media (max-width: 991px) {
 		padding: 0 10px;
+		justify-content: space-between;
+		column-gap: 0;
 	}
 
 	@media (max-width: 767px) {

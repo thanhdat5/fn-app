@@ -1,0 +1,194 @@
+.fn-license {
+	@media (max-width: 575px) {
+		.modal-content {
+			height: 100vh;
+			// position: absolute !important;
+			// top: 0 !important;
+			// left: 0;
+			// right: 0;
+			// bottom: 0;
+		}
+	}
+
+	.modal-content {
+		background: #17191b;
+		border-radius: 3px ;
+		
+		
+		.modal-body {
+			padding: 38px 43px 55px 74px !important;
+			
+			
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+			.license-logo {
+				margin: 0 auto;
+			}
+
+			.license-form {
+				margin: 0 auto;
+
+				.form-label {
+					color: #fff;
+					font-family: Montserrat;
+					font-size: 15px;
+					font-weight: 700;
+					line-height: 31.565px; /* 210.435% */
+					text-transform: capitalize;
+					margin: 0;
+
+					span {
+						color: #9e9e9e;
+						font-family: Montserrat;
+						font-size: 13px;
+						font-weight: 500;
+						line-height: 31.565px;
+					}
+				}
+
+				.form-control {
+					width: 362px;
+					height: 49px;
+					border-radius: 3px;
+					border: 1px solid #9e9e9e;
+					background: #2d3035;
+					color: #fff;
+					outline: none;
+					box-shadow: none;
+				}
+
+				.form-check {
+					margin-top: 34px;
+
+					.form-check-input {
+						background-color: transparent !important;
+						border-color: #9e9e9e !important;
+						box-shadow: none;
+
+						&:checked[type='checkbox'] {
+							--bs-form-check-bg-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='green' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+						}
+
+						&:checked {
+							background-color: transparent;
+						}
+					}
+
+					&-label {
+						color: #9e9e9e;
+						font-family: Montserrat;
+						font-size: 13px;
+						font-weight: 500;
+						line-height: 14.065px; /* 108.194% */
+						width: 402px;
+					}
+				}
+
+				.buy {
+					// margin-left: 16px;
+					margin-top: 27px;
+					margin-bottom: 14px;
+					color: #fff;
+					text-align: center;
+					font-family: Montserrat;
+					font-size: 13px;
+					font-weight: 700;
+					line-height: 15px; /* 115.385% */
+					text-transform: uppercase;
+					border-radius: 6px;
+					background: conic-gradient(
+						from 0deg at 50% 50%,
+						#e22197 0deg,
+						#9b1258 360deg
+					);
+					width: 362px;
+					max-width: 362px;
+					height: 49px;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					text-decoration: none;
+					padding: 0;
+					border: 0;
+					position: relative;
+					overflow: hidden;
+					&::before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						border-radius: 6px;
+						background: conic-gradient(
+							from 0deg at 50% 50%,
+							#e22197 0deg,
+							#9b1258 360deg
+						);
+						transition: all ease-in-out 0.3s;
+						transform: rotate(-180deg);
+						opacity: 0;
+					}
+					span {
+						position: relative;
+					}
+					&:hover {
+						&::before {
+							opacity: 1;
+						}
+					}
+
+					&:disabled {
+						background: gray;
+						cursor: not-allowed;
+
+
+						&::before { 
+							background: gray;
+						}
+						&:hover {
+							background: gray ;
+							&::before { 
+								background: gray;
+							}
+						}
+
+					}
+
+					@media (max-width: 992px) {
+						width: 100%;
+						height: 72px;
+						padding-top: 15px !important;
+						padding-bottom: 15px !important;
+						font-size: 15px;
+					}
+
+					@media (max-width: 768px) {
+						height: 50%;
+					}
+				}
+			}
+		}
+	}
+
+	// .fn-htp-body {
+	// 	color: #9e9e9e;
+	// 	font-family: Montserrat;
+	// 	font-size: 15px;
+	// 	font-weight: 500;
+	// 	line-height: 30px; /* 200% */
+	// 	text-transform: capitalize;
+	// 	width: 687px;
+	// 	max-width: 100%;
+	// 	margin-left: auto;
+	// 	margin-right: auto;
+	// 	p {
+	// 		text-transform: capitalize;
+	// 	}
+	// 	ul {
+	// 		margin-bottom: 0;
+	// 	}
+	// }
+}

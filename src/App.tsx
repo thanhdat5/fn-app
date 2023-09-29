@@ -12,6 +12,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.scss';
 import { useTranslation } from "react-i18next";
+import ClaimPage from "pages/claim-reward";
 
 const HomepageLoading = React.lazy(() => {
   return new Promise(resolve => setTimeout(resolve, 3000)).then(() => import('./pages/homepage'));
@@ -38,6 +39,7 @@ function App() {
           <Route path='/' element={<HomepageLoading />} />
           <Route path='/affiliate' element={<AffiliatePage />} />
           <Route path='/faq' element={<FAQPage />} />
+          <Route path='/claim-reward' element={<ClaimPage />} />
           <Route path='/login' element={<LoginPage />} />
           <Route path='/register' element={<RegisterPage />} />
         </Routes>
