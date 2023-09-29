@@ -33,8 +33,8 @@ const ClaimPage = () => {
 			icon: '/images/tokens/eth.svg'
 		},
 		// { symbol: 'BAKAC', name: 'BAKAC ${t('Upcoming')}', icon: '/images/tokens/bakac.svg', balance: '0' },
-		{ symbol: 'DOGE', name: `DOGE`, icon: '/images/tokens/doge.svg' },
-		{ symbol: 'SHIB', name: `SHIB`, icon: '/images/tokens/shib.svg' }
+		{ symbol: 'DOGE', name: `DOGE (${t('Upcoming')})`, icon: '/images/tokens/doge.svg' },
+		{ symbol: 'SHIB', name: `SHIB (${t('Upcoming')})`, icon: '/images/tokens/shib.svg' }
 	];
 
 	const [selectedCurrency, setSelectedCurrency] = useState<IToken>(

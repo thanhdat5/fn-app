@@ -10,7 +10,7 @@ import './index.scss';
 const MyWinningTickets = () => {
 	const loggedUser = useAppSelector(authUserSelector);
 	const [showModal, setShowModal] = useState(false);
-	const {t} = useTranslation();
+	const { t } = useTranslation();
 
 	return loggedUser ? (
 		<>
@@ -18,60 +18,73 @@ const MyWinningTickets = () => {
 			<div className="fn-my-winning">
 				<h4>{t('My winning')}</h4>
 				<Container>
-				<Row>
-					<Col className="px-0">
-						<div className="winning-prize">
-							<h4 className='prize-type '>{t('Second Prize')}</h4>
-							<div className="list-prizes column-even">
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
+					<Row>
+						<Col className="px-0">
+							<div className="winning-prize">
+								<h4 className="prize-type">{t('First Prize')}</h4>
+								<div className="list-prizes column-even">
+									<img src="./images/prize-winning.svg" alt="" />
+								</div>
+								<p className="text-end">total: 1</p>
 							</div>
-						</div>
-					</Col>
-					<Col className="px-0">
-					<div className="winning-prize">
-							<h4 className='prize-type '>{t('Third Prize')}</h4>
-							<div className="list-prizes column-odd">
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
+						</Col>
+						<Col className="px-0">
+							<div className="winning-prize">
+								<h4 className="prize-type">{t('Second Prize')}</h4>
+								<div className="list-prizes column-even">
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+								</div>
+								<p className="text-end">total: 1</p>
 							</div>
-						</div>
-					</Col>
-					<Col className="px-0">
-					<div className="winning-prize">
-							<h4 className='prize-type '>{t('Fourth Prize')}</h4>
-							<div className="list-prizes column-even">
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
+						</Col>
+						<Col className="px-0">
+							<div className="winning-prize">
+								<h4 className="prize-type ">{t('Third Prize')}</h4>
+								<div className="list-prizes column-odd">
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+								</div>
+								<p className="text-end">total: 1</p>
 							</div>
-						</div>
-					</Col>
-					<Col className="px-0">
-					<div className="winning-prize">
-							<h4 className='prize-type '>{t('Fifth Prize')}</h4>
-							<div className="list-prizes column-odd">
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
-							<img src="./images/prize-winning.svg" alt="" />
+						</Col>
+						<Col className="px-0">
+							<div className="winning-prize">
+								<h4 className="prize-type ">{t('Fourth Prize')}</h4>
+								<div className="list-prizes column-even">
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+								</div>
+								<p className="text-end">total: 1</p>
 							</div>
-						</div>
-					</Col>
-				</Row>
+						</Col>
+						<Col className="px-0">
+							<div className="winning-prize">
+								<h4 className="prize-type ">{t('Fifth Prize')}</h4>
+								<div className="list-prizes column-odd">
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+									<img src="./images/prize-winning.svg" alt="" />
+								</div>
+								<p className="text-end">total: 1</p>
+							</div>
+						</Col>
+					</Row>
 				</Container>
 			</div>
 		</>
