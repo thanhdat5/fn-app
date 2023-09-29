@@ -68,6 +68,10 @@
 			height: 194px;
 			border-radius: 6px 6px 0 0;
 
+			@media (max-width: 575px) {
+				padding-left: 10px;;
+			}
+
 			&.winning {
 				background: linear-gradient(90deg, #9b1258 35.78%, #d92090 69.53%);
 			}
@@ -121,6 +125,7 @@
 
 					@media (max-width: 575px) {
 						font-size: 15px;
+						width: 80%;
 					}
 				}
 
