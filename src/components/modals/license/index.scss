@@ -87,6 +87,11 @@
 						font-weight: 500;
 						line-height: 14.065px; /* 108.194% */
 						width: 402px;
+
+						@media (max-width: 575px ) {
+							width: 100%;
+							font-size: 11px;
+						}
 					}
 				}
 
