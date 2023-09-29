@@ -70,7 +70,7 @@ const ClaimPage = () => {
 
 										<div className="earn-card__content">
 											<div className="content__header">
-												<h1 className="header__title">{t('Winning rewards')}</h1>
+												<h1 className="header__title">{t('WINNING REWARDS')}</h1>
 												<Dropdown className="fn-claim-with">
 													<Dropdown.Toggle
 														variant="dark"
@@ -136,7 +136,7 @@ const ClaimPage = () => {
 
 										<div className="earn-card__content">
 											<div className="content__header ">
-												<h1 className="header__title">commission reward</h1>
+												<h1 className="header__title">{t('COMMISSION REWARDS')}</h1>
 
 												<Dropdown className="fn-claim-with">
 													<Dropdown.Toggle
@@ -214,15 +214,15 @@ const ClaimPage = () => {
 													<td>USDT</td>
 													<td>9.999</td>
 													<td className="status">{t('PENDING')}...</td>
-													<td className="text-end comment">{t('Winning rewards')}</td>
+													<td className="text-end comment">{t('WINNING REWARDS')}</td>
 												</tr>
 												<tr>
 													<td>2</td>
 													<td>BTC</td>
 													<td>9.999</td>
 													<td className="status text-success">{t('SUCCESSFUL')}</td>
-													<td className="text-end  comment">
-														COMMISSION REWARDS
+													<td className="text-end comment">
+														{t('COMMISSION REWARDS')}
 													</td>
 												</tr>
 											</tbody>

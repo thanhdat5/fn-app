@@ -79,14 +79,32 @@
 			.header__img {
 				position: absolute;
 
+				@media (max-width: 1199px) {
+					width: auto;
+			}
+
+					@media (max-width: 575px) {
+						width: 40%;
+				}
+
 				&.winning {
 					top: 35px;
 					right: 29.26px;
+
+					@media (max-width: 575px) {
+						top: 20%;
+						right:1%;
+					}
 				}
 
 				&.commision {
 					top: 18px;
 					right: 35px;
+
+					@media (max-width: 575px) {
+						top: 15%;
+						right: 3%;
+					}
 				}
 			}
 
@@ -100,6 +118,10 @@
 					font-family: Montserrat;
 					font-size: 20px;
 					font-weight: 700;
+
+					@media (max-width: 575px) {
+						font-size: 16px;
+					}
 				}
 
 				span {
@@ -107,6 +129,10 @@
 					font-family: Montserrat;
 					font-size: 30px;
 					font-weight: 700;
+
+					@media (max-width: 575px) {
+						font-size: 26px;
+					}
 				}
 			}
 		}
@@ -479,7 +505,7 @@
 							font-size: 13px;
 							font-style: normal;
 							font-weight: 500;
-							text-transform: capitalize;
+							text-transform: capitalize !important;
 
 							@media (max-width: 768px) {
 								font-size: 10px;
