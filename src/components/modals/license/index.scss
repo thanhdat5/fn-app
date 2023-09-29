@@ -29,10 +29,16 @@
 
 			.license-logo {
 				margin: 0 auto;
+
+				
 			}
 
 			.license-form {
 				margin: 0 auto;
+
+				@media (max-width: 575px) {
+					padding: 0 10px;
+				}
 
 				.form-label {
 					color: #fff;
@@ -61,6 +67,10 @@
 					color: #fff;
 					outline: none;
 					box-shadow: none;
+
+					@media (max-width: 575px) {
+						width: 100%;
+					}
 				}
 
 				.form-check {
@@ -88,9 +98,9 @@
 						line-height: 14.065px; /* 108.194% */
 						width: 402px;
 
-						@media (max-width: 575px ) {
-							width: 100%;
+						@media (max-width: 575px) {
 							font-size: 11px;
+							width:100%;
 						}
 					}
 				}

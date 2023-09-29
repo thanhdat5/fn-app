@@ -51,7 +51,7 @@ const LicenseModal = ({ onDismiss }: Props) => {
 						label={t('I agree to the collection of information in cookies, I agree with Privacy Policy and with Terms of Use. Lottery is not for people under 18 years old')}
 					/>
 
-					<div className="d-flex justify-content-start">
+					<div className="d-flex justify-content-center justify-content-md-start">
 						<button type="button" className="buy" onClick={handleNickname} disabled={!nickname || !agree || nickname  === "" ? true : false}>
 							<span>{t('Create')}</span>
 						</button>
