@@ -37,6 +37,12 @@ const Menu = () => {
 					{t('Affiliate')}
 				</NavLink>
 				<NavLink
+					to="/claim-reward"
+					className={({ isActive }) => (isActive ? 'active' : '')}
+				>
+					{t('Claim Reward')}
+				</NavLink>
+				<NavLink
 					to={`${windowSize > 1024 ? "/faq" : "/"}`}
 					className={({ isActive }) => (isActive && windowSize > 1024 ? 'active' : '')}
 					onClick={() => {

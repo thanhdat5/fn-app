@@ -97,5 +97,23 @@
 	"Clear": "मिटाना",
 	"Upcoming": "आनेवाला",
 	"Select the ticket price": "अपनी टिकट की कीमत चुनें।",
-	"Balance": "संतुलन"
+	"Balance": "संतुलन",
+
+
+	"Claim Reward": "इनाम का दावा करें",
+"Total reward earned": "कुल पुरस्कार अर्जित",
+"Claim with": "दावा करना",
+"Winning reward": "जीत का इनाम",
+"Claim": "दावा",
+"Currency": "मुद्रा",
+"Amount": "मात्रा",
+"Status": "स्थिति",
+"Comment": "टीका",
+"History": "इतिहास",
+"Nickname": "उपनाम" ,
+"I agree to the collection of information in cookies, I agree with Privacy Policy and with Terms of Use. Lottery is not for people under 18 years old" : "मैं कुकीज़ में जानकारी एकत्र करने के लिए सहमत हूं, मैं गोपनीयता नीति और उपयोग की शर्तों से सहमत हूं। लॉटरी 18 साल से कम उम्र के लोगों के लिए नहीं है।",
+"Create": "बनाना",
+"PENDING": "लंबित",
+"SUCCESSFUL": "सफल"
+
 }

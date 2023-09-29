@@ -134,10 +134,7 @@ const BuyTicketsModal = ({ onDismiss }: Props) => {
 											<span>{selectedCurrency.name}</span>
 										</div>
 
-										{/* <div className="balance">
-											<small>{t('Balance')}</small>
-											<b>đ {selectedCurrency.balance}</b>
-										</div> */}
+										
 										<img
 											className="arrow"
 											src="/images/icons/arrow.svg"
@@ -158,7 +155,7 @@ const BuyTicketsModal = ({ onDismiss }: Props) => {
 											>
 												<img className="icon" src={currency.icon} alt="" />
 												<span className="name">{currency.name}</span>
-												{/* <span className="balance">{currency.balance}</span> */}
+												
 											</Dropdown.Item>
 										))}
 									</Dropdown.Menu>

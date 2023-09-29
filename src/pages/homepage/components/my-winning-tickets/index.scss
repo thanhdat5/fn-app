@@ -15,66 +15,45 @@
 		text-transform: uppercase;
 		margin-bottom: 33px;
 	}
-	// .items {
-	// 	padding-bottom: 58px;
-	// 	.item-td {
-	// 		background-color: transparent !important;
-	// 		justify-self: center;
 
-	// 		p {
-	// 			color: #fff;
-	// 			text-align: center;
-	// 			font-family: Montserrat;
-	// 			font-size: 13px;
-	// 			font-style: normal;
-	// 			font-weight: 500;
-	// 			line-height: 15px; /* 115.385% */
-	// 			text-transform: capitalize;
-	// 			margin-bottom: 10px;
-	// 		}
-	// 	}
+	.list-prizes {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		// background: #291a3a;
+		padding: 10px 0;
+		gap: 20px;
 
-	// 	.col {
-	// 		background-color: #291a3a;
-	// 		&:nth-child(2n) {
-	// 			.item {
-	// 				background-color: #321a42;
-	// 			}
-	// 		}
-	// 	}
-	// 	.item {
-	// 		position: relative;
-	// 		flex: 1;
-	// 		height: 100%;
-	// 		min-height: 305px;
-	// 		padding: 21px 24px 8px;
-	// 		strong {
-	// 			display: block;
-	// 			text-align: center;
-	// 			color: #fff;
-	// 			text-align: center;
-	// 			font-family: Montserrat;
-	// 			font-size: 36px;
-	// 			font-weight: 700;
-	// 			height: 60px; /* 41.667% */
-	// 			text-transform: capitalize;
-	// 		}
-	// 		label {
-	// 			position: absolute;
-	// 			bottom: -37px;
-	// 			right: 9px;
-	// 			display: inline-flex;
-	// 			align-items: center;
-	// 			height: 37px;
-	// 			color: #fff;
-	// 			font-family: Montserrat;
-	// 			font-size: 13px;
-	// 			font-weight: 500;
-	// 			line-height: 15px; /* 115.385% */
-	// 			text-transform: capitalize;
-	// 		}
-	// 	}
-	// }
+		height: 500px;
+		max-height: 500px;
+		overflow-y: scroll;
+		&::-webkit-scrollbar {
+			width: 5px;
+		}
+
+		/* Track */
+		&::-webkit-scrollbar-track {
+			background:  #555;
+		}
+
+		/* Handle */
+		&::-webkit-scrollbar-thumb {
+			background: #c2c1c1;
+		}
+
+		/* Handle on hover */
+		&::-webkit-scrollbar-thumb:hover {
+			background: #f1f1f1;
+		}
+
+		&.column-even {
+			background: #291a3a;
+		}
+
+		&.column-odd {
+			background: #321a42;
+		}
+	}
 
 	table {
 		thead {
@@ -124,14 +103,6 @@
 							font-size: 11px;
 						}
 					}
-				}
-
-				.column-odd {
-					background: #321a42;
-				}
-
-				.column-even {
-					background: #291a3a;
 				}
 			}
 		}

@@ -95,5 +95,22 @@
 	"Clear": "tanggalin",
 	"Upcoming": "darating",
 	"Select the ticket price": "Piliin ang presyo ng iyong tiket",
-	"Balance": "Balanse"
+	"Balance": "Balanse",
+
+	"Claim Reward": "I-claim ang gantimpala",
+"Total reward earned": "Kabuuang gantimpalang nakuha",
+"Claim with": "I-claim",
+"Winning reward": "Gantimpala ng panalo",
+"Claim": "claim",
+"Currency": "pera",
+"Amount": "halagang",
+"Status": "katayuan",
+"Comment": "footnote",
+"History": "kasaysayan",
+"Nickname": "palayaw",
+"I agree to the collection of information in cookies, I agree with Privacy Policy and with Terms of Use. Lottery is not for people under 18 years old" : "Sumasang-ayon ako sa pagkolekta ng impormasyon sa cookies, sumasang-ayon ako sa Patakaran sa Pagkapribado at sa Mga Tuntunin ng Paggamit. Ang loterya ay hindi para sa mga taong wala pang 18 taong gulang.",
+"Create": "lumikha",
+"PENDING": "Nakabinbin",
+"SUCCESSFUL": "matagumpay"
+
 }

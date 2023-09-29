@@ -97,5 +97,22 @@
 	"Clear": "消す",
 	"Upcoming": "次の",
 	"Select the ticket price": "チケットの価格を選択してください。",
-	"Balance": "バランス"
+	"Balance": "バランス",
+
+	"Claim Reward": "報酬を請求する",
+"Total reward earned": "総報酬獲得",
+"Claim with": "請求する",
+"Winning reward": "勝利の報酬",
+"Claim": "請求" ,
+"Currency": "通貨",
+"Amount": "金額",
+"Status": "ステータス",
+"Comment": "注釈",
+"History": "歴史",
+"Nickname": "ニックネーム",
+"I agree to the collection of information in cookies, I agree with Privacy Policy and with Terms of Use. Lottery is not for people under 18 years old": "クッキーに含まれる情報の収集に同意し、プライバシーポリシーおよび利用規約に同意します。宝くじは18歳未満の方は購入できません。",
+"Create": "作る" ,
+"PENDING": "保留中",
+"SUCCESSFUL": "成功"
+
 }
